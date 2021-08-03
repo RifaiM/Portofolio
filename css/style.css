@@ -1,0 +1,1317 @@
+*{
+    margin: 0;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --headerColor: rgba(236, 236, 236, 1);
+    --footerColor: rgba(119, 82, 83, 0.6);
+    --writing: rgba(175, 144, 169, 0.9);
+    --drawing: rgba(160, 92, 123, 0.9);
+    --knowledge: rgba(148, 70, 84, 0.9);
+    --projects: rgba(122, 48, 108, 0.95);
+    --mainTextColor: #222;
+    --secondaryTextColor: #FFF;
+    --borderColor: #999;
+    --paginationActive: #443C3C;
+    --projectName: rgba(3, 25, 39, 0.5);
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--mainTextColor);
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--mainTextColor);
+    text-align: center;
+    margin: 50px 10px 50px 10px;
+}
+
+h3 {
+    font-size: 15px;
+    color: var(--secondaryTextColor);
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+p {
+    font-size: 18px;
+    color: var(--mainTextColor);
+    font-weight: 600;
+}
+
+a {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--secondaryTextColor);
+}
+
+/*------------------------------------------------------------------------*/
+
+.header-intro {
+    background-color: var(--headerColor);
+}
+
+.main-menu {
+    border: var(--borderColor) solid 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 5rem;
+    margin: 20px 0;
+}
+
+/*
+.option-menu1 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--writing);
+    position: relative;
+}
+
+.option-menu2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--drawing);
+    position: relative;
+}
+
+.option-menu3 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--knowledge);
+    position: relative;
+}
+
+.option-menu4 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--projects);
+    position: relative;
+}
+
+.option-menu1:hover,
+.option-menu2:hover,
+.option-menu3:hover,
+.option-menu4:hover {
+    background-color: var(--borderColor);
+    transform: scale(1.1);
+    transition: 0.4s ease;
+    border-radius: 10px;
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+*/
+
+.text1 a,
+.text2 a,
+.text3 a,
+.text4 a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.text1 a {
+    background-color: var(--writing);
+}
+
+.text2 a {
+    background-color: var(--drawing);
+}
+
+.text3 a {
+    background-color: var(--knowledge);
+}
+
+.text4 a {
+    background-color: var(--projects);
+}
+
+.text1 a:hover,
+.text2 a:hover,
+.text3 a:hover,
+.text4 a:hover {
+    background-color: var(--borderColor);
+    transform: scale(1.1);
+    transition: 0.4s ease;
+    border-radius: 10px;
+}
+
+
+.bio-text {
+    margin: 50px 10px 0 10px;
+    color: var(--mainTextColor);
+}
+
+.bio {
+    color: blue;
+}
+
+.mailto {
+    color: var(--mainTextColor);
+}
+
+.footer {
+    background-color: var(--footerColor);
+    color: var(--secondaryTextColor);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Writing + Stories */
+
+.wrap {
+    border: var(--borderColor) 2px solid;
+    margin: 0 20px 50px 20px;
+}
+
+.homepage {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+    color: var(--mainTextColor);
+    border: var(--borderColor) 2px solid;
+    padding: 5px;
+}
+
+.homepage:hover {
+    background-color: var(--borderColor);
+    color: var(--secondaryTextColor);
+}
+
+.writing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.writing-intro {
+    width: 50%;
+    background-color: var(--writing);
+    border-radius: 50px;
+    color: var(--secondaryTextColor);
+}
+
+.writing-content {
+    margin: 50px;
+    border: var(--borderColor) 2px solid;
+}
+
+.writing-content li {
+    padding: 15px;
+}
+
+.text-link {
+    color: var(--mainTextColor);
+}
+
+.page-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+.fa-chevron-right {
+    margin-left: 5px;
+}
+
+.fa-chevron-left,
+.fa-home {
+    margin-right: 5px;
+}
+
+.prev,
+.next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--borderColor) 2px solid;
+    margin: 10px;
+}
+
+.prev a,
+.next a {
+    color: var(--mainTextColor);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.next a:hover,
+.prev a:hover {
+    background-color: var(--paginationActive);
+    color: var(--secondaryTextColor);
+}
+
+.stories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.stories-intro {
+    width: 50%;
+    background-color: var(--writing);
+    border-radius: 50px;
+    color: var(--secondaryTextColor);
+}
+
+.desc {
+    border: var(--borderColor) 2px solid;
+    margin: 20px;
+    padding: 10px;
+    width: 50%;
+    height: 100px;
+}
+
+.full-stories {
+    border: var(--borderColor) 2px solid;
+    margin: 20px;
+    padding: 10px;
+}
+
+.desc-text {
+    text-align: justify;
+    font-size: 15px;
+    padding: 5px;
+}
+
+/*
+.stories-text {
+    text-align: justify;
+}
+*/
+
+/* Drawing */
+
+.drawing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.drawing-intro {
+    width: 50%;
+    background-color: var(--drawing);
+    border-radius: 50px;
+    color: var(--secondaryTextColor);
+}
+
+.gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-image img {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: var(--secondaryTextColor);
+    position: relative;
+    background-color: var(--secondaryTextColor);
+}
+
+.caption {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.caption .parent-text {
+    color: var(--secondaryTextColor);
+}
+
+.transparent-box {
+    height: 250px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+    transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+    transform: translateY(-20px);
+    opacity: 1.0;
+}
+
+.caption > p:nth-child(2) {
+    font-size: 12px;
+}
+
+.opacity-low {
+    opacity: 0.5;
+    color: var(--secondaryTextColor);
+}
+
+/* Knowledge */
+
+.opt {
+    font-size: 18px;
+    color: var(--mainTextColor);
+    text-align: left;
+}
+
+.knowledge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.knowledge-intro {
+    width: 50%;
+    background-color: var(--knowledge);
+    border-radius: 50px;
+    color: var(--secondaryTextColor);
+}
+
+.knowledge-content {
+    border: var(--borderColor) 2px solid;
+    margin: 50px;
+}
+
+.knowledge-fullText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.knowledge-title,
+.sub-knowledge {
+    padding: 15px;
+    color: var(--mainTextColor);
+}
+
+
+/* Projects */
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 20px 0;
+}
+
+.projects-intro {
+    width: 50%;
+    background-color: var(--knowledge);
+    border-radius: 50px;
+    color: var(--secondaryTextColor);
+}
+
+.wrappers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 50px;
+}
+
+.content-each {
+    border: var(--borderColor) 2px solid;
+    padding: 15px;
+}
+
+.project-name {
+    border: var(--borderColor) 1px solid;
+    background-color: var(--projectName);
+    color: var(--secondaryTextColor);
+}
+
+.project-name h3 {
+    text-align: center;
+    margin: unset;
+    font-size: 18px;
+}
+
+.project-img {
+    display: flex;
+    justify-content: center;
+
+}
+
+.project-img img {
+    padding: 20px 0 20px 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.project-summary {
+    border: var(--borderColor) 1px solid;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.check {
+    color: blue;
+}
+
+/*------------------------------------------------------------------*/
+
+@media screen and (min-width: 1370px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        margin: 30px 10px 30px 10px;
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    /* index.html */
+
+    .option-menu1,
+    .option-menu2,
+    .option-menu3,
+    .option-menu4 {
+        height: 100px;
+        width: 100px;
+    }
+
+    .bio-text {
+        margin: 50px 20px 50px 20px;
+        font-size: 25px;
+    }
+
+    .bio,
+    .mailto {
+        font-size: 25px;
+    }
+
+    .footer {
+        font-size: 25px;
+        height: 50px;
+    }
+
+    /* Writing */
+
+    .writing {
+        margin: 50px 0 0 0;
+    }
+
+    .wrap {
+        margin: 100px 20px 80px 20px;
+    }
+
+    .stories {
+        margin: 50px 0 0 0;
+    }
+
+    .desc {
+        height: 160px;
+    }
+
+    .desc-text {
+        font-size: 25px;
+    }
+
+    /* Drawing */
+
+    .drawing {
+        margin: 50px 0 0 0;
+    }
+
+    .gallery-image {
+        padding: 5px;
+    }
+
+    /* Knowledge */
+
+    .knowledge {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-fullText {
+        margin: 50px 0 0 0;
+    }
+
+    .opt {
+        font-size: 30px;
+    }
+
+    .sub-knowledge  {
+        font-size: 20px;
+    }
+
+    /* Projects */
+
+    .projects {
+        margin: 50px 0 0 0;
+    }
+
+    .project-name h3 {
+        font-size: 30px;
+    }
+
+    .project-summary {
+        font-size: 25px;
+    }
+
+    .check {
+        font-size: 25px;
+    }
+
+}
+
+/*------------------------------------------------------------------*/
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* index.html */
+
+    .bio-text {
+        margin: 20px 10px 0 10px;
+    }
+
+}
+
+/*------------------------------------------------------------------*/
+
+/* Portrait */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    /* index.html */
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        margin: 100px 10px 50px 10px;
+        font-size: 25px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    /* index.html */
+
+    .bio-text {
+        margin: 70px 20px 0 20px;
+        font-size: 20px;
+    }
+
+    .bio,
+    .mailto {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    /* Writing */
+
+    .writing {
+        margin: 50px 0 0 0;
+    }
+
+    .writing-content {
+        margin: 25px;
+    }
+
+    .wrap {
+        margin: 80px 20px 50px 20px;
+    }
+
+    .stories {
+        margin: 50px 0 0 0;
+    }
+
+    .desc {
+        height: 250px;
+        margin: 25px;
+    }
+
+    .full-stories {
+        margin: 25px;
+    }
+
+    .desc-text {
+        font-size: 20px;
+    }
+
+    /* Drawing */
+
+    .drawing {
+        margin: 50px 0 0 0;
+    }
+
+    .gallery-image {
+        padding: 5px;
+    }
+
+    .gallery-image img {
+        height: 150px;
+        width: 200px;
+    }
+    
+    .img-box {
+        height: 150px;
+        width: 200px;
+    }
+    
+    .transparent-box {
+        height: 150px;
+        width: 200px;
+    }
+
+    /* Knowledge */
+
+    .knowledge {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-fullText {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-content {
+        margin: 25px;
+    }
+
+    .opt {
+        font-size: 25px;
+    }
+
+    .sub-knowledge  {
+        font-size: 20px;
+    }
+
+    /* Projects */
+
+    .projects {
+        margin: 50px 0 0 0;
+    }
+
+    .wrappers {
+        margin: 25px;
+    }
+
+    .project-name h3 {
+        font-size: 20px;
+    }
+
+    .project-summary {
+        font-size: 18px;
+    }
+
+    .check {
+        font-size: 18px;
+    }
+
+}
+
+/*------------------------------------------------------------------*/
+
+/* Landscape */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* index.html */
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        margin: 30px 10px 20px 10px;
+        font-size: 25px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    /* index.html */
+
+    .bio-text {
+        margin: 50px 20px 0 20px;
+        font-size: 20px;
+    }
+
+    .bio,
+    .mailto {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    /* Writing */
+
+    .writing {
+        margin: 50px 0 0 0;
+    }
+
+    .wrap {
+        margin: 50px 20px 50px 20px;
+    }
+
+    .writing-content {
+        margin: 25px;
+    }
+
+    .stories {
+        margin: 50px 0 0 0;
+    }
+
+    .desc {
+        height: 200px;
+        margin: 25px;
+    }
+
+    .desc-text {
+        font-size: 20px;
+    }
+
+    .full-stories {
+        margin: 25px;
+    }
+
+    /* Drawing */
+
+    .drawing {
+        margin: 50px 0 0 0;
+    }
+
+    /* Knowledge */
+
+    .knowledge {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-fullText {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-content {
+        margin: 25px;
+    }
+
+    .opt {
+        font-size: 25px;
+    }
+
+    .sub-knowledge  {
+        font-size: 20px;
+    }
+
+    /* Projects */
+
+    .projects {
+        margin: 50px 0 0 0;
+    }
+
+    .wrappers {
+        margin: 25px;
+    }
+
+    .project-name h3 {
+        font-size: 20px;
+    }
+
+    .project-summary {
+        font-size: 18px;
+    }
+
+    .check {
+        font-size: 18px;
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+/*  ##Device = Low Resolution Tablets, Mobiles (Portrait)
+    ##Screen = B/w 481px to 767px 
+*/
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    /* index.html */
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        margin: 50px 10px 20px 10px;
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
+    /* index.html */
+
+    .bio-text {
+        margin: 35px 20px 0 20px;
+        font-size: 16px;
+    }
+
+    .bio,
+    .mailto {
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 16px;
+        height: 30px;
+    }
+
+    /* Writing */
+
+    .writing {
+        margin: 50px 0 0 0;
+    }
+
+    .writing-intro {
+        font-size: 30px;
+    }
+
+    .wrap {
+        margin: 50px 20px 50px 20px;
+    }
+
+    .writing-content {
+        margin: 20px;
+    }
+
+    .stories {
+        margin: 50px 0 0 0;
+    }
+
+    .stories-intro {
+        font-size: 30px;
+    }
+
+    .list-stories {
+        padding: 0 0 0 25px;
+    }
+
+    .desc {
+        width: auto;
+        height: 150px;
+        margin: 20px;
+    }
+
+    .desc-text {
+        font-size: 15px;
+    }
+
+    .full-stories {
+        margin: 20px;
+    }
+
+    /* Drawing */
+
+    .drawing {
+        margin: 50px 0 0 0;
+    }
+
+    .drawing-intro {
+        font-size: 30px;
+    }
+
+    /* Knowledge */
+
+    .knowledge {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-fullText {
+        margin: 50px 0 0 0;
+    }
+
+    .knowledge-intro {
+        font-size: 28px;
+    }
+
+    .knowledge-content {
+        margin: 20px;
+    }
+
+    .knowledge-title {
+        padding: 5px;
+    }
+
+    .opt {
+        font-size: 25px;
+    }
+
+    .sub-knowledge  {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    ol {
+        padding: 0 0 0 15px;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+    /* Projects */
+
+    .projects {
+        margin: 50px 0 0 0;
+    }
+
+    .projects-intro {
+        font-size: 30px;
+    }
+
+    .wrappers {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+
+    .project-name h3 {
+        font-size: 20px;
+    }
+
+    .project-summary {
+        font-size: 16px;
+    }
+
+    .check {
+        font-size: 16px;
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+/*  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px 
+*/
+
+@media only screen and (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+
+    /* index.html */
+
+    h2 {
+        margin: 20px 10px 20px 10px;
+        font-size: 20px;
+    }
+
+    .bio-text {
+        margin: 20px 20px 50px 20px;
+    }
+
+    /* Writing */
+
+    .desc {
+        height: 100px;
+    }
+
+    /* Knowledge */
+
+    ol {
+        padding: 0 0 0 20px;
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+/*  ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px 
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    /* index.html */
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        margin: 20px 10px 20px 10px;
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+    /* index.html */
+
+    .wrapper {
+        gap: 1rem 2.5rem;
+    }
+
+    .bio-text {
+        margin: 20px 10px 40px 10px;
+        font-size: 13px;
+    }
+
+    .bio,
+    .mailto {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+
+    /* Writing */
+
+    .writing {
+        margin: 25px 0 0 0;
+    }
+
+    .writing-intro {
+        width: 40%;
+        font-size: 19px;
+    }
+
+    .wrap {
+        margin: 30px 20px 30px 20px;
+    }
+
+    .writing-content {
+        margin: 10px;
+    }
+
+    .stories {
+        margin: 25px 0 0 0;
+    }
+
+    .stories-intro {
+        width: 40%;
+        font-size: 18px;
+    }
+
+    .list-stories {
+        padding: 0 0 0 25px;
+    }
+
+    .desc {
+        width: auto;
+        height: 150px;
+        margin: 10px;
+    }
+
+    .desc-text {
+        font-size: 12px;
+    }
+
+    .full-stories {
+        margin: 10px;
+    }
+
+    /* Drawing */
+
+    .drawing {
+        margin: 25px 0 0 0;
+    }
+
+    .drawing-intro {
+        width: 40%;
+        font-size: 19px;
+    }
+
+    .gallery-image {
+        padding: 5px;
+    }
+
+    .gallery-image img {
+        height: 175px;
+        width: 225px;
+    }
+    
+    .img-box {
+        height: 175px;
+        width: 225px;
+    }
+    
+    .transparent-box {
+        height: 175px;
+        width: 225px;
+    }
+
+    /* Knowledge */
+
+    .knowledge {
+        margin: 25px 0 0 0;
+    }
+
+    .knowledge-fullText {
+        margin: 25px 0 0 0;
+    }
+
+    .knowledge-intro {
+        width: 40%;
+        font-size: 19px;
+    }
+
+    .knowledge-content {
+        margin: 10px;
+    }
+
+    .knowledge-title {
+        padding: 5px;
+    }
+
+    .opt {
+        font-size: 18px;
+    }
+
+    .sub-knowledge  {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    ol {
+        padding: 0 0 0 15px;
+    }
+
+    ul {
+        padding: 0 0 0 20px;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+    /* Projects */
+
+    .projects {
+        margin: 25px 0 0 0;
+    }
+
+    .projects-intro {
+        width: 40%;
+        font-size: 19px;
+    }
+
+    .wrappers {
+        margin: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+
+    .project-name h3 {
+        font-size: 18px;
+    }
+
+    .project-summary {
+        font-size: 14px;
+    }
+
+    .check {
+        font-size: 14px;
+    }
+
+}
+
+/*------------------------------------------------------------------*/
+
+/*  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px 
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+
+    /* Writing */
+
+    .desc {
+        height: 100px;
+    }
+
+    .gallery-image img {
+        height: 250px;
+        width: 350px;
+    }
+    
+    .img-box {
+        height: 250px;
+        width: 350px;
+    }
+    
+    .transparent-box {
+        height: 250px;
+        width: 350px;
+    }
+
+}

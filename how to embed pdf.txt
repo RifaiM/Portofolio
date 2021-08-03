@@ -1,0 +1,17 @@
+First code trial
+
+https://docs.google.com/gview?embedded=true&url=https://onepersona.netlify.app/assets/writing/pdf/After the Rain.pdf#&toolbar=0&navpanes=0&scrollbar=0
+
+https://docs.google.com/gview?embedded=true&url=https://onepersona.netlify.app/assets/writing/pdf/After the Rain.pdf
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+won't open automatically in mobile (need to download to view)
+
+<object data="pdf/After the Rain.pdf#&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px"></object>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+work :
+
+<object data="https://docs.google.com/gview?embedded=true&url=https://onepersona.netlify.app/assets/writing/pdf/After the Rain.pdf" width="100%" height="600px"></object>
