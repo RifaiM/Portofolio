@@ -5,3 +5,7 @@ Awkward result ...
 ## Another error
 
 Don't know
+
+### Local Development
+
+Open index.html
