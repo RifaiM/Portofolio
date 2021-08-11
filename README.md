@@ -1,11 +1,13 @@
 # Self learn + git
 
-Awkward result ...
+Awkward result at first ...
 
 ## Another error
 
-Don't know
+Don't know ..fixed
 
 ### Local Development
+
+still in development
 
 Open index.html
