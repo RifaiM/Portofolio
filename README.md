@@ -9,5 +9,3 @@ Don't know ..fixed
 ### Local Development
 
 still in development
-
-Open index.html
