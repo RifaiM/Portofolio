@@ -1,0 +1,20 @@
+@use './config';
+@use './utilities';
+@use './buttons';
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    font-family: config.$font-stack;
+    margin: 0;
+    padding: 0;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 650px solid config.$blue;
+    border-right: 1200px solid transparent;
+    position: absolute;
+}
