@@ -1,0 +1,9 @@
+@use './vars/config';
+@use './vars/utilities';
+@use './vars/buttons';
+h1 {
+  color: var();
+}
+
+@use './vars/mobile';
+/*# sourceMappingURL=app.css.map */
