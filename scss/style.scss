@@ -16,5 +16,45 @@ body {
     height: 0;
     border-top: 650px solid config.$blue;
     border-right: 1200px solid transparent;
-    position: absolute;
 }
+
+.triangle {
+    ul {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        width: 150px;
+        color: config.$white;
+        font-size: 20px;
+    }
+    .bi {
+        font-size: 10px;
+        position: absolute;
+        padding: 0 3px;
+        animation: loading 3s linear infinite;
+
+        @keyframes loading {
+            0% { 
+                transform: rotate(0); 
+            }
+            100% { 
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.initial {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    color: config.$blue;
+    font-size: 100px;
+}
+

@@ -110,5 +110,50 @@ body {
   height: 0;
   border-top: 650px solid #63B2FF;
   border-right: 1200px solid transparent;
+}
+
+.triangle ul {
   position: absolute;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.triangle li {
+  width: 150px;
+  color: #fff;
+  font-size: 20px;
+}
+.triangle .bi {
+  font-size: 10px;
+  position: absolute;
+  padding: 0 3px;
+  -webkit-animation: loading 3s linear infinite;
+          animation: loading 3s linear infinite;
+}
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.initial {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  color: #63B2FF;
+  font-size: 100px;
 }/*# sourceMappingURL=style.css.map */
