@@ -1,81 +1,121 @@
-.m-space {
-  margin: spacerem;
+.m-1 {
+  margin: 1rem;
 }
 
-.my-space {
-  margin: spacerem 0;
+.my-1 {
+  margin: 1rem 0;
 }
 
-.p-space {
-  padding: spacerem;
+.mx-1 {
+  margin: 0 1rem;
 }
 
-.py-space {
-  padding: spacerem 0;
+.p-1 {
+  padding: 1rem;
 }
 
-.m-space {
-  margin: spacerem;
+.py-1 {
+  padding: 1rem 0;
 }
 
-.my-space {
-  margin: spacerem 0;
+.px-1 {
+  padding: 0 1rem;
 }
 
-.p-space {
-  padding: spacerem;
+.m-2 {
+  margin: 2rem;
 }
 
-.py-space {
-  padding: spacerem 0;
+.my-2 {
+  margin: 2rem 0;
 }
 
-.m-space {
-  margin: spacerem;
+.mx-2 {
+  margin: 0 2rem;
 }
 
-.my-space {
-  margin: spacerem 0;
+.p-2 {
+  padding: 2rem;
 }
 
-.p-space {
-  padding: spacerem;
+.py-2 {
+  padding: 2rem 0;
 }
 
-.py-space {
-  padding: spacerem 0;
+.px-2 {
+  padding: 0 2rem;
 }
 
-.m-space {
-  margin: spacerem;
+.m-3 {
+  margin: 3rem;
 }
 
-.my-space {
-  margin: spacerem 0;
+.my-3 {
+  margin: 3rem 0;
 }
 
-.p-space {
-  padding: spacerem;
+.mx-3 {
+  margin: 0 3rem;
 }
 
-.py-space {
-  padding: spacerem 0;
+.p-3 {
+  padding: 3rem;
 }
 
-.m-space {
-  margin: spacerem;
+.py-3 {
+  padding: 3rem 0;
 }
 
-.my-space {
-  margin: spacerem 0;
+.px-3 {
+  padding: 0 3rem;
 }
 
-.p-space {
-  padding: spacerem;
+.m-4 {
+  margin: 4rem;
 }
 
-.py-space {
-  padding: spacerem 0;
+.my-4 {
+  margin: 4rem 0;
+}
+
+.mx-4 {
+  margin: 0 4rem;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.px-4 {
+  padding: 0 4rem;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.mx-5 {
+  margin: 0 5rem;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}
+
+.px-5 {
+  padding: 0 5rem;
 }
 
 .btn-secondary, .btn-primary {
@@ -93,7 +133,7 @@
 }
 
 .btn-secondary {
-  background-color: #D6D6D6;
+  background-color: #A4B7B4;
 }
 
 html,
@@ -123,10 +163,10 @@ body {
 }
 .triangle li {
   width: 150px;
-  color: #fff;
+  color: #FBFAF5;
   font-size: 20px;
 }
-.triangle .bi {
+.triangle .bi-star-fill {
   font-size: 10px;
   position: absolute;
   padding: 0 3px;
@@ -156,4 +196,56 @@ body {
   right: 10%;
   color: #63B2FF;
   font-size: 100px;
+}
+
+.topright-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+}
+.topright-section .slide-show {
+  display: none;
+}
+.topright-section .slide-show img {
+  height: 460px;
+}
+.topright-section .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.topright-section .active, .topright-section .dot:hover {
+  background-color: #717171;
+}
+.topright-section .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
