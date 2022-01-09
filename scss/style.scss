@@ -11,6 +11,28 @@ body {
     padding: 0;
 }
 
+h1 {
+    font-size: config.$h1;
+}
+
+h2 {
+    font-size: config.$h2;
+}
+
+h3 {
+    font-size: config.$h3;
+}
+
+p {
+    font-size: config.$p;
+}
+
+hr {
+    background-color: config.$blue;
+    height: 2px;
+    border: 0;
+}
+
 .triangle {
     width: 0;
     height: 0;
@@ -25,7 +47,6 @@ body {
         left: 10%;
         display: flex;
         list-style: none;
-        margin: 0;
         padding: 0;
     }
     li {
@@ -55,27 +76,16 @@ body {
     top: 0;
     right: 10%;
     color: config.$blue;
-    font-size: 100px;
 }
 
-.topright-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
+.topsection {
+    
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: 45%;
+    left: 5%;
 
-    .slide-show {
-        display: none;
-    }
-
-    .slide-show img {
-        height: 460px;
-    }
-
-    /* The dots/bullets/indicators */
-    .dot {
+     /* The dots/bullets/indicators */
+     .dot {
         cursor: pointer;
         height: 15px;
         width: 15px;
@@ -108,6 +118,62 @@ body {
     to {opacity: 1}
     }
 
+    .slide-container {
+        
+        .slide-show {
+            display: none;
+        }
+
+        .slide-1,
+        .slide-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            gap: 5px;
+
+            .rightSide img {
+                margin-top: -20px;
+                width: 217px;
+                height: 412px;
+            }
+
+            .name,
+            p {
+                text-align: left;
+            }
+
+            .tech-img {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 100px);
+                justify-content: space-between;
+                overflow: hidden;
+            }
+
+            .tech-img img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .tech-img .aos {
+                border-radius: 10px;
+            }
+
+            .button a {
+                display: flex;
+                justify-content: center;
+                background-color: config.$blue;
+                border: none;
+                border-radius: 50px;
+                padding: 15px 5px;
+                color: var(--white2);
+                text-decoration: none;
+                text-align: center;
+                width: 150px;
+                color: config.$white;
+                font-weight: bold;
+            }
+        }
     
+    }
 }
 
