@@ -12,6 +12,8 @@
 
     <!--Bootstrap Icon Fonts-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <link rel="stylesheet" href="./css/style.css"> 
     <title>Welcome</title>
@@ -24,12 +26,27 @@
         <nav>
             <div class="triangle">
                 <ul>
-                    <li class="px-1">projects</li>
-                    <li class="px-1">about me</li>
-                    <li class="px-1">contact<i class="bi bi-star-fill"></i></li>
+                    <li class="px-1"><a href="">projects</a></li>
+                    <li class="px-1"><a href="">about me</a></li>
+                    <li class="px-1"><a href="">contact</a><i class="bi bi-star-fill"></i></li>
                 </ul>
             </div>
         </nav>
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="overlay-menu">
+                <ul>
+                    <li class="px-1"><a href="">projects</a></li>
+                    <li class="px-1"><a href="">about me</a></li>
+                    <li class="px-1"><a href="">contact</a><i class="bi bi-star-fill"></i></li>
+                </ul>
+            </div>
+        </div>
+
         <div class="initial">
             <h1 class="my-5">R.</h1>
         </div>
@@ -57,7 +74,7 @@
                                 </div>
                                 <p class="my-1">My main areas of expertise include Javascript, HTML, CSS ..SASS, and PHP.</p>
                             </div>
-                            <div class="button pt-1">
+                            <div class="btn-primary pt-1">
                                 <a href="#/">Contact me</a>
                             </div>
                         </div>
@@ -84,7 +101,7 @@
                                 </div>
                                 <p class="my-1">I have a solid knowledge in UI design. Figma & Mockplus are my friends.</p>
                             </div>
-                            <div class="button pt-1">
+                            <div class="btn-primary pt-1">
                                 <a href="#/">See my work</a>
                             </div>
                         </div>
@@ -98,6 +115,61 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <section class="projects mt-12 px-2">
+            <ul class="p-1">
+                <li>
+                    <div class="typewriter">
+                        <h2 class="mt-1">projects<span class="pr">.</span></h2>
+                    </div>
+                    <span class="blue-line"></span>
+                    <h3 class="mt-5">web design & development<span>.</span></h3>
+                    <span class="blue-line"></span>
+                </li>
+            </ul>
+            <div class="containerWeb">
+                <div class="web my-3">
+                    <div class="Webcontainer-1">
+                        <img class="px-1  mx-1" src="./img/pisang_ijo.png" alt="">
+                        <div class="webText px-2">
+                            <h3 class="my-1">Es Pisang Ijo<span>.</span></h3>
+                            <h4 class="my-1">Product showcase website</h4>
+                            <p>web development | web design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="web my-3">
+                    <div class="Webcontainer-2">
+                        <img class="px-1 mx-1" src="./img/dapur_mamizey.png" alt="">
+                        <div class="webText px-1">
+                            <h3 class="my-1">Dapur Mamizey<span>.</span></h3>
+                            <h4 class="my-1">Product showcase website</h4>
+                            <p>web development | web design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about px-2">
+            <ul class="p-1">
+                <li>
+                    <div class="typewriter">
+                        <h2 class="mt-1">about me<span class="pr">.</span></h2>
+                        <span class="blue-line"></span>
+                    </div>
+                </li>
+            </ul>
+            <div class="containerAbout p-1">
+                <div class="Aboutcontainer-1">
+                    <h2 class="mt-2">experience</h2>
+                </div>
+                <div class="Aboutcontainer-2">
+                    <h2 class="mt-2">education</h2>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="./js/main.js"></script>
 </body>

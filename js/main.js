@@ -17,5 +17,26 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";
   dott[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 7000); // Change image every 7 seconds
 }
+
+$("#toggle").click(function () {
+  $(this).toggleClass("active");
+  $("#overlay").toggleClass("open");
+});
+
+
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 200) {
+    $('.button_container').fadeIn();
+  } else {
+    $('.button_container').fadeOut();
+  }
+});
+
+$("#overlay").mouseenter(function(){
+  $("body").css("overflow", "hidden"); 
+}).mouseleave(function(){
+  $("body").css("overflow", "visible");
+});

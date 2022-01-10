@@ -1,6 +1,7 @@
 @use './config';
 @use './utilities';
 @use './buttons';
+@use './mobile';
 
 html,
 body {
@@ -29,10 +30,55 @@ p {
 
 hr {
     background-color: config.$blue;
-    height: 2px;
+    height: 3px;
     border: 0;
 }
 
+li {
+    list-style: none;
+    width: 150px;
+    color: config.$white;
+    font-size: 20px;
+
+    a {
+        display: block;
+        position: relative;
+        color: config.$white;
+        text-decoration: none;
+        overflow: hidden;
+        padding-bottom: 5px;
+    }
+
+    a:hover::after, a:focus::after, a:active:after {
+        width: 100%;
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+        width: 0%;
+        transform: translateX(-50%);
+        height: 3px;
+        background: config.$white;
+        transition: 0.35s;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: config.$white;
+}
+
+.initial {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    color: config.$blue;
+}
+
+    
 .triangle {
     width: 0;
     height: 0;
@@ -49,15 +95,13 @@ hr {
         list-style: none;
         padding: 0;
     }
-    li {
-        width: 150px;
-        color: config.$white;
-        font-size: 20px;
-    }
+
     .bi-star-fill {
         font-size: 10px;
         position: absolute;
         padding: 0 3px;
+        top: 0;
+        right: 13%;
         animation: loading 3s linear infinite;
 
         @keyframes loading {
@@ -70,13 +114,161 @@ hr {
         }
     }
 }
+  
+.button_container {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.25s ease;
+    display: none;
+}
 
-.initial {
+.button_container:hover {
+    opacity: 0.7;
+}
+.button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: config.$white;
+}
+  .button_container.active .middle {
+    opacity: 0;
+    background: config.$white;
+}
+  .button_container.active .bottom {
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: config.$white;
+}
+  .button_container span {
+    background: config.$blue;
+    border: none;
+    border-radius: 5px;
+    height: 5px;
+    width: 100%;
     position: absolute;
     top: 0;
-    right: 10%;
-    color: config.$blue;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
 }
+  .button_container span:nth-of-type(2) {
+    top: 11px;
+}
+  .button_container span:nth-of-type(3) {
+    top: 22px;
+}
+  
+.overlay {
+    position: fixed;
+    background: config.$blue;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s, visibility 0.8s, height 0.35s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    overflow: hidden;
+
+    .bi-star-fill {
+        font-size: 10px;
+        position: absolute;
+        padding: 0 3px;
+        top: 0;
+        right: 20%;
+        animation: loading 3s linear infinite;
+
+        @keyframes loading {
+            0% { 
+                transform: rotate(0); 
+            }
+            100% { 
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+.overlay.open li {
+    animation: fadeInRight 0.5s ease forwards;
+    animation-delay: 0.35s;
+}
+.overlay.open li:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+.overlay.open li:nth-of-type(3) {
+    animation-delay: 0.45s;
+}
+.overlay.open li:nth-of-type(4) {
+    animation-delay: 0.5s;
+}
+.overlay .overlay-menu {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    text-align: center;
+}
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+.overlay ul li {
+    display: block;
+    height: 25%;
+    height: calc(100% / 4);
+    min-height: 50px;
+    position: relative;
+    opacity: 0;
+}
+.overlay ul li a {
+    display: block;
+    position: relative;
+    color: config.$white;
+    text-decoration: none;
+    overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+    width: 50%;
+}
+.overlay ul li a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: config.$white;
+    transition: 0.35s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
 
 .topsection {
     
@@ -132,7 +324,6 @@ hr {
             gap: 5px;
 
             .rightSide img {
-                margin-top: -20px;
                 width: 217px;
                 height: 412px;
             }
@@ -157,23 +348,192 @@ hr {
             .tech-img .php {
                 border-radius: 10px;
             }
-
-            .button a {
-                display: flex;
-                justify-content: center;
-                background-color: config.$blue;
-                border: none;
-                border-radius: 50px;
-                padding: 15px 5px;
-                color: var(--white2);
-                text-decoration: none;
-                text-align: center;
-                width: 150px;
-                color: config.$white;
-                font-weight: bold;
-            }
         }
     
+    }
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: repeat(1, 2fr);
+    gap: 10px;
+
+    li {
+        color: config.$black;
+        width: 100%;
+
+        h2,
+        h3 {
+            display: block;
+            position: relative;
+            color: config.$black;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .blue-line {
+            content: "";
+            width: 102px;
+            height: 5px;
+            background: rgb(99, 178, 255);
+            display: block;
+            margin-top: 1px;
+        }
+
+        .blue-line:nth-child(4) {
+            content: "";
+            width: 50px;
+            height: 5px;
+            background: rgb(99, 178, 255);
+            display: block;
+            margin-top: 1px;
+        }
+        span:nth-child(1) {
+            color: config.$blue;
+        }
+    
+    }
+    .web span:nth-child(1) {
+        color: config.$blue;
+    }
+
+    .typewriter h2 {
+        width: auto;
+        display: inline-block;
+        text-align: left;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 4px solid config.$blue; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        
+        animation: 
+          typing 4s steps(40, end),
+          blink-caret 0.8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { max-width: 0 }
+        to { max-width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: config.$blue; }
+      }
+    
+}
+
+.containerWeb {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    .Webcontainer-1 img,
+    .Webcontainer-2 img {
+        width: 450px;
+        height: 280px;
+        box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+    }
+
+    .Webcontainer-1,
+    .Webcontainer-2 {
+        position: relative;
+
+        p {
+            color: config.$grey1;
+        }
+    }
+    .Webcontainer-1:hover,
+    .Webcontainer-2:hover {
+        transform: translateY(0%);
+
+        h3 {
+            color: config.$blue;
+        }
+    }
+
+    .Webcontainer-1:hover img,
+    .Webcontainer-2:hover img {
+        transform: translateY(-20%);
+        transition: 0.6s;
+    }
+
+    .webText {
+        width: 550px;
+        height: 170px;
+        position: absolute;
+        top: 40%;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+        color: config.$black;
+        overflow: hidden;
+    }
+}
+
+.about {
+
+    li {
+        color: config.$black;
+        width: 100%;
+
+        h2,
+        h3 {
+            display: block;
+            position: relative;
+            color: config.$black;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .blue-line {
+            content: "";
+            width: 102px;
+            height: 5px;
+            background: rgb(99, 178, 255);
+            display: block;
+            margin-top: 1px;
+        }
+
+        span:nth-child(1) {
+            color: config.$blue;
+        }
+    
+    }
+
+    .typewriter h2 {
+        width: auto;
+        display: inline-block;
+        text-align: left;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 4px solid config.$blue; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        
+        animation: 
+          typing 4s steps(40, end),
+          blink-caret 0.8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { max-width: 0 }
+        to { max-width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: config.$blue; }
+      }
+    
+      .containerAbout {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        h2 {
+            color: config.$blue;
+        }
     }
 }
 
