@@ -34,6 +34,10 @@ hr {
     border: 0;
 }
 
+.pr {
+    color: config.$blue;
+}
+
 li {
     list-style: none;
     width: 150px;
@@ -388,13 +392,7 @@ a {
             display: block;
             margin-top: 1px;
         }
-        span:nth-child(1) {
-            color: config.$blue;
-        }
     
-    }
-    .web span:nth-child(1) {
-        color: config.$blue;
     }
 
     .typewriter h2 {
@@ -468,6 +466,12 @@ a {
         box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
         color: config.$black;
         overflow: hidden;
+
+        .title,
+        .sub-title,
+        .sub-desc {
+            color: config.$black;
+        }
     }
 }
 
@@ -535,5 +539,48 @@ a {
             color: config.$blue;
         }
     }
+}
+
+
+.left-line,
+.right-line {
+    .date {
+        color: config.$grey1;
+    }
+    p {
+        padding-left: 10px;
+    }
+    li {
+        /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+        position: relative;
+        
+        /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+        margin: 0;
+        padding-bottom: 0.5em;
+        padding-left: 20px;
+        z-index: 1;
+      }
+      
+      /* The actual line being placed before each list item, tweak width and color as appropriate */
+      li:before {
+        background-color: rgb(99, 178, 255);
+        width: 2px;
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 9px;
+        z-index: -1;
+      }
+          
+      /* Start the line further down on the first list item */
+      li:first-child:before { top: 15px;  }
+      
+      /* Stop the line short on the final list item */
+      li:last-child:before { height: 6px; }
+          
+      /* Styles for the SVG bullet points */
+      .bullet { margin-left: -20px; width: 20px; fill: rgb(99, 178, 255); float: left; padding-right: 10px }
+    
 }
 
