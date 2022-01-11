@@ -838,9 +838,8 @@
   padding: 0 15rem 0 0;
 }
 
-.btn-secondary, .btn-primary a, .btn-primary {
+.btn-secondary .a, .btn-secondary, .btn-primary a, .btn-primary {
   border: none;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -848,7 +847,7 @@
   border-radius: 50px;
   font-weight: bold;
 }
-.btn-secondary:hover, .btn-primary a:hover, .btn-primary:hover {
+.btn-secondary .a:hover, .btn-secondary:hover, .btn-primary a:hover, .btn-primary:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
@@ -860,8 +859,11 @@
   margin: 4px 2px;
 }
 
-.btn-secondary {
+.btn-secondary .a {
   background-color: #A4B7B4;
+  color: #FBFAF5;
+  padding: 15px 32px;
+  margin: 4px 2px;
 }
 
 html,
@@ -940,14 +942,14 @@ a {
   color: #63B2FF;
 }
 
-.triangle {
+.triangle-top {
   width: 0;
   height: 0;
   border-top: 650px solid #63B2FF;
   border-right: 1200px solid transparent;
 }
 
-.triangle ul {
+.triangle-top ul {
   position: absolute;
   top: 10%;
   left: 10%;
@@ -955,7 +957,7 @@ a {
   list-style: none;
   padding: 0;
 }
-.triangle .bi-star-fill {
+.triangle-top .bi-star-fill {
   font-size: 10px;
   position: absolute;
   padding: 0 3px;
@@ -983,14 +985,24 @@ a {
 
 .button_container {
   position: fixed;
-  top: 5%;
-  right: 2%;
+  top: 34px;
+  right: 27px;
   height: 27px;
   width: 35px;
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.25s ease;
   display: none;
+}
+
+.border {
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: #63B2FF;
+  position: fixed;
+  top: 8px;
+  right: 23px;
 }
 
 .button_container:hover {
@@ -1013,14 +1025,14 @@ a {
 }
 
 .button_container span {
-  background: #63B2FF;
+  background: #FBFAF5;
   border: none;
   border-radius: 5px;
   height: 5px;
-  width: 100%;
+  width: 30px;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 20px;
   transition: all 0.35s ease;
   cursor: pointer;
 }
@@ -1052,6 +1064,7 @@ a {
   visibility: visible;
   height: 100%;
   overflow: hidden;
+  z-index: 2;
 }
 .overlay.open .bi-star-fill {
   font-size: 10px;
@@ -1212,8 +1225,11 @@ a {
 }
 .topsection .slide-container .slide-1,
 .topsection .slide-container .slide-2 {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column: repeat(2, 1fr);
+  grid-column: auto;
   justify-items: center;
   gap: 5px;
 }
@@ -1230,8 +1246,11 @@ a {
 }
 .topsection .slide-container .slide-1 .tech-img,
 .topsection .slide-container .slide-2 .tech-img {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
+  -ms-grid-column: repeat(auto-fill, 100px);
+  grid-column: auto;
   justify-content: space-between;
   overflow: hidden;
 }
@@ -1246,8 +1265,11 @@ a {
 }
 
 .projects {
+  display: -ms-grid;
   display: grid;
   grid-template-rows: repeat(1, 2fr);
+  -ms-grid-row: repeat(1, 2fr);
+  grid-row: auto;
   gap: 10px;
   /* The typing effect */
   /* The typewriter cursor effect */
@@ -1280,7 +1302,7 @@ a {
   display: block;
   margin-top: 1px;
 }
-.projects .typewriter h2 {
+.projects .typewriter {
   width: auto;
   display: inline-block;
   text-align: left;
@@ -1290,6 +1312,8 @@ a {
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
+}
+.projects .fade-in {
   -webkit-animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
           animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
 }
@@ -1327,8 +1351,11 @@ a {
 }
 
 .containerWeb {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column: repeat(2, 1fr);
+  grid-column: auto;
   gap: 10px;
 }
 .containerWeb .Webcontainer-1 img,
@@ -1401,7 +1428,7 @@ a {
 .about li span:nth-child(1) {
   color: #63B2FF;
 }
-.about .typewriter h2 {
+.about .typewriter {
   width: auto;
   display: inline-block;
   text-align: left;
@@ -1411,6 +1438,8 @@ a {
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
+}
+.about .fade-in {
   -webkit-animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
           animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
 }
@@ -1431,8 +1460,11 @@ a {
   }
 }
 .about .containerAbout {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column: repeat(2, 1fr);
+  grid-column: auto;
   gap: 10px;
 }
 .about .containerAbout h2 {
@@ -1458,6 +1490,7 @@ a {
 .right-line li {
   /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
   position: relative;
+  z-index: 0;
   /* Use padding to space things out rather than margins as the line would get broken up otherwise */
   margin: 0;
   padding-bottom: 0.5em;
@@ -1490,4 +1523,240 @@ a {
   fill: #63b2ff;
   float: left;
   padding-right: 10px;
+}
+
+.contact {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(1, 2fr);
+  -ms-grid-row: repeat(1, 2fr);
+  grid-row: auto;
+  gap: 10px;
+  /* The typing effect */
+  /* The typewriter cursor effect */
+}
+.contact .typewriter {
+  width: auto;
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 4px solid #63B2FF;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+}
+.contact .fade-in {
+  -webkit-animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
+          animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
+}
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #63B2FF;
+  }
+}
+.contact .blue-line {
+  content: "";
+  width: 102px;
+  height: 5px;
+  background: #63b2ff;
+  display: block;
+  margin-top: 1px;
+}
+.contact li {
+  width: 100%;
+}
+.contact li .typewriter,
+.contact li h2,
+.contact li h3 {
+  color: #0E1111;
+}
+.contact li .blue-line:nth-child(3) {
+  content: "";
+  width: 50px;
+  height: 5px;
+  background: #63b2ff;
+  display: block;
+  margin-top: 1px;
+}
+.contact .row {
+  margin: -20px 0;
+}
+.contact .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contact .row .col {
+  padding: 0 20px;
+  float: left;
+  box-sizing: border-box;
+}
+.contact .row .col.x-50 {
+  width: 50%;
+}
+.contact .row .col.x-100 {
+  width: 100%;
+}
+.contact .row .col.f-r {
+  float: right;
+}
+.contact .content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.contact .get-in-touch {
+  max-width: 650px;
+  left: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
+}
+.contact .get-in-touch .title {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 36px;
+  line-height: 48px;
+  padding-bottom: 48px;
+}
+.contact .contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+.contact .contact-form .col a {
+  text-align: right;
+}
+.contact .contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 1.5px 0;
+  border-color: #63B2FF;
+  font-size: 18px;
+  line-height: 26px;
+}
+.contact .contact-form .input-text:focus {
+  outline: none;
+}
+.contact .contact-form .input-text:focus + .label, .contact .contact-form .input-text.not-empty + .label {
+  transform: translateY(-24px);
+}
+.contact .contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #63B2FF;
+  cursor: text;
+  transition: transform 0.2s ease-in-out;
+}
+.contact .note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+}
+.contact .note .link {
+  color: #A4B7B4;
+  text-decoration: none;
+}
+.contact .note .link:hover {
+  text-decoration: underline;
+}
+
+.social li h3 {
+  color: #0E1111;
+  width: 100%;
+}
+.social .icon {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+}
+.social .icon .bi-github,
+.social .icon .bi-instagram,
+.social .icon .bi-linkedin {
+  color: #0E1111;
+  opacity: 0.6;
+  font-size: 60px;
+}
+
+footer .triangle-bottom {
+  width: 0;
+  height: 0;
+  border-bottom: 500px solid #63B2FF;
+  border-left: 1150px solid transparent;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+}
+footer .triangle-bottom .initial {
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+  right: 350px;
+  width: 100%;
+}
+footer .triangle-bottom .initial h1, footer .triangle-bottom .initial h4, footer .triangle-bottom .initial p {
+  color: #FBFAF5;
+}
+footer .triangle-bottom .initial ul {
+  padding: 0;
+}
+footer .triangle-bottom .initial ul li {
+  display: block;
+}
+footer .triangle-bottom .initial ul li h1 {
+  display: flex;
+  justify-content: flex-end;
+}
+footer .triangle-bottom .initial ul li .blue-line {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #FBFAF5;
+  display: block;
+}
+footer .triangle-bottom .initial ul li h4 {
+  position: relative;
+  color: #FBFAF5;
+  text-decoration: none;
+  overflow: hidden;
+  margin: 0;
+}
+footer .triangle-bottom .initial ul li h4:hover::after, footer .triangle-bottom .initial ul li h4:focus::after, footer .triangle-bottom .initial ul li h4:active:after {
+  width: 100%;
+}
+footer .triangle-bottom .initial ul li h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FBFAF5;
+  transition: 0.35s;
+}
+footer .triangle-bottom .initial ul li .aa {
+  width: 210px;
 }/*# sourceMappingURL=style.css.map */

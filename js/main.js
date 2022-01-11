@@ -1,3 +1,5 @@
+// slider
+
 var slideIndex = 0;
 showSlides();
 
@@ -17,8 +19,10 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";
   dott[slideIndex-1].className += " active";
-  setTimeout(showSlides, 7000); // Change image every 7 seconds
+  setTimeout(showSlides, 3000); // Change image every 7 seconds
 }
+
+// scroll function
 
 $("#toggle").click(function () {
   $(this).toggleClass("active");
@@ -40,3 +44,37 @@ $("#overlay").mouseenter(function(){
 }).mouseleave(function(){
   $("body").css("overflow", "visible");
 });
+
+// contact
+
+$( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
+});
+
+//scroll reveal
+//ScrollReveal().reveal('.testing');
+document.addEventListener("DOMContentLoaded", function(event) {
+  document.addEventListener("scroll", function(event) {
+      const animatedBoxes = document.getElementsByClassName("typewriter");
+      const windowOffsetTop = window.innerHeight + window.scrollY;
+
+      Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
+          const animatedBoxOffsetTop = animatedBox.offsetTop;
+
+          if (windowOffsetTop >= animatedBoxOffsetTop) {
+              addClass(animatedBox, "fade-in");
+          }
+      });
+  });
+});
+
+function addClass(element, className) {
+  const arrayClasses = element.className.split(" ");
+  if (arrayClasses.indexOf(className) === -1) {
+      element.className += " " + className;
+  }
+}

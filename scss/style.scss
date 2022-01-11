@@ -3,6 +3,7 @@
 @use './buttons';
 @use './mobile';
 
+
 html,
 body {
     box-sizing: border-box;
@@ -83,14 +84,14 @@ a {
 }
 
     
-.triangle {
+.triangle-top {
     width: 0;
     height: 0;
     border-top: 650px solid config.$blue;
     border-right: 1200px solid transparent;
 }
 
-.triangle {
+.triangle-top {
     ul {
         position: absolute;
         top: 10%;
@@ -121,8 +122,8 @@ a {
   
 .button_container {
     position: fixed;
-    top: 5%;
-    right: 2%;
+    top: 34px;
+    right: 27px;
     height: 27px;
     width: 35px;
     cursor: pointer;
@@ -131,6 +132,15 @@ a {
     display: none;
 }
 
+.border {
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    background-color: config.$blue;
+    position: fixed;
+    top: 8px;
+    right: 23px;
+}
 .button_container:hover {
     opacity: 0.7;
 }
@@ -147,14 +157,14 @@ a {
     background: config.$white;
 }
   .button_container span {
-    background: config.$blue;
+    background: config.$white;
     border: none;
     border-radius: 5px;
     height: 5px;
-    width: 100%;
+    width: 30px;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 20px;
     transition: all 0.35s ease;
     cursor: pointer;
 }
@@ -184,6 +194,7 @@ a {
     visibility: visible;
     height: 100%;
     overflow: hidden;
+    z-index: 2;
 
     .bi-star-fill {
         font-size: 10px;
@@ -322,8 +333,11 @@ a {
 
         .slide-1,
         .slide-2 {
+            display: -ms-grid;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            -ms-grid-column: repeat(2, 1fr);
+            grid-column: auto;
             justify-items: center;
             gap: 5px;
 
@@ -338,8 +352,11 @@ a {
             }
 
             .tech-img {
+                display: -ms-grid;
                 display: grid;
                 grid-template-columns: repeat(auto-fill, 100px);
+                -ms-grid-column: repeat(auto-fill, 100px);
+                grid-column: auto;
                 justify-content: space-between;
                 overflow: hidden;
             }
@@ -358,8 +375,11 @@ a {
 }
 
 .projects {
+    display: -ms-grid;
     display: grid;
     grid-template-rows: repeat(1, 2fr);
+    -ms-grid-row: repeat(1, 2fr);
+    grid-row: auto;
     gap: 10px;
 
     li {
@@ -395,17 +415,19 @@ a {
     
     }
 
-    .typewriter h2 {
+    .typewriter {
         width: auto;
         display: inline-block;
         text-align: left;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: 4px solid config.$blue; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
-        
+      }
+
+      .fade-in {
         animation: 
-          typing 4s steps(40, end),
-          blink-caret 0.8s step-end infinite;
+        typing 4s steps(40, end),
+        blink-caret 0.8s step-end infinite;
       }
       
       /* The typing effect */
@@ -423,8 +445,11 @@ a {
 }
 
 .containerWeb {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-column: repeat(2, 1fr);
+    grid-column: auto;
     gap: 10px;
 
     .Webcontainer-1 img,
@@ -505,7 +530,7 @@ a {
     
     }
 
-    .typewriter h2 {
+    .typewriter {
         width: auto;
         display: inline-block;
         text-align: left;
@@ -513,9 +538,12 @@ a {
         border-right: 4px solid config.$blue; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
         
+      }
+
+      .fade-in {
         animation: 
-          typing 4s steps(40, end),
-          blink-caret 0.8s step-end infinite;
+        typing 4s steps(40, end),
+        blink-caret 0.8s step-end infinite;
       }
       
       /* The typing effect */
@@ -531,8 +559,11 @@ a {
       }
     
       .containerAbout {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-column: repeat(2, 1fr);
+        grid-column: auto;
         gap: 10px;
 
         h2 {
@@ -553,6 +584,7 @@ a {
     li {
         /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
         position: relative;
+        z-index: 0;
         
         /* Use padding to space things out rather than margins as the line would get broken up otherwise */
         margin: 0;
@@ -584,3 +616,277 @@ a {
     
 }
 
+.contact {
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: repeat(1, 2fr);
+    -ms-grid-row: repeat(1, 2fr);
+    grid-row: auto;
+    gap: 10px;
+
+    .typewriter {
+        width: auto;
+        display: inline-block;
+        text-align: left;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 4px solid config.$blue; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+      }
+
+      .fade-in {
+        animation: 
+        typing 4s steps(40, end),
+        blink-caret 0.8s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { max-width: 0 }
+        to { max-width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: config.$blue; }
+      }
+
+    .blue-line {
+        content: "";
+        width: 102px;
+        height: 5px;
+        background: rgb(99, 178, 255);
+        display: block;
+        margin-top: 1px;
+    }
+    
+    li {
+        width: 100%;
+
+        .typewriter,
+        h2,
+        h3 {
+            color: config.$black;
+        }
+        .blue-line:nth-child(3) {
+            content: "";
+            width: 50px;
+            height: 5px;
+            background: rgb(99, 178, 255);
+            display: block;
+            margin-top: 1px;
+        }
+    }
+    
+    // Helpers
+    @mixin clearfix {
+            &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+     // Grid
+    .row {
+        @include clearfix;
+        margin: -20px 0;
+        .col {
+            padding: 0 20px;
+            float: left;
+            box-sizing: border-box;
+            &.x-50 {
+                width: 50%;
+            }
+            &.x-100 {
+                width: 100%;
+            }
+            &.f-r {
+               float: right;
+            }
+        }
+    }
+    
+    .content-wrapper {
+        min-height: 100%;
+        position: relative;
+    }
+    
+    .get-in-touch {
+        max-width: 650px;
+        left: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+    
+        .title {
+            text-align: center;
+            font-family: Raleway, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 36px;
+            line-height: 48px;
+            padding-bottom: 48px;
+        }
+    }
+    
+    .contact-form {
+        .form-field {
+            position: relative;
+            margin: 32px 0;
+        }
+        .col a {
+            text-align: right;
+        }
+        .input-text {
+            display: block;
+            width: 100%;
+            height: 36px;
+            border-width: 0 0 1.5px 0;
+            border-color: config.$blue;
+            font-size: 18px;
+            line-height: 26px;
+            
+            &:focus {
+                outline: none;
+            }
+            
+            &:focus,
+            &.not-empty {
+                + .label {
+                    transform: translateY(-24px);
+                }
+            }
+        }
+        .label {
+            position: absolute;
+            left: 20px;
+            bottom: 11px;
+            font-size: config.$h4;
+            font-weight: bold;
+            line-height: 26px;
+            color: config.$blue;
+            cursor: text;
+            transition: transform .2s ease-in-out;
+        }
+    }
+    
+    .note {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 21px;
+        
+        .link {
+            color: config.$grey1;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.social {
+
+    li {
+        h3 {
+            color: config.$black;
+            width: 100%;
+        }
+    }
+
+    .icon {
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-start;
+
+        .bi-github,
+        .bi-instagram,
+        .bi-linkedin {
+            color: config.$black;
+            opacity: 0.6;
+            font-size: 60px;
+        }
+
+    }
+}
+
+footer {
+    .triangle-bottom {
+        width: 0;
+        height: 0;
+        border-bottom: 500px solid config.$blue;
+        border-left: 1150px solid transparent;
+        position: relative;
+        margin-left: auto; 
+        margin-right: 0;
+
+        .initial {
+            position: absolute;
+            top: 150px;
+            bottom: 0;
+            right: 350px;
+            width: 100%;
+            
+            h1, h4, p {
+                color: config.$white;
+            }
+
+            ul{
+                padding: 0;
+                li {
+                    display: block;
+                    h1 {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                    .blue-line {
+                        content: "";
+                        width: 100%;
+                        height: 3px;
+                        background: config.$white;
+                        display: block;
+                    }
+
+                    h4 {
+                        position: relative;
+                        color: config.$white;
+                        text-decoration: none;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+                
+                    h4:hover::after, h4:focus::after, h4:active:after {
+                        width: 100%;
+                    }
+                
+                    h4::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0%;
+                        width: 0%;
+                        transform: translateX(-50%);
+                        height: 3px;
+                        background: config.$white;
+                        transition: 0.35s;
+                    }
+
+                    .aa {
+                        width: 210px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+  

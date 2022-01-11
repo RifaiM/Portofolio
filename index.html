@@ -8,14 +8,31 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" crossorigin="anonymous">
 
     <!--Bootstrap Icon Fonts-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" crossorigin="anonymous">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--animate css
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    -->
+
+    <!--
+    <link rel="stylesheet" href="./css/scrollCue-2.0.0/scrollCue.css">
+    -->
     
-    <link rel="stylesheet" href="./css/style.css"> 
+    <!--reveal on scroll
+    <script src="https://unpkg.com/scrollreveal"></script>
+    -->
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
     <title>Welcome</title>
     <meta name="description" content="Mochammad Rifai Personal Projects using Sass">
     <meta name="keywords" content="About Mochammad Rifai, Mochammad Rifai Personal Projects, Mochammad Rifai Contacts">
@@ -24,7 +41,7 @@
     
     <header>
         <nav>
-            <div class="triangle">
+            <div class="triangle-top">
                 <ul>
                     <li class="px-1"><a href="">projects</a></li>
                     <li class="px-1"><a href="">about me</a></li>
@@ -33,9 +50,10 @@
             </div>
         </nav>
         <div class="button_container" id="toggle">
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
+            <div class="border"></div>
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
         </div>
         <div class="overlay" id="overlay">
             <div class="overlay-menu">
@@ -66,14 +84,14 @@
                             <hr>
                             <div class="tech">
                                 <p class="my-1">I am a Junior Front-end Web Developer who does a bit of web design.</p>
-                                <div class="tech-img">
-                                    <img src="./img/html5.png" alt="">
-                                    <img src="./img/sass.png" alt="">
-                                    <img src="./img/javascript.png" alt="">
-                                    <img class="php" src="./img/php.png" alt="">
-                                </div>
-                                <p class="my-1">My main areas of expertise include Javascript, HTML, CSS ..SASS, and PHP.</p>
                             </div>
+                            <div class="tech-img">
+                                <img src="./img/html5.png" alt="">
+                                <img src="./img/sass.png" alt="">
+                                <img src="./img/javascript.png" alt="">
+                                <img class="php" src="./img/php.png" alt="">
+                            </div>
+                                <p class="my-1">My main areas of expertise include Javascript, HTML, CSS ..SASS, and PHP.</p>
                             <div class="btn-primary pt-1">
                                 <a href="#/">Contact me</a>
                             </div>
@@ -88,21 +106,31 @@
                         
                         <div class="leftSide">
                             <div class="name">
-                                <h3 class="mt-2">I am also a</h2>
-                                <h2 class="my-1">UI Designer</h1>
+                                <div class="fadeInLeft">
+                                    <h3 class="mt-2">I am also a</h2>
+                                </div>
+                                <div class="fadeInLeft">
+                                    <h2 class="my-1">UI Designer</h1>
+                                </div>
                             </div>
                             <hr>
                             <div class="tech">
-                                <p class="my-1">My main tool to design:</p>
+                                <div class="fadeInLeft">
+                                    <p class="my-1">My main tool to design:</p>
+                                </div>
                                 <div class="tech-img">
                                     <img src="./img/figma.png" alt="">
                                     <img src="./img/mockplus.png" alt="">
                                     
                                 </div>
-                                <p class="my-1">I have a solid knowledge in UI design. Figma & Mockplus are my friends.</p>
+                                <div class="fadeInLeft">
+                                    <p class="my-1">I have a solid knowledge in UI design. Figma & Mockplus are my friends.</p>
+                                </div>
                             </div>
-                            <div class="btn-primary pt-1">
-                                <a href="#/">See my work</a>
+                            <div class="fadeInLeft">
+                                <div class="btn-primary pt-1">
+                                    <a href="#/">See my work</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,32 +148,32 @@
         <section class="projects mt-12 px-2">
             <ul class="p-1">
                 <li>
-                    <div class="typewriter">
-                        <h2 class="mt-1">projects<span class="pr">.</span></h2>
+                    <div class="large-text">
+                        <h2 class="mt-1 typewriter">projects<span class="pr">.</span></h2>
+                        <span class="blue-line"></span>
+                        <h3 class="mt-5">web design & development<span class="pr">.</span></h3>
+                        <span class="blue-line"></span>
                     </div>
-                    <span class="blue-line"></span>
-                    <h3 class="mt-5">web design & development<span class="pr">.</span></h3>
-                    <span class="blue-line"></span>
                 </li>
             </ul>
             <div class="containerWeb">
                 <div class="web my-3">
                     <div class="Webcontainer-1">
-                        <a href="https://www.google.com/"><img class="px-1 mx-1" src="./img/pisang_ijo.png" alt=""></a>
+                        <a href="#"><img class="px-1 mx-1" src="./img/pisang_ijo.png" alt="" aria-label="See the website"></a>
                         <div class="webText px-2">
-                            <a href="https://www.google.com/"><h3 class="my-1 title">Es Pisang Ijo<span class="pr">.</span></h3></a>
-                            <a href="https://www.google.com/"><h4 class="my-1 sub-title">Product showcase website</h4></a>
-                            <a href="https://www.google.com/"><p class="sub-desc">web development | web design</p></a>
+                            <a href="#"><h3 class="my-1 title">Es Pisang Ijo<span class="pr">.</span></h3></a>
+                            <a href="#"><h4 class="my-1 sub-title">Product showcase website</h4></a>
+                            <a href="#"><p class="sub-desc">web development | web design</p></a>
                         </div>
                     </div>
                 </div>
                 <div class="web my-3">
                     <div class="Webcontainer-2">
-                        <a href="https://www.google.com/"><img class="px-1 mx-1" src="./img/dapur_mamizey.png" alt=""></a>
+                        <a href="#"><img class="px-1 mx-1" src="./img/dapur_mamizey.png" alt="" aria-label="See the website"></a>
                         <div class="webText px-1">
-                            <a href="https://www.google.com/"><h3 class="my-1 title">Dapur Mamizey<span class="pr">.</span></h3></a>
-                            <a href="https://www.google.com/"><h4 class="my-1 sub-title">Product showcase website</h4></a>
-                            <a href="https://www.google.com/"><p class="sub-desc">web development | web design</p></a>
+                            <a href="#"><h3 class="my-1 title">Dapur Mamizey<span class="pr">.</span></h3></a>
+                            <a href="#"><h4 class="my-1 sub-title">Product showcase website</h4></a>
+                            <a href="#"><p class="sub-desc">web development | web design</p></a>
                         </div>
                     </div>
                 </div>
@@ -154,8 +182,8 @@
         <section class="about px-2">
             <ul class="p-1">
                 <li>
-                    <div class="typewriter">
-                        <h2 class="mt-1">about me<span class="pr">.</span></h2>
+                    <div class="large-text">
+                        <h2 class="mt-1 typewriter">about me<span class="pr">.</span></h2>
                         <span class="blue-line"></span>
                     </div>
                 </li>
@@ -212,8 +240,113 @@
                 </div>
             </div>
         </section>
+
+        <section class="contact px-2">
+            <ul class="p-1">
+                <li>
+                    <div class="large-text">
+                        <h2 class="mt-1 typewriter">contact<span class="pr">.</span></h2>
+                        <span class="blue-line"></span>
+                    </div>
+                    <h3 class="mt-5">send me a message<span class="pr">!</span></h3>
+                    <span class="blue-line"></span>
+                </li>
+            </ul>
+            <div class="containerContact p-1">
+                <div class="get-in-touch my-1">
+                    <form class="contact-form row" method="POST" name="form" data-netlify="true" netlify-honeypot="bot-field">
+                        <div hidden aria-hidden="true">
+                            <label>
+                              Don’t fill this out if you're human: 
+                              <input name="bot-field" />
+                            </label>
+                        </div>
+                        <div class="form-field col x-50">
+                            <input name="name" id="name" class="input-text js-input" type="text" required>
+                            <label class="label" for="name">Name</label>
+                        </div>
+                        <div class="form-field col x-50">
+                            <input name="email" id="email" class="input-text js-input" type="email" required>
+                            <label class="label" for="email">E-mail</label>
+                        </div>
+                        <div class="form-field col x-100">
+                            <input name="message" id="message" class="input-text js-input" type="text" required>
+                            <label class="label" for="message">Message</label>
+                        </div>
+                        
+                        <div class="form-field col btn-secondary pt-1 f-r">
+                            <input type="submit" class="a" value="Send">
+                        </div>
+                        <!--
+                        <div class="btn-secondary pt-1 form-field col f-r">
+                            <a href="#/">Send</a>
+                        </div>
+                        -->
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="social px-2">
+            <ul class="p-1">
+                <li>
+                    <div data-aos="zoom-in" data-aos-duration="500">
+                        <div class="headtextSocial">
+                            <h3 class="mt-1">social<span class="pr">.</span></h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="icon px-1">
+                <div data-aos="zoom-in" data-aos-duration="700">
+                    <div class="github">
+                        <a href="#" aria-label="See the website"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="linkedin">
+                        <a href="#" aria-label="See the website"><i class="bi bi-linkedin ps-2"></i></a>
+                    </div>
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1300">
+                    <div class="instagram">
+                        <a href="#" aria-label="See the website"><i class="bi bi-instagram ps-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="triangle-bottom">
+                <div class="initial">
+                    <ul>
+                        <li>
+                            <div class="aa">
+                                <h1 class="mt-1">R.</h1>
+                                <span class="blue-line"></span>
+                                <p class="mt-1">Website design and code by</p>
+                                <h4>Rifai. M</h2>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </main>
 
+    <!--
+    <script src="./css/scrollCue-2.0.0/scrollCue.js"></script>
+    -->
+
+    <!--AOS-->
+    <script>
+        AOS.init({once: true});
+    </script>
+
     <script src="./js/main.js"></script>
+
+    <!--
+    <script>scrollCue.init({duration : 600});</script>
+    -->
 </body>
 </html>
