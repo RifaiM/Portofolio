@@ -891,12 +891,6 @@ p {
   font-size: 16px;
 }
 
-hr {
-  background-color: #63B2FF;
-  height: 3px;
-  border: 0;
-}
-
 .pr {
   color: #63B2FF;
 }
@@ -945,7 +939,7 @@ a {
 .triangle-top {
   width: 0;
   height: 0;
-  border-top: 650px solid #63B2FF;
+  border-top: 600px solid #63B2FF;
   border-right: 1200px solid transparent;
 }
 
@@ -1180,10 +1174,18 @@ a {
 }
 .topsection {
   position: absolute;
-  top: 45%;
-  left: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
   /* The dots/bullets/indicators */
   /* Fading animation */
+}
+.topsection .dots {
+  display: flex;
+  justify-content: center;
+  width: 75%;
 }
 .topsection .dot {
   cursor: pointer;
@@ -1220,23 +1222,25 @@ a {
     opacity: 1;
   }
 }
+.topsection .slide-container {
+  width: 100%;
+  height: 100%;
+}
 .topsection .slide-container .slide-show {
   display: none;
 }
 .topsection .slide-container .slide-1,
 .topsection .slide-container .slide-2 {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  -ms-grid-column: repeat(2, 1fr);
-  grid-column: auto;
-  justify-items: center;
-  gap: 5px;
+  gap: 100px;
 }
-.topsection .slide-container .slide-1 .rightSide img,
-.topsection .slide-container .slide-2 .rightSide img {
+.topsection .slide-container .slide-1 .leftSide img,
+.topsection .slide-container .slide-2 .leftSide img {
   width: 217px;
   height: 412px;
+  display: block;
+  margin-left: auto;
 }
 .topsection .slide-container .slide-1 .name,
 .topsection .slide-container .slide-1 p,
@@ -1262,6 +1266,14 @@ a {
 .topsection .slide-container .slide-1 .tech-img .php,
 .topsection .slide-container .slide-2 .tech-img .php {
   border-radius: 10px;
+}
+.topsection .slide-container .slide-1 .rightSide .blue-line,
+.topsection .slide-container .slide-2 .rightSide .blue-line {
+  width: 90%;
+  height: 3px;
+  background: #63b2ff;
+  display: block;
+  margin-top: 1px;
 }
 
 .projects {
@@ -1742,9 +1754,10 @@ footer .triangle-bottom .initial ul li h4 {
   text-decoration: none;
   overflow: hidden;
   margin: 0;
+  padding-bottom: 5px;
 }
 footer .triangle-bottom .initial ul li h4:hover::after, footer .triangle-bottom .initial ul li h4:focus::after, footer .triangle-bottom .initial ul li h4:active:after {
-  width: 100%;
+  width: 60%;
 }
 footer .triangle-bottom .initial ul li h4::after {
   content: "";

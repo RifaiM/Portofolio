@@ -19,7 +19,7 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";
   dott[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000); // Change image every 7 seconds
+  setTimeout(showSlides, 5000); // Change image every 7 seconds
 }
 
 // scroll function
@@ -45,7 +45,7 @@ $("#overlay").mouseenter(function(){
   $("body").css("overflow", "visible");
 });
 
-// contact
+// contact form
 
 $( '.js-input' ).keyup(function() {
   if( $(this).val() ) {
@@ -57,6 +57,7 @@ $( '.js-input' ).keyup(function() {
 
 //scroll reveal
 //ScrollReveal().reveal('.testing');
+
 document.addEventListener("DOMContentLoaded", function(event) {
   document.addEventListener("scroll", function(event) {
       const animatedBoxes = document.getElementsByClassName("typewriter");
