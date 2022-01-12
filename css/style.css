@@ -1231,8 +1231,11 @@ a {
 }
 .topsection .slide-container .slide-1,
 .topsection .slide-container .slide-2 {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column: repeat(2, 1fr);
+  grid-column: auto;
   gap: 100px;
 }
 .topsection .slide-container .slide-1 .leftSide img,
