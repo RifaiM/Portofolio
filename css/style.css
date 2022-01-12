@@ -900,6 +900,7 @@ li {
   width: 150px;
   color: #FBFAF5;
   font-size: 20px;
+  z-index: 1;
 }
 li a {
   display: block;

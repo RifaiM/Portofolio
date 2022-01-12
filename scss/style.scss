@@ -29,8 +29,6 @@ p {
     font-size: config.$p;
 }
 
-
-
 .pr {
     color: config.$blue;
 }
@@ -40,6 +38,7 @@ li {
     width: 150px;
     color: config.$white;
     font-size: 20px;
+    z-index: 1;
 
     a {
         display: block;
