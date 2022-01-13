@@ -13,6 +13,8 @@ body {
     padding: 0;
 }
 
+/* GLOBAL STYLE */
+
 h1 {
     font-size: config.$h1;
 }
@@ -29,41 +31,8 @@ p {
     font-size: config.$p;
 }
 
-.pr {
-    color: config.$blue;
-}
-
 li {
     list-style: none;
-    width: 150px;
-    color: config.$white;
-    font-size: 20px;
-    z-index: 1;
-
-    a {
-        display: block;
-        position: relative;
-        color: config.$white;
-        text-decoration: none;
-        overflow: hidden;
-        padding-bottom: 5px;
-    }
-
-    a:hover::after, a:focus::after, a:active:after {
-        width: 100%;
-    }
-
-    a::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0%;
-        width: 0%;
-        transform: translateX(-50%);
-        height: 3px;
-        background: config.$white;
-        transition: 0.35s;
-    }
 }
 
 a {
@@ -71,394 +40,432 @@ a {
     color: config.$white;
 }
 
-.initial {
-    position: absolute;
-    top: 0;
-    right: 10%;
+/* DOTTED AFTER TEXT */
+
+.pr {
     color: config.$blue;
 }
 
-    
-.triangle-top {
-    width: 0;
-    height: 0;
-    border-top: 600px solid config.$blue;
-    border-right: 1200px solid transparent;
+/* BLUE LINE BELOW TEXT */
+
+.blue-line {
+    content: "";
+    width: 102px;
+    height: 5px;
+    background: rgb(99, 178, 255);
+    display: block;
+    margin-top: 5px;
 }
 
-.triangle-top {
-    ul {
+.blue-line:nth-child(3),
+.blue-line:nth-child(4) {
+    width: 51px;
+    height: 5px;
+    background: rgb(99, 178, 255);
+    display: block;
+    margin-top: 5px;
+}
+
+/* TYPEWRITER EFFECTS */
+
+.typewriter {
+    width: auto;
+    display: inline-block;
+    text-align: left;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 4px solid config.$blue; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+  }
+
+  .fade-in {
+    animation: 
+    typing 4s steps(40, end),
+    blink-caret 0.8s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { max-width: 0 }
+    to { max-width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: config.$blue; }
+  }
+
+/* HEADER */
+
+header {
+    .triangle-top {
+        width: 0;
+        height: 0;
+        border-top: 600px solid config.$blue;
+        border-right: 1200px solid transparent;
+
+        ul {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+    
+        .bi-star-fill {
+            font-size: 10px;
+            position: absolute;
+            padding: 0 3px;
+            top: 0;
+            right: 13%;
+            animation: loading 3s linear infinite;
+    
+            @keyframes loading {
+                0% { 
+                    transform: rotate(0); 
+                }
+                100% { 
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    
+        li {
+            list-style: none;
+            width: 150px;
+            color: config.$white;
+            font-size: config.$h4;
+            z-index: 1;
+        
+            a {
+                display: block;
+                position: relative;
+                color: config.$white;
+                text-decoration: none;
+                overflow: hidden;
+                padding-bottom: 5px;
+            }
+        
+            a:hover::after, a:focus::after, a:active:after {
+                width: 100%;
+            }
+        
+            a::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0%;
+                width: 0%;
+                transform: translateX(-50%);
+                height: 3px;
+                background: config.$white;
+                transition: 0.35s;
+            }
+        }
+
+        .topsection {
+    
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 100%;
+        
+        
+             /* The dots/bullets/indicators */
+             .dots {
+                 display: flex;
+                 justify-content: center;
+                 width: 75%;
+             }
+             .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+        
+            .active, .dot:hover {
+                background-color: #717171;
+              }
+              
+            /* Fading animation */
+            .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+            
+            @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+            
+            @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+        
+            .slide-container {
+        
+                width: 100%;
+                height: 100%;
+        
+                .slide-show {
+                    display: none;
+                }
+        
+                .slide-1,
+                .slide-2 {
+                    display: -ms-grid;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    -ms-grid-column: repeat(2, 1fr);
+                    grid-column: auto;
+                    gap: 100px;
+        
+                    .leftSide img {
+                        width: 217px;
+                        height: 412px;
+                        display: block;
+                        margin-left: auto;
+                        
+                    }
+        
+                    .name,
+                    p {
+                        text-align: left;
+                    }
+        
+                    .tech-img {
+                        display: -ms-grid;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, 100px);
+                        -ms-grid-column: repeat(auto-fill, 100px);
+                        grid-column: auto;
+                        justify-content: space-between;
+                        overflow: hidden;
+                    }
+        
+                    .tech-img img {
+                        width: 80px;
+                        height: 80px;
+                    }
+        
+                    .tech-img .php {
+                        border-radius: 10px;
+                    }
+        
+                    .rightSide .blue-line {
+                        width: 90%;
+                        height: 3px;
+                        background: rgb(99, 178, 255);
+                        display: block;
+                        margin-top: 1px;
+                    }
+                }
+            
+            }
+        }
+    }
+
+    .button_container {
+        position: fixed;
+        top: 34px;
+        right: 27px;
+        height: 27px;
+        width: 35px;
+        cursor: pointer;
+        z-index: 100;
+        transition: opacity 0.25s ease;
+        display: none;
+    }
+    
+    .border {
+        border-radius: 50px;
+        width: 80px;
+        height: 80px;
+        background-color: config.$blue;
+        position: fixed;
+        top: 8px;
+        right: 23px;
+    }
+    .button_container:hover {
+        opacity: 0.7;
+    }
+    .button_container.active .top {
+        transform: translateY(11px) translateX(0) rotate(45deg);
+        background: config.$white;
+    }
+      .button_container.active .middle {
+        opacity: 0;
+        background: config.$white;
+    }
+      .button_container.active .bottom {
+        transform: translateY(-11px) translateX(0) rotate(-45deg);
+        background: config.$white;
+    }
+      .button_container span {
+        background: config.$white;
+        border: none;
+        border-radius: 5px;
+        height: 5px;
+        width: 30px;
         position: absolute;
-        top: 10%;
-        left: 10%;
-        display: flex;
+        top: 0;
+        right: 20px;
+        transition: all 0.35s ease;
+        cursor: pointer;
+    }
+      .button_container span:nth-of-type(2) {
+        top: 11px;
+    }
+      .button_container span:nth-of-type(3) {
+        top: 22px;
+    }
+      
+    .overlay {
+        position: fixed;
+        background: config.$blue;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s, visibility 0.8s, height 0.35s;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .overlay.open {
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+        overflow: hidden;
+        z-index: 2;
+    
+        .bi-star-fill {
+            font-size: 10px;
+            position: absolute;
+            padding: 0 3px;
+            top: 0;
+            right: 5%;
+            animation: loading 3s linear infinite;
+            color: config.$white;
+    
+            @keyframes loading {
+                0% { 
+                    transform: rotate(0); 
+                }
+                100% { 
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    .overlay.open li {
+        animation: fadeInRight 0.5s ease forwards;
+        animation-delay: 0.35s;
+    }
+    .overlay.open li:nth-of-type(2) {
+        animation-delay: 0.4s;
+    }
+    .overlay.open li:nth-of-type(3) {
+        animation-delay: 0.45s;
+    }
+    .overlay.open li:nth-of-type(4) {
+        animation-delay: 0.5s;
+    }
+    .overlay .overlay-menu {
+        position: relative;
+        height: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: config.$h3;
+        text-align: center;
+    }
+    .overlay ul {
         list-style: none;
         padding: 0;
-    }
-
-    .bi-star-fill {
-        font-size: 10px;
-        position: absolute;
-        padding: 0 3px;
-        top: 0;
-        right: 13%;
-        animation: loading 3s linear infinite;
-
-        @keyframes loading {
-            0% { 
-                transform: rotate(0); 
-            }
-            100% { 
-                transform: rotate(360deg);
-            }
-        }
-    }
-}
-  
-.button_container {
-    position: fixed;
-    top: 34px;
-    right: 27px;
-    height: 27px;
-    width: 35px;
-    cursor: pointer;
-    z-index: 100;
-    transition: opacity 0.25s ease;
-    display: none;
-}
-
-.border {
-    border-radius: 50px;
-    width: 80px;
-    height: 80px;
-    background-color: config.$blue;
-    position: fixed;
-    top: 8px;
-    right: 23px;
-}
-.button_container:hover {
-    opacity: 0.7;
-}
-.button_container.active .top {
-    transform: translateY(11px) translateX(0) rotate(45deg);
-    background: config.$white;
-}
-  .button_container.active .middle {
-    opacity: 0;
-    background: config.$white;
-}
-  .button_container.active .bottom {
-    transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: config.$white;
-}
-  .button_container span {
-    background: config.$white;
-    border: none;
-    border-radius: 5px;
-    height: 5px;
-    width: 30px;
-    position: absolute;
-    top: 0;
-    right: 20px;
-    transition: all 0.35s ease;
-    cursor: pointer;
-}
-  .button_container span:nth-of-type(2) {
-    top: 11px;
-}
-  .button_container span:nth-of-type(3) {
-    top: 22px;
-}
-  
-.overlay {
-    position: fixed;
-    background: config.$blue;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s, visibility 0.8s, height 0.35s;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.overlay.open {
-    opacity: 1;
-    visibility: visible;
-    height: 100%;
-    overflow: hidden;
-    z-index: 2;
-
-    .bi-star-fill {
-        font-size: 10px;
-        position: absolute;
-        padding: 0 3px;
-        top: 0;
-        right: 20%;
-        animation: loading 3s linear infinite;
-
-        @keyframes loading {
-            0% { 
-                transform: rotate(0); 
-            }
-            100% { 
-                transform: rotate(360deg);
-            }
-        }
-    }
-}
-.overlay.open li {
-    animation: fadeInRight 0.5s ease forwards;
-    animation-delay: 0.35s;
-}
-.overlay.open li:nth-of-type(2) {
-    animation-delay: 0.4s;
-}
-.overlay.open li:nth-of-type(3) {
-    animation-delay: 0.45s;
-}
-.overlay.open li:nth-of-type(4) {
-    animation-delay: 0.5s;
-}
-.overlay .overlay-menu {
-    position: relative;
-    height: 70%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-    text-align: center;
-}
-.overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%;
-}
-.overlay ul li {
-    display: block;
-    height: 25%;
-    height: calc(100% / 4);
-    min-height: 50px;
-    position: relative;
-    opacity: 0;
-}
-.overlay ul li a {
-    display: block;
-    position: relative;
-    color: config.$white;
-    text-decoration: none;
-    overflow: hidden;
-}
-.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-    width: 50%;
-}
-.overlay ul li a:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0%;
-    transform: translateX(-50%);
-    height: 3px;
-    background: config.$white;
-    transition: 0.35s;
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        left: 20%;
-    }
-    100% {
-        opacity: 1;
-        left: 0;
-    }
-}
-
-
-.topsection {
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    width: 100%;
-
-
-     /* The dots/bullets/indicators */
-     .dots {
-         display: flex;
-         justify-content: center;
-         width: 75%;
-     }
-     .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
+        margin: 0 auto;
         display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active, .dot:hover {
-        background-color: #717171;
-      }
-      
-    /* Fading animation */
-    .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-    }
-    
-    @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-    }
-
-    .slide-container {
-
-        width: 100%;
+        position: relative;
         height: 100%;
-
-        .slide-show {
-            display: none;
-        }
-
-        .slide-1,
-        .slide-2 {
-            display: -ms-grid;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            -ms-grid-column: repeat(2, 1fr);
-            grid-column: auto;
-            gap: 100px;
-
-            .leftSide img {
-                width: 217px;
-                height: 412px;
-                display: block;
-                margin-left: auto;
-                
-            }
-
-            .name,
-            p {
-                text-align: left;
-            }
-
-            .tech-img {
-                display: -ms-grid;
-                display: grid;
-                grid-template-columns: repeat(auto-fill, 100px);
-                -ms-grid-column: repeat(auto-fill, 100px);
-                grid-column: auto;
-                justify-content: space-between;
-                overflow: hidden;
-            }
-
-            .tech-img img {
-                width: 80px;
-                height: 80px;
-            }
-
-            .tech-img .php {
-                border-radius: 10px;
-            }
-
-            .rightSide .blue-line {
-                width: 90%;
-                height: 3px;
-                background: rgb(99, 178, 255);
-                display: block;
-                margin-top: 1px;
-            }
-        }
-    
     }
+    .overlay ul li {
+        display: block;
+        height: 25%;
+        height: calc(100% / 4);
+        min-height: 50px;
+        position: relative;
+        opacity: 0;
+    }
+    .overlay ul li a {
+        display: block;
+        position: relative;
+        color: config.$white;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+        width: 50%;
+    }
+    .overlay ul li a:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        transform: translateX(-50%);
+        height: 3px;
+        background: config.$white;
+        transition: 0.35s;
+    }
+    
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            left: 20%;
+        }
+        100% {
+            opacity: 1;
+            left: 0;
+        }
+    }
+
+    .initial {
+        position: absolute;
+        top: 0;
+        right: 10%;
+        color: config.$blue;
+    }
+
 }
 
+/* PROJECTS SECTION */
 
 .projects {
-    display: -ms-grid;
-    display: grid;
-    grid-template-rows: repeat(1, 2fr);
-    -ms-grid-row: repeat(1, 2fr);
-    grid-row: auto;
-    gap: 10px;
 
-    li {
+    .heading-text {
         color: config.$black;
-        width: 100%;
 
-        h2,
-        h3 {
-            display: block;
-            position: relative;
+        .large-text {
+            width: 100%;
+            display: inline-block;
             color: config.$black;
             text-decoration: none;
             overflow: hidden;
         }
-
-        .blue-line {
-            content: "";
-            width: 102px;
-            height: 5px;
-            background: rgb(99, 178, 255);
-            display: block;
-            margin-top: 1px;
-        }
-
-        .blue-line:nth-child(4) {
-            content: "";
-            width: 50px;
-            height: 5px;
-            background: rgb(99, 178, 255);
-            display: block;
-            margin-top: 1px;
-        }
     
     }
-
-    .typewriter {
-        width: auto;
-        display: inline-block;
-        text-align: left;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: 4px solid config.$blue; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-      }
-
-      .fade-in {
-        animation: 
-        typing 4s steps(40, end),
-        blink-caret 0.8s step-end infinite;
-      }
-      
-      /* The typing effect */
-      @keyframes typing {
-        from { max-width: 0 }
-        to { max-width: 100% }
-      }
-      
-      /* The typewriter cursor effect */
-      @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: config.$blue; }
-      }
     
 }
 
@@ -470,19 +477,29 @@ a {
     grid-column: auto;
     gap: 10px;
 
-    .Webcontainer-1 img,
-    .Webcontainer-2 img {
-        width: 450px;
-        height: 280px;
-        box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
-    }
-
     .Webcontainer-1,
     .Webcontainer-2 {
         position: relative;
 
         p {
             color: config.$grey1;
+        }
+
+        .webText {
+            width: 550px;
+            height: 170px;
+            position: absolute;
+            top: 40%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+            color: config.$black;
+            overflow: hidden;
+    
+            .title,
+            .sub-title,
+            .sub-desc {
+                color: config.$black;
+            }
         }
     }
     .Webcontainer-1:hover,
@@ -494,87 +511,39 @@ a {
         }
     }
 
+    .Webcontainer-1 img,
+    .Webcontainer-2 img {
+        width: 450px;
+        height: 280px;
+        box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+    }
+
     .Webcontainer-1:hover img,
     .Webcontainer-2:hover img {
         transform: translateY(-20%);
         transition: 0.6s;
     }
-
-    .webText {
-        width: 550px;
-        height: 170px;
-        position: absolute;
-        top: 40%;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
-        color: config.$black;
-        overflow: hidden;
-
-        .title,
-        .sub-title,
-        .sub-desc {
-            color: config.$black;
-        }
-    }
 }
+
+/* ABOUT SECTION */
 
 .about {
 
-    li {
-        color: config.$black;
-        width: 100%;
+    .heading-text {
 
-        h2,
-        h3 {
-            display: block;
-            position: relative;
+        .large-text {
+            width: 100%;
+            display: inline-block;
             color: config.$black;
             text-decoration: none;
             overflow: hidden;
-        }
-
-        .blue-line {
-            content: "";
-            width: 102px;
-            height: 5px;
-            background: rgb(99, 178, 255);
-            display: block;
-            margin-top: 1px;
-        }
-
-        span:nth-child(1) {
-            color: config.$blue;
+    
+            span:nth-child(1) {
+                color: config.$blue;
+            }
         }
     
     }
-
-    .typewriter {
-        width: auto;
-        display: inline-block;
-        text-align: left;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: 4px solid config.$blue; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        
-      }
-
-      .fade-in {
-        animation: 
-        typing 4s steps(40, end),
-        blink-caret 0.8s step-end infinite;
-      }
-      
-      /* The typing effect */
-      @keyframes typing {
-        from { max-width: 0 }
-        to { max-width: 100% }
-      }
-      
-      /* The typewriter cursor effect */
-      @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: config.$blue; }
-      }
     
       .containerAbout {
         display: -ms-grid;
@@ -582,57 +551,67 @@ a {
         grid-template-columns: repeat(2, 1fr);
         -ms-grid-column: repeat(2, 1fr);
         grid-column: auto;
-        gap: 10px;
+        gap: 50px;
 
         h2 {
             color: config.$blue;
         }
-    }
-}
 
+        li {
+            /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+            position: relative;
+            z-index: 0;
+            
+            /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+            margin: 0;
+            padding-bottom: 8px;
+            z-index: 1;
+            width: 100%;
 
-.left-line,
-.right-line {
-    .date {
-        color: config.$grey1;
-    }
-    p {
-        padding-left: 10px;
-    }
-    li {
-        /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
-        position: relative;
-        z-index: 0;
+            h4, p {
+                color: config.$black;
+                padding-left: 30px;
+            }
+        }
+
+        /* The actual line being placed before each list item, tweak width and color as appropriate */
+        li:before {
+            background-color: rgb(99, 178, 255);
+            width: 2px;
+            content: '';
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 9px;
+            z-index: -1;
+          }
+              
+        /* Start the line further down on the first list item */
+        li:first-child:before { 
+            top: 15px;  
+        }
         
-        /* Use padding to space things out rather than margins as the line would get broken up otherwise */
-        margin: 0;
-        padding-bottom: 0.5em;
-        padding-left: 20px;
-        z-index: 1;
-      }
-      
-      /* The actual line being placed before each list item, tweak width and color as appropriate */
-      li:before {
-        background-color: rgb(99, 178, 255);
-        width: 2px;
-        content: '';
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 9px;
-        z-index: -1;
-      }
-          
-      /* Start the line further down on the first list item */
-      li:first-child:before { top: 15px;  }
-      
-      /* Stop the line short on the final list item */
-      li:last-child:before { height: 6px; }
-          
-      /* Styles for the SVG bullet points */
-      .bullet { margin-left: -20px; width: 20px; fill: rgb(99, 178, 255); float: left; padding-right: 10px }
-    
+        /* Stop the line short on the final list item */
+        li:last-child:before { 
+            height: 6px; 
+        }
+            
+        /* Styles for the SVG bullet points */
+        .bullet { 
+            margin-left: px;
+            width: 20px;
+            fill: rgb(99, 178, 255);
+            float: left;
+        }
+
+        .date {
+            color: config.$grey1;
+        }
+
+    }
 }
+
+/* CONTACT SECTION */
 
 .contact {
     display: -ms-grid;
@@ -641,42 +620,6 @@ a {
     -ms-grid-row: repeat(1, 2fr);
     grid-row: auto;
     gap: 10px;
-
-    .typewriter {
-        width: auto;
-        display: inline-block;
-        text-align: left;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: 4px solid config.$blue; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-      }
-
-      .fade-in {
-        animation: 
-        typing 4s steps(40, end),
-        blink-caret 0.8s step-end infinite;
-      }
-      
-      /* The typing effect */
-      @keyframes typing {
-        from { max-width: 0 }
-        to { max-width: 100% }
-      }
-      
-      /* The typewriter cursor effect */
-      @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: config.$blue; }
-      }
-
-    .blue-line {
-        content: "";
-        width: 102px;
-        height: 5px;
-        background: rgb(99, 178, 255);
-        display: block;
-        margin-top: 1px;
-    }
     
     li {
         width: 100%;
@@ -685,14 +628,6 @@ a {
         h2,
         h3 {
             color: config.$black;
-        }
-        .blue-line:nth-child(3) {
-            content: "";
-            width: 50px;
-            height: 5px;
-            background: rgb(99, 178, 255);
-            display: block;
-            margin-top: 1px;
         }
     }
     
@@ -737,16 +672,6 @@ a {
         top: 50%;
         transform: translateY(-50%);
         box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
-    
-        .title {
-            text-align: center;
-            font-family: Raleway, sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 36px;
-            line-height: 48px;
-            padding-bottom: 48px;
-        }
     }
     
     .contact-form {
@@ -763,7 +688,7 @@ a {
             height: 36px;
             border-width: 0 0 1.5px 0;
             border-color: config.$blue;
-            font-size: 18px;
+            font-size: config.$p;
             line-height: 26px;
             
             &:focus {
@@ -787,6 +712,7 @@ a {
             color: config.$blue;
             cursor: text;
             transition: transform .2s ease-in-out;
+            padding: 5px 0;
         }
     }
     
@@ -796,7 +722,7 @@ a {
         bottom: 10px;
         width: 100%;
         text-align: center;
-        font-size: 16px;
+        font-size: config.$p;
         line-height: 21px;
         
         .link {
@@ -810,12 +736,13 @@ a {
 
 }
 
+/* SOCIAL SECTION */
+
 .social {
 
     li {
         h3 {
             color: config.$black;
-            width: 100%;
         }
     }
 
@@ -829,11 +756,13 @@ a {
         .bi-linkedin {
             color: config.$black;
             opacity: 0.6;
-            font-size: 60px;
+            font-size: config.$h2;
         }
 
     }
 }
+
+/* FOOTER */
 
 footer {
     .triangle-bottom {
