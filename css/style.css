@@ -1579,19 +1579,29 @@ header .initial {
   background-color: #fff;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 .social .icon .bi-github,
-.social .icon .bi-instagram,
 .social .icon .bi-linkedin {
-  color: #0E1111;
-  opacity: 0.6;
   font-size: 60px;
+}
+.social .icon .bi-github {
+  color: #171515;
+}
+.social .icon .bi-linkedin {
+  color: #0077b5;
+}
+.social .icon .ig {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  padding-top: 5px;
 }
 .social .icon .github:hover,
 .social .icon .instagram:hover,
 .social .icon .linkedin:hover {
-  transform: rotateZ(7deg) scale(1.2);
-  transition: 0.3s ease;
+  transform: rotateZ(7deg) scale(1.1);
+  transition: all 0.3s ease;
 }
 
 /* FOOTER */
