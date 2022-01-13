@@ -221,6 +221,20 @@ header {
                 .slide-show {
                     display: none;
                 }
+
+                .blue-line {
+                    height: 3px;
+                    background: rgb(99, 178, 255);
+                    display: block;
+                }
+
+                .slide-1 .blue-line {
+                    width: 85%;
+                }
+
+                .slide-2 .blue-line {
+                    width: 80%;
+                }
         
                 .slide-1,
                 .slide-2 {
@@ -263,13 +277,6 @@ header {
                         border-radius: 10px;
                     }
         
-                    .rightSide .blue-line {
-                        width: 100%;
-                        height: 3px;
-                        background: rgb(99, 178, 255);
-                        display: block;
-                        margin-top: 1px;
-                    }
                 }
             
             }
@@ -475,7 +482,9 @@ header {
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-column: repeat(2, 1fr);
     grid-column: auto;
-    gap: 10px;
+    gap: 20px;
+
+    
 
     .Webcontainer-1,
     .Webcontainer-2 {
@@ -486,7 +495,7 @@ header {
         }
 
         .webText {
-            width: 550px;
+            width: 500px;
             height: 170px;
             position: absolute;
             top: 40%;
@@ -502,14 +511,6 @@ header {
             }
         }
     }
-    .Webcontainer-1:hover,
-    .Webcontainer-2:hover {
-        transform: translateY(0%);
-
-        h3 {
-            color: config.$blue;
-        }
-    }
 
     .Webcontainer-1 img,
     .Webcontainer-2 img {
@@ -522,6 +523,15 @@ header {
     .Webcontainer-2:hover img {
         transform: translateY(-20%);
         transition: 0.6s;
+    }
+
+    .web .Webcontainer-1:hover,
+    .web .Webcontainer-2:hover {
+        transform: translateY(0%);
+
+        h3 {
+            color: config.$blue;
+        }
     }
 }
 
@@ -551,7 +561,7 @@ header {
         grid-template-columns: repeat(2, 1fr);
         -ms-grid-column: repeat(2, 1fr);
         grid-column: auto;
-        gap: 50px;
+        gap: 20px;
 
         h2 {
             color: config.$blue;
@@ -619,7 +629,7 @@ header {
     grid-template-rows: repeat(1, 2fr);
     -ms-grid-row: repeat(1, 2fr);
     grid-row: auto;
-    gap: 10px;
+    gap: 20px;
     
     li {
         width: 100%;
@@ -759,6 +769,18 @@ header {
             font-size: config.$h2;
         }
 
+        .github:hover,
+        .instagram:hover,
+        .linkedin:hover {
+            -webkit-transform: rotateZ(7deg) scale(1.2);
+            -moz-transform: rotateZ(7deg) scale(1.2);
+            -ms-transform: rotateZ(7deg) scale(1.2);
+            -o-transform: rotateZ(7deg) scale(1.2);
+            transform:  rotateZ(7deg) scale(1.2);
+
+            transition: 0.3s ease;
+        }
+
     }
 }
 
@@ -812,7 +834,7 @@ footer {
                     }
                 
                     h4:hover::after, h4:focus::after, h4:active:after {
-                        width: 60%;
+                        width: 50%;
                     }
                 
                     h4::after {
