@@ -1,13 +1,15 @@
 @use './config';
 
 %btn {
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 50px;
-  font-weight: bold;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 15px 32px;
+    margin: 4px 2px;
 
     &:hover {
         transform: scale(1.1);
@@ -15,26 +17,14 @@
     }
 }
 
-.btn-primary {
-    @extend %btn;
-}
-
 .btn-primary a {
     @extend %btn;
     background-color: config.$blue;
     color: config.$white;
-    padding: 15px 32px;
-    margin: 4px 2px;
 }
 
-.btn-secondary {
-    @extend %btn;
-}
-
-.btn-secondary .a {
+.btn-secondary .btn-submit {
     @extend %btn;
     background-color: config.$grey1;
     color: config.$white;
-    padding: 15px 32px;
-    margin: 4px 2px;
 }
