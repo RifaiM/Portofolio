@@ -2,6 +2,7 @@
 @use './utilities';
 @use './buttons';
 
+
 html,
 body {
     box-sizing: border-box;
@@ -9,6 +10,7 @@ body {
     font-family: config.$font-stack;
     margin: 0;
     padding: 0;
+    max-width: -moz-fit-content;
     max-width: fit-content;
 }
 
@@ -93,9 +95,58 @@ a {
     from, to { border-color: transparent }
     50% { border-color: config.$blue; }
   }
-  
+
 
 /* HEADER */
+
+header {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    .span-col-2 {
+        grid-column: span 2 / auto;
+        text-align: center;
+
+        .slide-1,
+        .slide-2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
+            .leftSide {
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSide {
+                text-align: left;
+                .right-img img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+/* HEADER 
 
 header {
     
@@ -105,6 +156,8 @@ header {
         height: 0;
         border-top: 600px solid config.$blue;
         border-right: 1200px solid transparent;
+
+        
         
 
         ul {
@@ -180,24 +233,27 @@ header {
               
               .material-design-hamburger__layer {
                 display: block;
-                width: 100px;
-                height: 10px;
+                width: 50px;
+                height: 5px;
                 background: #eee;
                 position: relative;
                 animation-duration: 300ms;
                 animation-timing-function: ease-in-out;
+                border-radius: 50px;
+                left: 100%;
               }
               
               .material-design-hamburger__layer:before, .material-design-hamburger__layer:after {
                 display: block;
                 width: 100%;
-                height: 10px;
+                height: 5px;
                 position: absolute;
                 background: inherit;
-                left: 0;
                 content: '';
                 animation-duration: 300ms;
                 animation-timing-function: ease-in-out;
+                border-radius: 50px;
+                margin: 2px 0;
               }
               
               .material-design-hamburger__layer:before {
@@ -290,6 +346,7 @@ header {
                 100% {
                 }
               }
+
         }
     
         .bi-star-fill {
@@ -351,9 +408,12 @@ header {
             transform: translate(-50%, -50%);
             height: 100%;
             width: 100%;
+
+*/
         
         
-             /* The dots/bullets/indicators */
+             /* The dots/bullets/indicators 
+
              .dots {
                  display: flex;
                  justify-content: center;
@@ -373,8 +433,11 @@ header {
             .active, .dot:hover {
                 background-color: #717171;
               }
+
+            */
               
-            /* Fading animation */
+            /* Fading animation 
+
             .fade {
             -webkit-animation-name: fade;
             -webkit-animation-duration: 1.5s;
@@ -436,7 +499,7 @@ header {
                     p {
                         text-align: left;
                     }
-        
+
                     .tech-img {
                         display: -ms-grid;
                         display: grid;
@@ -461,7 +524,11 @@ header {
             }
         }
     }
+
+*/
     
+
+    /*
 
     .button_container {
         position: fixed;
@@ -470,7 +537,7 @@ header {
         height: 27px;
         width: 35px;
         cursor: pointer;
-        z-index: 100;
+        z-index: 3;
         transition: opacity 0.25s ease;
         display: none;
     }
@@ -637,7 +704,9 @@ header {
 
 }
 
-/* PROJECTS SECTION */
+*/
+
+/* PROJECTS SECTION 
 
 .projects {
 
@@ -715,7 +784,9 @@ header {
     }
 }
 
-/* ABOUT SECTION */
+*/
+
+/* ABOUT SECTION 
 
 .about {
 
@@ -747,12 +818,16 @@ header {
             color: config.$blue;
         }
 
+    */
+        /*
         li {
-            /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+            /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page 
             position: relative;
             z-index: 0;
+
+            */
             
-            /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+            /* Use padding to space things out rather than margins as the line would get broken up otherwise 
             margin: 0;
             padding-bottom: 8px;
             z-index: 1;
@@ -762,9 +837,12 @@ header {
                 color: config.$black;
                 padding-left: 30px;
             }
+
         }
 
-        /* The actual line being placed before each list item, tweak width and color as appropriate */
+        */
+
+        /* The actual line being placed before each list item, tweak width and color as appropriate 
         li:before {
             background-color: rgb(99, 178, 255);
             width: 2px;
@@ -775,18 +853,24 @@ header {
             left: 9px;
             z-index: -1;
           }
+
+          */
               
-        /* Start the line further down on the first list item */
+        /* Start the line further down on the first list item 
         li:first-child:before { 
             top: 15px;  
         }
+
+        */
         
-        /* Stop the line short on the final list item */
+        /* Stop the line short on the final list item 
         li:last-child:before { 
             height: 6px; 
         }
+
+        */
             
-        /* Styles for the SVG bullet points */
+        /* Styles for the SVG bullet points
         .bullet { 
             margin-left: px;
             width: 20px;
@@ -797,11 +881,14 @@ header {
         .date {
             color: config.$grey1;
         }
+        
 
     }
 }
 
-/* CONTACT SECTION */
+ */
+
+/* CONTACT SECTION 
 
 .contact {
     display: -ms-grid;
@@ -897,7 +984,7 @@ header {
             left: 20px;
             bottom: 11px;
             font-size: config.$h4;
-            font-weight: bold;
+            font-weight: map-get(config.$font-weights, bold);
             line-height: 26px;
             color: config.$blue;
             cursor: text;
@@ -926,7 +1013,9 @@ header {
 
 }
 
-/* SOCIAL SECTION */
+*/
+
+/* SOCIAL SECTION 
 
 .social {
 
@@ -977,80 +1066,83 @@ header {
     }
 }
 
-/* FOOTER */
+*/
+
+/* FOOTER 
 
 footer {
     
     .triangle-bottom {
+
         width: 0;
         height: 0;
-        border-bottom: 600px solid config.$blue;
+        border-bottom: 500px solid config.$blue;
         border-left: 1200px solid transparent;
-        position: relative;
-        margin-left: auto; 
-        margin-right: 0;
-
+        position:absolute;
+        right: 0;
+        max-width: 100%;
+        
+        
         .initial {
-            position: absolute;
+            position: relative;
             top: 150px;
             bottom: 0;
             right: 350px;
             width: 100%;
             
-            h1, h4, p {
-                color: config.$white;
-            }
 
-            ul{
-                padding: 0;
-                li {
-                    display: block;
-                    h1 {
-                        display: flex;
-                        justify-content: flex-end;
-                    }
+            .wrap {
+                width: 210px;
+                position: absolute;
 
-                    .blue-line {
-                        content: "";
-                        width: 100%;
-                        height: 3px;
-                        background: config.$white;
-                        display: block;
-                    }
-
-                    h4 {
-                        position: relative;
-                        color: config.$white;
-                        text-decoration: none;
-                        overflow: hidden;
-                        margin: 0;
-                        padding-bottom: 5px;
-                    }
-                
-                    h4:hover::after, h4:focus::after, h4:active:after {
-                        width: 50%;
-                    }
-                
-                    h4::after {
-                        content: "";
-                        position: absolute;
-                        bottom: 0;
-                        left: 0%;
-                        width: 0%;
-                        transform: translateX(-50%);
-                        height: 3px;
-                        background: config.$white;
-                        transition: 0.35s;
-                    }
-
-                    .wrap {
-                        width: 210px;
-                    }
+                h1, h4, p {
+                    color: config.$white;
                 }
-                
+
+                h1 {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .blue-line {
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background: config.$white;
+                    display: block;
+                }
+
+                h4 {
+                    position: relative;
+                    color: config.$white;
+                    text-decoration: none;
+                    overflow: hidden;
+                    margin: 0;
+                    padding-bottom: 5px;
+                }
+            
+                h4:hover::after, h4:focus::after, h4:active:after {
+                    width: 50%;
+                }
+            
+                h4::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0%;
+                    width: 0%;
+                    transform: translateX(-50%);
+                    height: 3px;
+                    background: config.$white;
+                    transition: 0.35s;
+                }
             }
+
         }
     }
 }
+
+*/
+
 
 @import './mobile';

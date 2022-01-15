@@ -39,30 +39,136 @@
     <meta name="keywords" content="About Mochammad Rifai, Mochammad Rifai Personal Projects, Mochammad Rifai Contacts">
 </head>
 <body>
-    <!--HEADER-->
+
+    <!--HEADER NEW-->
+    <header>
+        <div class="triangle-top"></div>
+        <div class="grid">
+            <div class="item-1">
+                <nav class="nav">
+                    <ul class="nav-item">
+                        <li class="nav-list-item">
+                            <div class="wrapper">
+                                <div class="material-design-hamburger">
+                                    <button class="material-design-hamburger__icon">
+                                    <span class="material-design-hamburger__layer"></span>
+                                    </button>
+                                </div>
+                                <div class="menu menu--off">
+                                    <div><a href="https://swirlycheetah.com" target="_blank">projects</a></div>
+                                    <div><a href="https://swirlycheetah.com" target="_blank">about me</a></div>
+                                    <div><a href="https://swirlycheetah.com" target="_blank">contact</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-1 as"><a href="#/">projects</a></li>
+                        <li class="px-1 ad"><a href="#/">about me</a></li>
+                        <li class="px-1 af"><a href="#/">contact</a><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="item-2">
+                <div class="initial">
+                    <h1 class="my-5">R.</h1>
+                </div>
+            </div>
+            <div class="span-col-2">
+                <div class="topsection">
+                    <div class="slide-container">
+                        <div class="slide-show fade">
+                            <div class="slide-1">
+                                <div class="leftSide">
+                                    <img src="./img/Slide1.webp" alt="">
+                                </div>
+                                
+                                <div class="rightSide">
+                                    <div class="textTop">
+                                        <h3 class="mt-2 name__top">My name is</h2>
+                                        <h2 class="my-1 name__bot">Rifai. M</h1>
+                                        <span class="blue-line"></span>
+                                    </div>
+                                    <div class="textMiddle">
+                                        <p class="my-1">I am a Junior Front-end Web Developer who does a bit of web design.</p>
+                                    </div>
+                                    <div class="right-img">
+                                        <img src="./img/html5.webp" alt="">
+                                        <img src="./img/sass.webp" alt="">
+                                        <img src="./img/javascript.webp" alt="">
+                                        <img class="php" src="./img/php.webp" alt="">
+                                    </div>
+                                    <div class="textBottom">
+                                        <p class="my-1">My main areas of expertise include Javascript, HTML, CSS ..SASS, and PHP.</p>
+                                    </div>
+                                    <div class="btn-primary pt-1">
+                                        <a href="#/">Contact me</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-show fade">
+                            <div class="slide-2">
+                                <div class="leftSide">
+                                    <img src="./img/Slide2.webp" alt="">
+                                </div>
+                                
+                                <div class="rightSide">
+                                    <div class="textTop">
+                                        <h3 class="mt-2">I am also a</h2>
+                                        <h2 class="my-1">UI Designer</h1>
+                                        <span class="blue-line"></span>
+                                    </div>
+                                    <div class="textMiddle">
+                                        <p class="my-1">My main tool to design :</p>
+                                    </div>
+                                    <div class="right-img">
+                                        <img src="./img/figma.webp" alt="">
+                                        <img src="./img/mockplus.webp" alt="">
+                                    </div>
+                                    <div class="textBottom">
+                                        <p class="my-1">I have a solid knowledge in UI design. Figma & Mockplus are my friends.</p>
+                                    </div>
+                                    <div class="btn-primary pt-1">
+                                        <a href="#/">See my work</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span-col-2">
+                <!--The dots/circles-->
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--HEADER
     <header>
         <nav>
             <div class="triangle-top">
                 <ul>
                     <li>
                         <div class="wrapper">
-
                             <div class="material-design-hamburger">
                                 <button class="material-design-hamburger__icon">
                                 <span class="material-design-hamburger__layer"></span>
                                 </button>
                             </div>
-                            
                             <div class="menu menu--off">
-                                <div>Android's Material Design Hamburger Animation</div>
-                                <div>Adapted for the web by <a href="https://swirlycheetah.com" target="_blank">Chris Wheatley</a></div>
+                                <div><a href="https://swirlycheetah.com" target="_blank">projects</a></div>
+                                <div><a href="https://swirlycheetah.com" target="_blank">about me</a></div>
+                                <div><a href="https://swirlycheetah.com" target="_blank">contact</a></div>
                             </div>
-                          
                         </div>
                     </li>
-                    <li class="px-1"><a href="#/">projects</a></li>
-                    <li class="px-1"><a href="#/">about me</a></li>
-                    <li class="px-1"><a href="#/">contact</a><i class="bi bi-star-fill"></i></li>
+                    <li class="px-1 as"><a href="#/">projects</a></li>
+                    <li class="px-1 ad"><a href="#/">about me</a></li>
+                    <li class="px-1 af"><a href="#/">contact</a><i class="bi bi-star-fill"></i></li>
                 </ul>
                 
                 <div class="topsection">
@@ -75,8 +181,8 @@
                                 
                                 <div class="rightSide">
                                     <div class="name">
-                                        <h3 class="mt-2">My name is</h2>
-                                        <h2 class="my-1">Rifai. M</h1>
+                                        <h3 class="mt-2 name__top">My name is</h2>
+                                        <h2 class="my-1 name__bot">Rifai. M</h1>
                                         <span class="blue-line"></span>
                                     </div>
                                     <div class="tech">
@@ -121,7 +227,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- The dots/circles -->
+
+                        -->
+                        <!-- The dots/circles 
                         <div class="dots">
                             <span class="dot" onclick="currentSlide(1)"></span>
                             <span class="dot" onclick="currentSlide(2)"></span>
@@ -150,6 +258,8 @@
             <h1 class="my-5">R.</h1>
         </div>
     </header>
+
+    -->
 
     <!--MAIN-->
     <main>
@@ -330,19 +440,45 @@
     <footer>
         <div class="triangle-bottom">
             <div class="initial">
-                <ul>
-                    <li>
-                        <div class="wrap">
-                            <h1 class="mt-1">R.</h1>
-                            <span class="blue-line"></span>
-                            <p class="mt-1">Website design and code by</p>
-                            <h4>Rifai. M</h2>
-                        </div>
-                    </li>
-                </ul>
+                <div class="wrap">
+                    <h1 class="mt-1">R.</h1>
+                    <span class="blue-line"></span>
+                    <p class="mt-1">Website design and code by</p>
+                    <h4>Rifai. M</h2>
+                </div>
             </div>
         </div>
     </footer>
+
+    <div id="header">
+        <div class="nav">
+          <button class="toggler-menu">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="menus" class="">
+        <div class="main-nav">
+          <ul>
+            <li>
+              <a href="#">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Pricing
+              </a>
+            </li>
+            
+            <li>
+              <a href="#">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
 
     <!--
     <script src="./css/scrollCue-2.0.0/scrollCue.js"></script>
