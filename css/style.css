@@ -871,9 +871,6 @@ body {
   font-family: "Manrope", sans-serif;
   margin: 0;
   padding: 0;
-  max-width: -moz-fit-content;
-  max-width: -webkit-fit-content;
-  max-width: fit-content;
 }
 
 /* GLOBAL STYLE */
