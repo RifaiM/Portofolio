@@ -98,10 +98,254 @@ a {
 /* HEADER */
 
 header {
+    position: relative;
+    .triangle-top {
+        width: 0;
+        height: 0;
+        border-top: 900px solid config.$blue;
+        border-right: 1800px solid transparent;
+        position: absolute;
+        z-index: -1;
+    }
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
+        z-index: 1;
+
+        .item-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nav {
+                display: flex;
+                ul {
+                    display: inline-flex;
+                    align-items: center;
+                    .wrapper {
+                        .wrapper {
+                            height: 100%;
+                            transition: all 300ms ease-in-out;  
+                            padding: 0;
+                            display: none;
+                          }
+                          
+                          .background--blur {
+                            background: #004d40;
+                          }
+                          
+                          .menu {
+                            color: #333;
+                          }
+                          
+                          .menu div {
+                            margin: 1em;
+                            padding-bottom: 1em;
+                            border-bottom: 1px solid #ccc;
+                          }
+                          
+                          .menu a {
+                            text-decoration: none;
+                            color: #3367d6;
+                          }
+                          
+                          .menu a:hover {
+                            text-decoration: underline;
+                          }
+                          
+                          .menu div:last-child {
+                            border: 0;
+                          }
+                          
+                          .menu--off {
+                            position: absolute;
+                            width: 20%;
+                            display: block;
+                            background: #eee;
+                            margin-top: 50px;
+                            transition: all 300ms;
+                            display: none;
+                          }
+                          
+                          .menu--on {
+                            left: 0;
+                            box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.2);
+                            transition: all 300ms;
+                            display: initial;
+                          }
+                          
+                          .material-design-hamburger button {
+                            display: block;
+                            border: none;
+                            background: none;
+                            outline: 0;
+                          }
+                          
+                          .material-design-hamburger__icon {
+                            cursor: pointer;
+                          }
+                          
+                          .material-design-hamburger__layer {
+                            display: block;
+                            width: 50px;
+                            height: 5px;
+                            background: config.$white;
+                            position: relative;
+                            animation-duration: 300ms;
+                            animation-timing-function: ease-in-out;
+                            border-radius: 50px;
+                          }
+                          
+                          .material-design-hamburger__layer:before, .material-design-hamburger__layer:after {
+                            display: block;
+                            width: 100%;
+                            height: 5px;
+                            position: absolute;
+                            background: inherit;
+                            content: '';
+                            animation-duration: 300ms;
+                            animation-timing-function: ease-in-out;
+                            border-radius: 50px;
+                            margin: 2px 0;
+                          }
+                          
+                          .material-design-hamburger__layer:before {
+                            bottom: 200%;
+                          }
+                          
+                          .material-design-hamburger__layer:after {
+                            top: 200%;
+                          }
+                          
+                          .material-design-hamburger__icon--to-arrow {
+                            animation-name: material-design-hamburger__icon--slide;
+                            animation-fill-mode: forwards;
+                          }
+                          
+                          .material-design-hamburger__icon--to-arrow:before {
+                            animation-name: material-design-hamburger__icon--slide-before;
+                            animation-fill-mode: forwards;
+                          }
+                          
+                          .material-design-hamburger__icon--to-arrow:after {
+                            animation-name: material-design-hamburger__icon--slide-after;
+                            animation-fill-mode: forwards;
+                          }
+                          
+                          .material-design-hamburger__icon--from-arrow {
+                            animation-name: material-design-hamburger__icon--slide-from;
+                          }
+                          
+                          .material-design-hamburger__icon--from-arrow:before {
+                            animation-name: material-design-hamburger__icon--slide-before-from;
+                          }
+                          
+                          .material-design-hamburger__icon--from-arrow:after {
+                            animation-name: material-design-hamburger__icon--slide-after-from;
+                          }
+                          
+                          @keyframes material-design-hamburger__icon--slide {
+                            0% {
+                            }
+                            100% {
+                              transform: rotate(180deg);
+                            }
+                          }
+                          
+                          @keyframes material-design-hamburger__icon--slide-before {
+                            0% {
+                            }
+                            100% {
+                              transform: rotate(45deg);
+                              margin: 3% 37%;
+                              width: 75%;
+                            }
+                          }
+                          
+                          @keyframes material-design-hamburger__icon--slide-after {
+                            0% {
+                            }
+                            100% {
+                              transform: rotate(-45deg);
+                              margin: 3% 37%;
+                              width: 75%;
+                            }
+                          }
+                          
+                          @keyframes material-design-hamburger__icon--slide-from {
+                            0% {
+                              transform: rotate(-180deg);
+                            }
+                            100% {
+                            }
+                          }
+                          
+                          @keyframes material-design-hamburger__icon--slide-before-from {
+                            0% {
+                              transform: rotate(45deg);
+                              margin: 3% 37%;
+                              width: 75%;
+                            }
+                            100% {
+                            }
+                          }
+                          
+                          @keyframes material-design-hamburger__icon--slide-after-from {
+                            0% {
+                              transform: rotate(-45deg);
+                              margin: 3% 37%;
+                              width: 75%;
+                            }
+                            100% {
+                            }
+                          }
+                    }
+                    li {
+                        .bi-star-fill {
+                            font-size: 10px;
+                            position: absolute;
+                            left: 35%;
+                            animation: loading 3s linear infinite;
+                            color: config.$white;
+                    
+                            @keyframes loading {
+                                0% { 
+                                    transform: rotate(0); 
+                                }
+                                100% { 
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            position: relative;
+                            color: config.$white;
+                            text-decoration: none;
+                            overflow: hidden;
+                            padding-bottom: 5px;
+                        }
+                    
+                        a:hover::after, a:focus::after, a:active:after {
+                            width: 200%;
+                        }
+                    
+                        a::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0%;
+                            width: 0%;
+                            transform: translateX(-50%);
+                            height: 3px;
+                            background: config.$white;
+                            transition: 0.35s;
+                        }
+                    }
+                }
+            }
+        }
     }
     .span-col-2 {
         grid-column: span 2 / auto;
