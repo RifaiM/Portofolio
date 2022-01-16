@@ -374,13 +374,14 @@ header {
                 transition: opacity 0.25s ease;
                 display: none;
             }
-            
             .border {
+                background: config.$blue;
+                position: fixed;
                 border-radius: 50px;
                 width: 80px;
                 height: 80px;
                 background-color: config.$blue;
-                right: 2%;
+                right: 8px;
                 top: 1%;
                 position: fixed;
             }
@@ -401,14 +402,12 @@ header {
             }
               .button_container span {
                 background: config.$white;
-                border: none;
                 border-radius: 5px;
                 height: 5px;
                 width: 30px;
-                position: absolute;
-                right: 70%;
                 transition: all 0.35s ease;
                 cursor: pointer;
+                position: absolute;
             }
               .button_container span:nth-of-type(2) {
                 top: 11px;

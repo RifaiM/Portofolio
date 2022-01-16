@@ -1274,11 +1274,13 @@ header .grid .item-3 .button_container {
   display: none;
 }
 header .grid .item-3 .border {
+  background: #63B2FF;
+  position: fixed;
   border-radius: 50px;
   width: 80px;
   height: 80px;
   background-color: #63B2FF;
-  right: 2%;
+  right: 8px;
   top: 1%;
   position: fixed;
 }
@@ -1299,14 +1301,12 @@ header .grid .item-3 .button_container.active .bottom {
 }
 header .grid .item-3 .button_container span {
   background: #FBFAF5;
-  border: none;
   border-radius: 5px;
   height: 5px;
   width: 30px;
-  position: absolute;
-  right: 70%;
   transition: all 0.35s ease;
   cursor: pointer;
+  position: absolute;
 }
 header .grid .item-3 .button_container span:nth-of-type(2) {
   top: 11px;
