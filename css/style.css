@@ -1279,7 +1279,7 @@ header .grid .item-3 .border {
   height: 80px;
   background-color: #63B2FF;
   top: 4%;
-  right: 1.8%;
+  right: 0.5%;
   position: fixed;
 }
 header .grid .item-3 .button_container:hover {
@@ -1304,8 +1304,6 @@ header .grid .item-3 .button_container span {
   height: 5px;
   width: 30px;
   position: absolute;
-  top: 0;
-  right: 20px;
   transition: all 0.35s ease;
   cursor: pointer;
 }
