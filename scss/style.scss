@@ -365,7 +365,7 @@ header {
             grid-area: 1 / 3;
             .button_container {
                 position: fixed;
-                top: 8%;
+                top: 5%;
                 right: 2%;
                 height: 27px;
                 width: 35px;
@@ -380,9 +380,8 @@ header {
                 width: 80px;
                 height: 80px;
                 background-color: config.$blue;
-                right: 0%;
-                top: 4%;
-                transform: translateX(-30%);
+                right: 2%;
+                top: 1%;
                 position: fixed;
             }
             .button_container:hover {
@@ -407,8 +406,7 @@ header {
                 height: 5px;
                 width: 30px;
                 position: absolute;
-                transform: translateX(-50%);
-                right: 10%;
+                right: 70%;
                 transition: all 0.35s ease;
                 cursor: pointer;
             }
