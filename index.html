@@ -69,10 +69,27 @@
             </div>
             <div class="item-2">
                 <div class="initial">
-                    <h1 class="my-5">R.</h1>
+                    <h1>R.</h1>
                 </div>
             </div>
-            <div class="span-col-2">
+            <div class="item-3">
+                <div class="button_container" id="toggle">
+                    <div class="border"></div>
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                </div>
+                <div class="overlay" id="overlay">
+                    <div class="overlay-menu">
+                        <ul>
+                            <li class="px-1"><a href="#/">projects</a></li>
+                            <li class="px-1"><a href="#/">about me</a></li>
+                            <li class="px-1"><a href="#/">contact</a><i class="bi bi-star-fill"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="span-col-3">
                 <div class="topsection">
                     <div class="slide-container">
                         <div class="slide-show fade">
@@ -83,7 +100,7 @@
                                 
                                 <div class="rightSide">
                                     <div class="textTop">
-                                        <h3 class="mt-2 name__top">My name is</h2>
+                                        <h3 class="mt-1 name__top">My name is</h2>
                                         <h2 class="my-1 name__bot">Rifai. M</h1>
                                         <span class="blue-line"></span>
                                     </div>
@@ -113,8 +130,8 @@
                                 
                                 <div class="rightSide">
                                     <div class="textTop">
-                                        <h3 class="mt-2">I am also a</h2>
-                                        <h2 class="my-1">UI Designer</h1>
+                                        <h3 class="mt-1 name__top">I am also a</h2>
+                                        <h2 class="my-1 name__bot">UI Designer</h1>
                                         <span class="blue-line"></span>
                                     </div>
                                     <div class="textMiddle">
@@ -136,12 +153,12 @@
                     </div>
                 </div>
             </div>
-            <div class="span-col-2">
-                <!--The dots/circles-->
-                <div class="dots">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                </div>
+        </div>
+        <!--The dots/circles-->
+        <div class="dots-container">
+            <div class="dots-wrapper">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
     </header>
@@ -264,7 +281,7 @@
     <!--MAIN-->
     <main>
         <!--PROJECTS SECTION-->
-        <section class="projects mt-15 px-2">
+        <section class="projects px-2">
             <div class="p-1 heading-text">
                 <div class="large-text">
                     <h2 class="mt-1 typewriter">projects<span class="pr">.</span></h2>
@@ -449,36 +466,6 @@
             </div>
         </div>
     </footer>
-
-    <div id="header">
-        <div class="nav">
-          <button class="toggler-menu">
-            <span></span>
-          </button>
-        </div>
-      </div>
-      
-      <div id="menus" class="">
-        <div class="main-nav">
-          <ul>
-            <li>
-              <a href="#">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Pricing
-              </a>
-            </li>
-            
-            <li>
-              <a href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
 
     <!--
     <script src="./css/scrollCue-2.0.0/scrollCue.js"></script>

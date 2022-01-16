@@ -109,26 +109,6 @@ function addClass(element, className) {
 
 //
 
-/*       
-//                M               M
-//             MMM MMM         MMM MMM
-//          MMM       MMM   MMM       MMM
-//       MMM             MMM             MMM
-//       M                                 M
-//       M                                 M
-//       M                                 M
-//       M                                 M
-//       M                                 M
-//       M        M               M        M
-//       M        MMMM         MMMM        M
-//       M        M   MMM   MMM   M        M
-//       MMM      M      MMM      M      MMM
-//          MMM   M               M   MMM
-//             MMMM               MMMM
-//                M               M
-//
-// ---------------- marcbizal.com -----------------
-*/
 
 function resizeNav() {
   // Set the nav height to fill the window
