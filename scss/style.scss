@@ -380,8 +380,9 @@ header {
                 width: 80px;
                 height: 80px;
                 background-color: config.$blue;
+                right: 0%;
                 top: 4%;
-                right: 0.5%;
+                transform: translateX(-30%);
                 position: fixed;
             }
             .button_container:hover {
@@ -406,6 +407,8 @@ header {
                 height: 5px;
                 width: 30px;
                 position: absolute;
+                transform: translateX(-50%);
+                right: 10%;
                 transition: all 0.35s ease;
                 cursor: pointer;
             }
