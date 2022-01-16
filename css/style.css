@@ -1277,12 +1277,10 @@ header .grid .item-3 .border {
   background: #63B2FF;
   position: fixed;
   border-radius: 50px;
-  width: 80px;
-  height: 80px;
-  background-color: #63B2FF;
-  right: 8px;
-  top: 1%;
-  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 15px;
+  right: 15px;
 }
 header .grid .item-3 .button_container:hover {
   opacity: 0.7;
@@ -1307,6 +1305,8 @@ header .grid .item-3 .button_container span {
   transition: all 0.35s ease;
   cursor: pointer;
   position: absolute;
+  top: 0px;
+  right: 5px;
 }
 header .grid .item-3 .button_container span:nth-of-type(2) {
   top: 11px;
