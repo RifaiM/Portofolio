@@ -383,6 +383,9 @@ header {
                 top: 15px;
                 right: 15px;
             }
+            .border:hover {
+                box-shadow: 0 0 0 5px rgba(170, 187, 204, 0.5);
+            }
             .button_container:hover {
                 opacity: 0.7;
             }

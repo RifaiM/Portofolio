@@ -1282,6 +1282,9 @@ header .grid .item-3 .border {
   top: 15px;
   right: 15px;
 }
+header .grid .item-3 .border:hover {
+  box-shadow: 0 0 0 5px rgba(170, 187, 204, 0.5);
+}
 header .grid .item-3 .button_container:hover {
   opacity: 0.7;
 }
