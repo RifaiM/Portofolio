@@ -1,0 +1,103 @@
+@media only screen
+and (min-device-width : 280px)
+and (max-device-width : 480px) {
+    header {
+        /* The dots/bullets/indicators */
+
+        .dots-container {
+            display: flex;
+            position: absolute;
+            top: 700px;
+            left: 0;
+            right: 0;
+            margin-top: unset;
+            margin-bottom: unset;
+            .dots-wrapper {
+                grid-area: 1 / 1;
+                margin: 0 auto;
+                
+            }
+        }
+    
+        .triangle-top {
+            border-top: 300px solid config.$blue;
+            border-right: 270px solid transparent;
+        }
+        .grid {
+            display: block;
+            .normal {
+                display: none;
+            }
+            .item-1 {
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                top: 60px;
+                .nav {
+                    ul {
+                        .wrapper {
+                            display: initial;
+                        }
+                        .menu--off {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .item-2 {
+                grid-template-columns: repeat(2, 1fr);
+                .initial {
+                    grid-area: 1 / 2;
+                    font-size: config.$h1;
+                }
+            }
+            .item-3 {
+                .button_container {
+                    top: 40px;
+                    right: 30px;
+                }
+                .border {
+                    top: 20px;
+                    right: 10px;
+                }
+                .button_container span {
+                    top: 0px;
+                    right: 0px;
+                }
+            }
+        }
+        .span-col-3 {
+            padding: 0 10px;
+            .slide-1,
+            .slide-2 {
+                display: block;
+                .leftSide {
+                    display: flex;
+                    justify-content: center;
+                }
+                .rightSide {
+                    margin-top: 60px;
+                    .blue-line {
+                        width: 100%;
+                    }
+                    .right-img {
+                        gap: 5px;
+                    }
+                    .right-img img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .textTop {
+                        h3 {
+                            font-size: config.$h3_mobile;
+                        }
+                        h2 {
+                            font-size: config.$h2_mobile;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
