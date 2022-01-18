@@ -7,14 +7,18 @@ $grey2: #EAF3F0;
 $black: #0E1111;
 
 $h1: 120px;
-$h2: 60px;
-$h3: 40px;
 $h4: 20px;
 $p: 16px;
 
-// Media Queries font size
-$h2_mobile: 45px;
-$h3_mobile: 25px;
+$h2: (
+    "normal": 60px,
+    "mobile": 45px
+);
+
+$h3: (
+    "normal": 40px,
+    "mobile": 25px,
+);
 
 $font-weights: (
     "regular": 400,

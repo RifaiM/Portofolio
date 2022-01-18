@@ -459,7 +459,7 @@ header {
                 height: 70%;
                 top: 50%;
                 transform: translateY(-50%);
-                font-size: config.$h3;
+                font-size: map-get(config.$h3, "normal");
                 text-align: center;
             }
             .overlay ul {
@@ -543,10 +543,10 @@ header {
                 }
                 .textTop {
                     h3 {
-                        font-size: config.$h3;
+                        font-size: map-get(config.$h3, "normal");
                     }
                     h2 {
-                        font-size: config.$h2;
+                        font-size: map-get(config.$h2, "normal");
                     }
                 }
             }

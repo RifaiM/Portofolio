@@ -89,10 +89,10 @@ and (max-device-width : 480px) {
                     }
                     .textTop {
                         h3 {
-                            font-size: config.$h3_mobile;
+                            font-size: map-get(config.$h3, "mobile");
                         }
                         h2 {
-                            font-size: config.$h2_mobile;
+                            font-size: map-get(config.$h2, "mobile");
                         }
                     }
                 }
