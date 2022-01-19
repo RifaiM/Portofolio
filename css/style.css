@@ -1019,13 +1019,15 @@ header .grid .item-1 .nav ul .menu div:last-child {
 }
 header .grid .item-1 .nav ul .menu--off {
   position: absolute;
+  z-index: 3;
   width: 20%;
   display: block;
   background: #FBFAF5;
-  margin-top: 50px;
+  margin-top: 30px;
   transition: all 300ms;
   display: none;
-  border-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 header .grid .item-1 .nav ul .menu--on {
   left: 0;
@@ -1575,7 +1577,83 @@ header .fade {
   color: #63B2FF;
 }
 
+/* ABOUT SECTION */
+.about .heading-text .large-text {
+  width: 100%;
+  display: inline-block;
+  color: #0E1111;
+  text-decoration: none;
+  overflow: hidden;
+}
+.about .heading-text .large-text span:nth-child(1) {
+  color: #63B2FF;
+}
+.about .heading-text .large-text h2 {
+  font-size: 60px;
+}
+.about .containerAbout {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column: repeat(2, 1fr);
+  grid-column: auto;
+  gap: 20px;
+  /* The actual line being placed before each list item, tweak width and color as appropriate */
+  /* Start the line further down on the first list item */
+  /* Stop the line short on the final list item */
+  /* Styles for the SVG bullet points */
+}
+.about .containerAbout h2 {
+  color: #63B2FF;
+  font-size: 60px;
+}
+.about .containerAbout li {
+  /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+  position: relative;
+  z-index: 0;
+  /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+  margin: 0;
+  padding-bottom: 8px;
+  z-index: 1;
+  width: 100%;
+}
+.about .containerAbout li h4, .about .containerAbout li p {
+  color: #0E1111;
+  padding-left: 30px;
+}
+.about .containerAbout li:before {
+  background-color: #63b2ff;
+  width: 2px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 9px;
+  z-index: -1;
+}
+.about .containerAbout li:first-child:before {
+  top: 15px;
+}
+.about .containerAbout li:last-child:before {
+  height: 6px;
+}
+.about .containerAbout .bullet {
+  margin-left: px;
+  width: 20px;
+  fill: #63b2ff;
+  float: left;
+}
+.about .containerAbout .date {
+  color: #A4B7B4;
+}
+
 @media only screen and (min-device-width: 280px) and (max-device-width: 480px) {
+  /* Typewriter */
+  .fade-in {
+    -webkit-animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
+            animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
+  }
+
   /* Header */
   header {
     /* The dots/bullets/indicators */
@@ -1613,7 +1691,7 @@ header .fade {
     display: initial;
   }
   header .grid .item-1 .nav ul .menu--off {
-    width: 50%;
+    width: 55%;
   }
   header .grid .item-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -1686,10 +1764,6 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   .projects .heading-text .large-text h3 {
     font-size: 25px;
   }
-  .projects .heading-text .large-text .fade-in {
-    -webkit-animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
-            animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
-  }
   .projects .containerWeb {
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-column: repeat(1, 1fr);
@@ -1700,7 +1774,7 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     position: relative;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
   .projects .containerWeb .Webcontainer-1 .webText,
 .projects .containerWeb .Webcontainer-2 .webText {
@@ -1721,6 +1795,73 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     padding: 0;
     width: 225px;
     height: 140px;
+  }
+
+  /* ABOUT SECTION */
+  .about {
+    padding: 0 10px;
+  }
+  .about .heading-text {
+    padding: 0;
+    margin-top: 50px;
+  }
+  .about .heading-text .large-text span:nth-child(1) {
+    color: #63B2FF;
+  }
+  .about .heading-text .large-text h2 {
+    font-size: 45px;
+  }
+  .about .containerAbout {
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-column: repeat(1, 1fr);
+    gap: 10px;
+    /* The actual line being placed before each list item, tweak width and color as appropriate */
+    /* Start the line further down on the first list item */
+    /* Stop the line short on the final list item */
+    /* Styles for the SVG bullet points */
+  }
+  .about .containerAbout h2 {
+    font-size: 45px;
+  }
+  .about .containerAbout li {
+    /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+    position: relative;
+    z-index: 0;
+    /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+    margin: 0;
+    padding-bottom: 8px;
+    z-index: 1;
+    width: 100%;
+  }
+  .about .containerAbout li h4, .about .containerAbout li p {
+    color: #0E1111;
+    padding-left: 30px;
+  }
+  .about .containerAbout li:before {
+    background-color: #63b2ff;
+    width: 2px;
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 9px;
+    z-index: -1;
+  }
+  .about .containerAbout li:first-child:before {
+    top: 15px;
+  }
+  .about .containerAbout li:last-child:before {
+    height: 6px;
+  }
+  .about .containerAbout .bullet {
+    margin-left: px;
+    width: 20px;
+    fill: #63b2ff;
+    float: left;
+  }
+  .about .containerAbout .date {
+    color: #A4B7B4;
   }
 }
 /* HEADER 

@@ -142,13 +142,19 @@ header {
                         
                         .menu--off {
                         position: absolute;
+                        z-index: 3;
                         width: 20%;
                         display: block;
                         background: config.$white;
-                        margin-top: 50px;
+                        margin-top: 30px;
                         transition: all 300ms;
                         display: none;
-                        border-radius: 5px;
+                        -moz-border-radius-topright: 25px;
+                        -webkit-border-top-right-radius: 25px;
+                        border-top-right-radius: 25px;
+                        -moz-border-radius-bottomright: 25px;
+                        -webkit-border-bottom-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
                         }
                         
                         .menu--on {
@@ -674,6 +680,101 @@ header {
         }
     }
     
+}
+
+/* ABOUT SECTION */
+
+.about {
+
+    .heading-text {
+
+        .large-text {
+            width: 100%;
+            display: inline-block;
+            color: config.$black;
+            text-decoration: none;
+            overflow: hidden;
+    
+            span:nth-child(1) {
+                color: config.$blue;
+            }
+
+            h2 {
+                font-size: map-get(config.$h2, "normal");
+            }
+        }
+    
+    }
+    
+      .containerAbout {
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-column: repeat(2, 1fr);
+        grid-column: auto;
+        gap: 20px;
+
+        h2 {
+            color: config.$blue;
+            font-size: map-get(config.$h2, "normal");
+        }
+
+        li {
+            /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+            position: relative;
+            z-index: 0;
+            
+            /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+            margin: 0;
+            padding-bottom: 8px;
+            z-index: 1;
+            width: 100%;
+
+            h4, p {
+                color: config.$black;
+                padding-left: 30px;
+            }
+
+        }
+
+
+        /* The actual line being placed before each list item, tweak width and color as appropriate */
+        li:before {
+            background-color: rgb(99, 178, 255);
+            width: 2px;
+            content: '';
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 9px;
+            z-index: -1;
+          }
+              
+        /* Start the line further down on the first list item */
+        li:first-child:before { 
+            top: 15px;  
+        }
+
+        
+        /* Stop the line short on the final list item */
+        li:last-child:before { 
+            height: 6px; 
+        }
+            
+        /* Styles for the SVG bullet points */
+        .bullet { 
+            margin-left: px;
+            width: 20px;
+            fill: rgb(99, 178, 255);
+            float: left;
+        }
+
+        .date {
+            color: config.$grey1;
+        }
+        
+
+    }
 }
 
 @import './mobile';
