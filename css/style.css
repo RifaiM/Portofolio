@@ -874,7 +874,7 @@ body {
 }
 
 /* GLOBAL STYLE */
-li {
+ul, li {
   list-style: none;
 }
 
@@ -898,18 +898,15 @@ a {
   margin-top: 5px;
 }
 
-/*
-
 .blue-line:nth-child(3),
 .blue-line:nth-child(4) {
-    width: 51px;
-    height: 5px;
-    background: rgb(99, 178, 255);
-    display: block;
-    margin-top: 5px;
+  width: 51px;
+  height: 5px;
+  background: #63b2ff;
+  display: block;
+  margin-top: 5px;
 }
 
-*/
 /* TYPEWRITER EFFECTS */
 .typewriter {
   width: auto;
@@ -1364,7 +1361,6 @@ header .grid .item-3 .overlay .overlay-menu {
   text-align: center;
 }
 header .grid .item-3 .overlay ul {
-  list-style: none;
   padding: 0;
   margin: 0 auto;
   display: inline-block;
@@ -1507,7 +1503,78 @@ header .fade {
   }
 }
 
+/* PROJECTS SECTION */
+.projects .heading-text {
+  color: #0E1111;
+}
+.projects .heading-text .large-text {
+  width: 100%;
+  display: inline-block;
+  color: #0E1111;
+}
+.projects .heading-text .large-text h2 {
+  font-size: 60px;
+}
+.projects .heading-text .large-text h3 {
+  font-size: 40px;
+}
+.projects .containerWeb {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column: repeat(2, 1fr);
+  grid-column: auto;
+  gap: 20px;
+}
+.projects .containerWeb .Webcontainer-1,
+.projects .containerWeb .Webcontainer-2 {
+  position: relative;
+}
+.projects .containerWeb .Webcontainer-1 p,
+.projects .containerWeb .Webcontainer-2 p {
+  color: #A4B7B4;
+}
+.projects .containerWeb .Webcontainer-1 .webText,
+.projects .containerWeb .Webcontainer-2 .webText {
+  width: 500px;
+  height: 170px;
+  position: absolute;
+  top: 40%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
+  color: #0E1111;
+  overflow: hidden;
+}
+.projects .containerWeb .Webcontainer-1 .webText .title,
+.projects .containerWeb .Webcontainer-1 .webText .sub-title,
+.projects .containerWeb .Webcontainer-1 .webText .sub-desc,
+.projects .containerWeb .Webcontainer-2 .webText .title,
+.projects .containerWeb .Webcontainer-2 .webText .sub-title,
+.projects .containerWeb .Webcontainer-2 .webText .sub-desc {
+  color: #0E1111;
+}
+.projects .containerWeb .Webcontainer-1 img,
+.projects .containerWeb .Webcontainer-2 img {
+  width: 450px;
+  height: 280px;
+  box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
+}
+.projects .containerWeb .Webcontainer-1:hover img,
+.projects .containerWeb .Webcontainer-2:hover img {
+  transform: translateY(-20%);
+  transition: 0.6s;
+}
+.projects .containerWeb .web .Webcontainer-1:hover,
+.projects .containerWeb .web .Webcontainer-2:hover {
+  transform: translateY(0%);
+}
+.projects .containerWeb .web .Webcontainer-1:hover h3,
+.projects .containerWeb .web .Webcontainer-2:hover h3 {
+  color: #63B2FF;
+}
+
 @media only screen and (min-device-width: 280px) and (max-device-width: 480px) {
+  /* Header */
   header {
     /* The dots/bullets/indicators */
   }
@@ -1601,6 +1668,50 @@ header .span-col-3 .slide-2 .rightSide .textTop h3 {
   header .span-col-3 .slide-1 .rightSide .textTop h2,
 header .span-col-3 .slide-2 .rightSide .textTop h2 {
     font-size: 45px;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+  .projects .heading-text {
+    padding: 0;
+  }
+  .projects .heading-text .large-text h2 {
+    font-size: 45px;
+  }
+  .projects .heading-text .large-text h3 {
+    font-size: 25px;
+  }
+  .projects .heading-text .large-text .fade-in {
+    -webkit-animation: typing 1s steps(10, end), blink-caret 0.8s step-end infinite;
+            animation: typing 1s steps(10, end), blink-caret 0.8s step-end infinite;
+  }
+  .projects .containerWeb {
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-column: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .projects .containerWeb .Webcontainer-1,
+.projects .containerWeb .Webcontainer-2 {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects .containerWeb .Webcontainer-1 .webText,
+.projects .containerWeb .Webcontainer-2 .webText {
+    width: auto;
+    height: auto;
+    padding: 16px;
+  }
+  .projects .containerWeb .Webcontainer-1 img,
+.projects .containerWeb .Webcontainer-2 img {
+    padding: 0;
+    width: auto;
+    height: 140px;
   }
 }
 /* HEADER 
@@ -2168,8 +2279,6 @@ header {
             width: 100%;
             display: inline-block;
             color: config.$black;
-            text-decoration: none;
-            overflow: hidden;
         }
 
     }

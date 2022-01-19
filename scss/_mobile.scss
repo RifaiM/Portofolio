@@ -1,6 +1,9 @@
 @media only screen
 and (min-device-width : 280px)
 and (max-device-width : 480px) {
+
+    /* Header */
+
     header {
         /* The dots/bullets/indicators */
 
@@ -100,4 +103,56 @@ and (max-device-width : 480px) {
         }
     }
 
+    /* PROJECTS */
+
+    .projects {
+        padding: 0 10px;
+        margin-top: 50px;
+            .heading-text {
+                padding: 0;
+
+                .large-text {
+                
+                    h2 {
+                        font-size: map-get(config.$h2 , "mobile");
+                    }
+                    h3 {
+                        font-size: map-get(config.$h3 , "mobile");
+                    } 
+                    .fade-in {
+                    animation: 
+                    typing 1s steps(10, end),
+                    blink-caret 0.8s step-end infinite;
+                    }
+                    
+                }
+            }
+            .containerWeb {
+                grid-template-columns: repeat(1, 1fr);
+                -ms-grid-column: repeat(1, 1fr);
+                gap: 20px;
+                
+                .Webcontainer-1,
+                .Webcontainer-2 {
+                    position: relative;
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .webText {
+                        width: auto;
+                        height: auto;
+                        padding: 16px;
+                    }
+                }
+            
+                .Webcontainer-1 img,
+                .Webcontainer-2 img {
+                    padding: 0;
+                    width: auto;
+                    height: 140px;
+                }
+            }
+        }
 }

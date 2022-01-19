@@ -14,7 +14,7 @@ body {
 
 /* GLOBAL STYLE */
 
-li {
+ul, li {
     list-style: none;
 }
 
@@ -40,8 +40,6 @@ a {
     margin-top: 5px;
 }
 
-/*
-
 .blue-line:nth-child(3),
 .blue-line:nth-child(4) {
     width: 51px;
@@ -51,7 +49,6 @@ a {
     margin-top: 5px;
 }
 
-*/
 
 /* TYPEWRITER EFFECTS */
 
@@ -463,7 +460,6 @@ header {
                 text-align: center;
             }
             .overlay ul {
-                list-style: none;
                 padding: 0;
                 margin: 0 auto;
                 display: inline-block;
@@ -602,20 +598,85 @@ header {
    }
 }
 
+/* PROJECTS SECTION */
+
+.projects {
+    .heading-text {
+        color: config.$black;
+        .large-text {
+            width: 100%;
+            display: inline-block;
+            color: config.$black;
+
+            h2 {
+                font-size: map-get(config.$h2 , "normal");
+            }
+            h3 {
+                font-size: map-get(config.$h3 , "normal");
+            }
+        }
+    }
+    .containerWeb {
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-grid-column: repeat(2, 1fr);
+        grid-column: auto;
+        gap: 20px;
+        
+        .Webcontainer-1,
+        .Webcontainer-2 {
+            position: relative;
+    
+            p {
+                color: config.$grey1;
+            }
+    
+            .webText {
+                width: 500px;
+                height: 170px;
+                position: absolute;
+                top: 40%;
+                background: rgba(255, 255, 255, 0.9);
+                box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+                color: config.$black;
+                overflow: hidden;
+        
+                .title,
+                .sub-title,
+                .sub-desc {
+                    color: config.$black;
+                }
+            }
+        }
+    
+        .Webcontainer-1 img,
+        .Webcontainer-2 img {
+            width: 450px;
+            height: 280px;
+            box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
+        }
+    
+        .Webcontainer-1:hover img,
+        .Webcontainer-2:hover img {
+            transform: translateY(-20%);
+            transition: 0.6s;
+        }
+    
+        .web .Webcontainer-1:hover,
+        .web .Webcontainer-2:hover {
+            transform: translateY(0%);
+    
+            h3 {
+                color: config.$blue;
+            }
+        }
+    }
+    
+}
+
 @import './mobile';
 
-
-
-
-
-
-
-
-
-
-
-
-  
 
 /* HEADER 
 
@@ -1188,8 +1249,6 @@ header {
             width: 100%;
             display: inline-block;
             color: config.$black;
-            text-decoration: none;
-            overflow: hidden;
         }
     
     }
