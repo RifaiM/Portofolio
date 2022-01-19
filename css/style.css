@@ -840,7 +840,6 @@
 
 .btn-secondary .btn-submit, .btn-primary a {
   border: none;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
@@ -852,11 +851,13 @@
 .btn-secondary .btn-submit:hover, .btn-primary a:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
+  border: none;
 }
 
 .btn-primary a {
   background-color: #63B2FF;
   color: #FBFAF5;
+  outline: none;
 }
 
 .btn-secondary .btn-submit {
@@ -1024,6 +1025,7 @@ header .grid .item-1 .nav ul .menu--off {
   margin-top: 50px;
   transition: all 300ms;
   display: none;
+  border-radius: 5px;
 }
 header .grid .item-1 .nav ul .menu--on {
   left: 0;
