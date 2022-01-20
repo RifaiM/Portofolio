@@ -634,7 +634,7 @@ header {
         .Webcontainer-1,
         .Webcontainer-2 {
             position: relative;
-    
+            
             p {
                 color: config.$grey1;
             }
@@ -678,6 +678,18 @@ header {
                 color: config.$blue;
             }
         }
+
+        .web-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .web-2 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+        }
+
     }
     
 }

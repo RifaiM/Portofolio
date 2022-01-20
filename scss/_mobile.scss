@@ -169,6 +169,12 @@ and (max-device-width : 480px) {
                     width: 225px;
                     height: 140px;
                 }
+
+                .web-1, .web-2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
 

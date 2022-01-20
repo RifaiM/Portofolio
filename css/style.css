@@ -1575,6 +1575,16 @@ header .fade {
 .projects .containerWeb .web .Webcontainer-2:hover h3 {
   color: #63B2FF;
 }
+.projects .containerWeb .web-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects .containerWeb .web-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
 
 /* ABOUT SECTION */
 .about .heading-text .large-text {
@@ -1923,6 +1933,11 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     padding: 0;
     width: 225px;
     height: 140px;
+  }
+  .projects .containerWeb .web-1, .projects .containerWeb .web-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* ABOUT SECTION */
