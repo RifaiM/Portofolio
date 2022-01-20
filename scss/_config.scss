@@ -6,9 +6,13 @@ $grey1: #A4B7B4;
 $grey2: #EAF3F0;
 $black: #0E1111;
 
-$h1: 120px;
 $h4: 20px;
 $p: 16px;
+
+$h1: (
+    "normal": 120px,
+    "mobile": 100px
+);
 
 $h2: (
     "normal": 60px,

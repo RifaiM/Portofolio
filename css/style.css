@@ -840,6 +840,7 @@
 
 .btn-secondary .btn-submit, .btn-primary a {
   border: none;
+  outline: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
@@ -851,13 +852,11 @@
 .btn-secondary .btn-submit:hover, .btn-primary a:hover {
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
-  border: none;
 }
 
 .btn-primary a {
   background-color: #63B2FF;
   color: #FBFAF5;
-  outline: none;
 }
 
 .btn-secondary .btn-submit {
@@ -1582,8 +1581,6 @@ header .fade {
   width: 100%;
   display: inline-block;
   color: #0E1111;
-  text-decoration: none;
-  overflow: hidden;
 }
 .about .heading-text .large-text span:nth-child(1) {
   color: #63B2FF;
@@ -1647,6 +1644,130 @@ header .fade {
   color: #A4B7B4;
 }
 
+/* CONTACT SECTION */
+.contact {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(1, 2fr);
+  -ms-grid-row: repeat(1, 2fr);
+  grid-row: auto;
+  gap: 20px;
+}
+.contact .large-text {
+  width: 100%;
+  display: inline-block;
+  color: #0E1111;
+}
+.contact li {
+  width: 100%;
+}
+.contact li .typewriter,
+.contact li h2,
+.contact li h3 {
+  color: #0E1111;
+}
+.contact li h2 {
+  font-size: 60px;
+}
+.contact li h3 {
+  font-size: 40px;
+}
+.contact .row {
+  margin: -20px 0;
+}
+.contact .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contact .row .col {
+  padding: 0 20px;
+  float: left;
+  box-sizing: border-box;
+}
+.contact .row .col.x-50 {
+  width: 50%;
+}
+.contact .row .col.x-100 {
+  width: 100%;
+}
+.contact .row .col.f-r {
+  float: right;
+}
+.contact .content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+.contact .get-in-touch {
+  max-width: 650px;
+  left: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
+}
+.contact .contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+.contact .contact-form .form-field textarea {
+  height: 100px;
+}
+.contact .contact-form .size {
+  height: 100px;
+  margin-top: 10px;
+  resize: none;
+}
+.contact .contact-form .to-top {
+  top: 0;
+}
+.contact .contact-form .col a {
+  text-align: right;
+}
+.contact .contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 1.5px 0;
+  border-color: #63B2FF;
+  font-size: 16px;
+  line-height: 26px;
+}
+.contact .contact-form .input-text:focus {
+  outline: none;
+}
+.contact .contact-form .input-text:focus + .label, .contact .contact-form .input-text.not-empty + .label {
+  transform: translateY(-24px);
+}
+.contact .contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 26px;
+  color: #63B2FF;
+  cursor: text;
+  transition: transform 0.2s ease-in-out;
+  padding: 5px 0;
+}
+.contact .note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+}
+.contact .note .link {
+  color: #A4B7B4;
+  text-decoration: none;
+}
+.contact .note .link:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-device-width: 280px) and (max-device-width: 480px) {
   /* Typewriter */
   .fade-in {
@@ -1661,7 +1782,7 @@ header .fade {
   header .dots-container {
     display: flex;
     position: absolute;
-    top: 700px;
+    top: 590px;
     left: 0;
     right: 0;
     margin-top: unset;
@@ -1698,7 +1819,9 @@ header .fade {
   }
   header .grid .item-2 .initial {
     grid-area: 1/2;
-    font-size: 120px;
+  }
+  header .grid .item-2 .initial h1 {
+    font-size: 100px;
   }
   header .grid .item-3 .button_container {
     top: 40px;
@@ -1723,6 +1846,11 @@ header .span-col-3 .slide-2 {
 header .span-col-3 .slide-2 .leftSide {
     display: flex;
     justify-content: center;
+  }
+  header .span-col-3 .slide-1 .leftSide img,
+header .span-col-3 .slide-2 .leftSide img {
+    width: 180px;
+    height: 344px;
   }
   header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
@@ -1862,6 +1990,42 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   }
   .about .containerAbout .date {
     color: #A4B7B4;
+  }
+
+  /* CONTACT SECTION */
+  .contact {
+    padding: 0 10px;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .contact ul {
+    padding: 0;
+  }
+  .contact .containerContact {
+    padding: 0;
+    margin-top: 20px;
+  }
+  .contact .containerContact .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .containerContact .contact-form .form-field {
+    display: inline-flex;
+    width: auto;
+  }
+  .contact li {
+    width: 100%;
+  }
+  .contact li .typewriter,
+.contact li h2,
+.contact li h3 {
+    color: #0E1111;
+  }
+  .contact li h2 {
+    font-size: 45px;
+  }
+  .contact li h3 {
+    font-size: 25px;
   }
 }
 /* HEADER 

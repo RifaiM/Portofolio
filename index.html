@@ -200,7 +200,7 @@
         </section>
 
         <!--ABOUT SECTION-->
-        <section class="about px-2">
+        <section class="about px-2 mt-5">
             <div class="p-1 heading-text">
                 <div class="large-text">
                     <h2 class="mt-1 typewriter">about me<span class="pr">.</span></h2>
@@ -256,6 +256,53 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!--CONTACT SECTION-->
+        <section class="contact px-2 mt-5">
+            <ul class="p-1">
+                <li>
+                    <div class="large-text">
+                        <h2 class="mt-1 typewriter">contact<span class="pr">.</span></h2>
+                        <span class="blue-line"></span>
+                    </div>
+                    <h3 class="mt-5">send me a message<span class="pr">!</span></h3>
+                    <span class="blue-line"></span>
+                </li>
+            </ul>
+            <div class="containerContact p-1 mt-1">
+                <div class="get-in-touch my-1">
+                    <form class="contact-form row" method="POST" name="form" data-netlify="true" netlify-honeypot="bot-field">
+                        <div hidden aria-hidden="true">
+                            <label>
+                              Don’t fill this out if you're human: 
+                              <input name="bot-field" />
+                            </label>
+                        </div>
+                        <div class="form-field col x-50">
+                            <input name="name" id="name" class="input-text js-input" type="text" required>
+                            <label class="label" for="name">Name</label>
+                        </div>
+                        <div class="form-field col x-50">
+                            <input name="email" id="email" class="input-text js-input" type="email" required>
+                            <label class="label" for="email">E-mail</label>
+                        </div>
+                        <div class="form-field col x-100">
+                            <textarea name="message" id="message" class="input-text size js-input" type="text"  rows="50" rezise required></textarea>
+                            <label class="label to-top" for="message">Message</label>
+                        </div>
+                        
+                        <div class="form-field col btn-secondary pt-1 f-r">
+                            <input type="submit" class="btn-submit" value="Send">
+                        </div>
+                        <!--
+                        <div class="btn-secondary pt-1 form-field col f-r">
+                            <a href="#/">Send</a>
+                        </div>
+                        -->
+                    </form>
                 </div>
             </div>
         </section>
