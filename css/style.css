@@ -871,6 +871,7 @@ body {
   font-family: "Manrope", sans-serif;
   margin: 0;
   padding: 0;
+  zoom: 100%;
 }
 
 /* GLOBAL STYLE */
@@ -2158,13 +2159,13 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     margin-top: 50px;
   }
   .social .heading-text {
-    padding: 16px 0;
+    padding: 0;
   }
   .social .heading-text h3 {
     font-size: 25px;
   }
   .social .icon {
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 10px 0;
     margin-top: 20px;
   }
@@ -2172,7 +2173,11 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
 .social .icon .bi-linkedin,
 .social .icon .ig {
     font-size: 45px;
-    padding: 0;
+    padding-top: 2px;
+  }
+  .social .icon .bi-linkedin,
+.social .icon .ig {
+    padding-left: 0;
   }
   .social .icon .ig {
     width: 45px;
