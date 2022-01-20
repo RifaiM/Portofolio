@@ -1778,6 +1778,98 @@ header .fade {
   text-decoration: underline;
 }
 
+/* SOCIAL SECTION */
+.social .heading-text h3 {
+  color: #0E1111;
+  font-size: 40px;
+}
+.social .icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.social .icon .bi-github,
+.social .icon .bi-linkedin {
+  font-size: 60px;
+}
+.social .icon .bi-github {
+  color: #171515;
+}
+.social .icon .bi-linkedin {
+  color: #0077b5;
+}
+.social .icon .ig {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  padding-top: 5px;
+}
+.social .icon .github:hover,
+.social .icon .instagram:hover,
+.social .icon .linkedin:hover {
+  transform: rotateZ(7deg) scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* FOOTER */
+footer .triangle-bottom {
+  width: 0;
+  height: 0;
+  border-bottom: 500px solid #63B2FF;
+  border-left: 1200px solid transparent;
+  position: absolute;
+  right: 0;
+  max-width: 100%;
+  z-index: -1;
+}
+footer .initial {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 500px;
+  gap: 5px;
+  z-index: 1;
+}
+footer .initial .wrap {
+  grid-area: 1/3;
+  margin: auto;
+  padding-top: 100px;
+  padding-left: 500px;
+}
+footer .initial .wrap h1, footer .initial .wrap h4, footer .initial .wrap p {
+  color: #FBFAF5;
+}
+footer .initial .wrap h1 {
+  font-size: 120px;
+}
+footer .initial .wrap .blue-line {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #FBFAF5;
+  display: block;
+}
+footer .initial .wrap h4 {
+  position: relative;
+  color: #FBFAF5;
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 5px;
+}
+footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active:after {
+  width: 50%;
+}
+footer .initial .wrap h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FBFAF5;
+  transition: 0.35s;
+}
+
 @media only screen and (min-device-width: 280px) and (max-device-width: 480px) {
   /* Typewriter */
   .fade-in {
@@ -2041,6 +2133,67 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   }
   .contact li h3 {
     font-size: 25px;
+  }
+
+  /* SOCIAL SECTION */
+  .social {
+    padding: 0 10px;
+    margin-top: 50px;
+  }
+  .social .heading-text {
+    padding: 16px 0;
+  }
+  .social .heading-text h3 {
+    font-size: 25px;
+  }
+  .social .icon {
+    justify-content: space-evenly;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  .social .icon .bi-github,
+.social .icon .bi-linkedin,
+.social .icon .ig {
+    font-size: 45px;
+    padding: 0;
+  }
+  .social .icon .ig {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* FOOTER */
+  footer .triangle-bottom {
+    border-bottom: 380px solid #63B2FF;
+    border-left: 400px solid transparent;
+    overflow: hidden;
+  }
+  footer .initial {
+    grid-template-columns: auto;
+    grid-template-rows: 380px;
+    justify-content: end;
+  }
+  footer .initial .wrap {
+    padding: 50px 10px 0 0;
+    grid-area: 1/1;
+    width: 120px;
+  }
+  footer .initial .wrap p {
+    display: inline-block;
+    width: auto;
+  }
+  footer .initial .wrap h1 {
+    font-size: 100px;
+  }
+  footer .initial .wrap .blue-line {
+    content: "";
+    width: 90%;
+  }
+  footer .initial .wrap h4 {
+    margin: 5px 0 0 0;
+  }
+  footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active:after {
+    width: 90%;
   }
 }
 /* HEADER 
