@@ -674,8 +674,10 @@ header {
         .web-2 .Webcontainer-2:hover {
             transform: translateY(0%);
     
-            h3 {
-                color: config.$blue;
+            .webText {
+                .title {
+                    color: config.$blue;
+                }
             }
         }
 

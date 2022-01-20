@@ -1571,8 +1571,8 @@ header .fade {
 .projects .containerWeb .web-2 .Webcontainer-2:hover {
   transform: translateY(0%);
 }
-.projects .containerWeb .web-1 .Webcontainer-1:hover h3,
-.projects .containerWeb .web-2 .Webcontainer-2:hover h3 {
+.projects .containerWeb .web-1 .Webcontainer-1:hover .webText .title,
+.projects .containerWeb .web-2 .Webcontainer-2:hover .webText .title {
   color: #63B2FF;
 }
 .projects .containerWeb .web-1 {
