@@ -1530,15 +1530,18 @@ header .fade {
   gap: 20px;
 }
 .projects .containerWeb .Webcontainer-1,
-.projects .containerWeb .Webcontainer-2 {
+.projects .containerWeb .Webcontainer-2,
+.projects .containerWeb .Webcontainer-3 {
   position: relative;
 }
 .projects .containerWeb .Webcontainer-1 p,
-.projects .containerWeb .Webcontainer-2 p {
+.projects .containerWeb .Webcontainer-2 p,
+.projects .containerWeb .Webcontainer-3 p {
   color: #A4B7B4;
 }
 .projects .containerWeb .Webcontainer-1 .webText,
-.projects .containerWeb .Webcontainer-2 .webText {
+.projects .containerWeb .Webcontainer-2 .webText,
+.projects .containerWeb .Webcontainer-3 .webText {
   width: 500px;
   height: 170px;
   position: absolute;
@@ -1553,29 +1556,37 @@ header .fade {
 .projects .containerWeb .Webcontainer-1 .webText .sub-desc,
 .projects .containerWeb .Webcontainer-2 .webText .title,
 .projects .containerWeb .Webcontainer-2 .webText .sub-title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-desc {
+.projects .containerWeb .Webcontainer-2 .webText .sub-desc,
+.projects .containerWeb .Webcontainer-3 .webText .title,
+.projects .containerWeb .Webcontainer-3 .webText .sub-title,
+.projects .containerWeb .Webcontainer-3 .webText .sub-desc {
   color: #0E1111;
 }
 .projects .containerWeb .Webcontainer-1 img,
-.projects .containerWeb .Webcontainer-2 img {
+.projects .containerWeb .Webcontainer-2 img,
+.projects .containerWeb .Webcontainer-3 img {
   width: 450px;
   height: 280px;
   box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
 }
 .projects .containerWeb .Webcontainer-1:hover img,
-.projects .containerWeb .Webcontainer-2:hover img {
+.projects .containerWeb .Webcontainer-2:hover img,
+.projects .containerWeb .Webcontainer-3:hover img {
   transform: translateY(-20%);
   transition: 0.6s;
 }
 .projects .containerWeb .web-1 .Webcontainer-1:hover,
-.projects .containerWeb .web-2 .Webcontainer-2:hover {
+.projects .containerWeb .web-2 .Webcontainer-2:hover,
+.projects .containerWeb .web-3 .Webcontainer-3:hover {
   transform: translateY(0%);
 }
 .projects .containerWeb .web-1 .Webcontainer-1:hover .webText .title,
-.projects .containerWeb .web-2 .Webcontainer-2:hover .webText .title {
+.projects .containerWeb .web-2 .Webcontainer-2:hover .webText .title,
+.projects .containerWeb .web-3 .Webcontainer-3:hover .webText .title {
   color: #63B2FF;
 }
-.projects .containerWeb .web-1 {
+.projects .containerWeb .web-1,
+.projects .containerWeb .web-3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2000,14 +2011,16 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     gap: 10px;
   }
   .projects .containerWeb .Webcontainer-1,
-.projects .containerWeb .Webcontainer-2 {
+.projects .containerWeb .Webcontainer-2,
+.projects .containerWeb .Webcontainer-3 {
     position: relative;
     margin-top: 20px;
     display: flex;
     justify-content: left;
   }
   .projects .containerWeb .Webcontainer-1 .webText,
-.projects .containerWeb .Webcontainer-2 .webText {
+.projects .containerWeb .Webcontainer-2 .webText,
+.projects .containerWeb .Webcontainer-3 .webText {
     height: auto;
     width: 100%;
     padding: 0;
@@ -2017,16 +2030,20 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
 .projects .containerWeb .Webcontainer-1 .webText .sub-desc,
 .projects .containerWeb .Webcontainer-2 .webText .title,
 .projects .containerWeb .Webcontainer-2 .webText .sub-title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-desc {
+.projects .containerWeb .Webcontainer-2 .webText .sub-desc,
+.projects .containerWeb .Webcontainer-3 .webText .title,
+.projects .containerWeb .Webcontainer-3 .webText .sub-title,
+.projects .containerWeb .Webcontainer-3 .webText .sub-desc {
     padding: 0 16px;
   }
   .projects .containerWeb .Webcontainer-1 img,
-.projects .containerWeb .Webcontainer-2 img {
+.projects .containerWeb .Webcontainer-2 img,
+.projects .containerWeb .Webcontainer-3 img {
     padding: 0;
     width: 225px;
     height: 140px;
   }
-  .projects .containerWeb .web-1, .projects .containerWeb .web-2 {
+  .projects .containerWeb .web-1, .projects .containerWeb .web-2, .projects .containerWeb .web-3 {
     display: flex;
     align-items: center;
     justify-content: center;

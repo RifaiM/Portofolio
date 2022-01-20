@@ -632,7 +632,8 @@ header {
         gap: 20px;
         
         .Webcontainer-1,
-        .Webcontainer-2 {
+        .Webcontainer-2,
+        .Webcontainer-3 {
             position: relative;
             
             p {
@@ -658,20 +659,23 @@ header {
         }
     
         .Webcontainer-1 img,
-        .Webcontainer-2 img {
+        .Webcontainer-2 img,
+        .Webcontainer-3 img {
             width: 450px;
             height: 280px;
             box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
         }
     
         .Webcontainer-1:hover img,
-        .Webcontainer-2:hover img {
+        .Webcontainer-2:hover img,
+        .Webcontainer-3:hover img {
             transform: translateY(-20%);
             transition: 0.6s;
         }
     
         .web-1 .Webcontainer-1:hover,
-        .web-2 .Webcontainer-2:hover {
+        .web-2 .Webcontainer-2:hover,
+        .web-3 .Webcontainer-3:hover {
             transform: translateY(0%);
     
             .webText {
@@ -681,7 +685,8 @@ header {
             }
         }
 
-        .web-1 {
+        .web-1,
+        .web-3 {
             display: flex;
             align-items: center;
             justify-content: center;

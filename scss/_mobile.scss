@@ -144,7 +144,8 @@ and (max-device-width : 480px) {
                 gap: 10px;
                 
                 .Webcontainer-1,
-                .Webcontainer-2 {
+                .Webcontainer-2,
+                .Webcontainer-3 {
                     position: relative;
                     margin-top: 20px;
                     display: flex;
@@ -164,13 +165,14 @@ and (max-device-width : 480px) {
                 }
             
                 .Webcontainer-1 img,
-                .Webcontainer-2 img {
+                .Webcontainer-2 img,
+                .Webcontainer-3 img {
                     padding: 0;
                     width: 225px;
                     height: 140px;
                 }
 
-                .web-1, .web-2 {
+                .web-1, .web-2, .web-3 {
                     display: flex;
                     align-items: center;
                     justify-content: center;
