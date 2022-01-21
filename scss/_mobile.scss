@@ -36,7 +36,8 @@ and (max-device-width : 480px) {
     
         .triangle-top {
             border-top: 300px solid config.$blue;
-            border-right: 270px solid transparent;
+            border-right: 300px solid transparent;
+            overflow: hidden;
         }
         .grid {
             display: block;
