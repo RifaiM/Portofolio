@@ -18,7 +18,7 @@ and (max-device-width : 480px) {
         .dots-container {
             display: flex;
             position: absolute;
-            top: 550px;
+            top: 560px;
             left: 0;
             right: 0;
             margin-top: unset;
@@ -95,7 +95,7 @@ and (max-device-width : 480px) {
                     }
                 }
                 .rightSide {
-                    margin-top: 60px;
+                    margin-top: 80px;
                     .blue-line {
                         width: 100%;
                     }

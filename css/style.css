@@ -1904,7 +1904,7 @@ footer .initial .wrap h4::after {
   header .dots-container {
     display: flex;
     position: absolute;
-    top: 550px;
+    top: 560px;
     left: 0;
     right: 0;
     margin-top: unset;
@@ -1976,7 +1976,7 @@ header .span-col-3 .slide-2 .leftSide img {
   }
   header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
-    margin-top: 60px;
+    margin-top: 80px;
   }
   header .span-col-3 .slide-1 .rightSide .blue-line,
 header .span-col-3 .slide-2 .rightSide .blue-line {
