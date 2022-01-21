@@ -2,6 +2,10 @@
 and (min-device-width : 280px)
 and (max-device-width : 480px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     /* Typewriter */
 
     .fade-in {
@@ -88,10 +92,10 @@ and (max-device-width : 480px) {
                 .leftSide {
                     display: flex;
                     justify-content: center;
-
                     img {
-                        min-width: 100%;
-                        min-height: 100%;
+                        max-width: 100%;
+                        max-height: 100%;
+                        display: block; /* remove extra space below image */
                     }
                 }
                 .rightSide {

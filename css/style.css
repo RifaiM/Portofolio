@@ -977,14 +977,14 @@ header .triangle-top {
 }
 header .grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   grid-gap: 5px;
   z-index: 1;
 }
 header .grid .item-1 {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 header .grid .item-1 .nav {
   display: flex;
@@ -1231,22 +1231,17 @@ header .grid .item-1 .nav ul li a::after {
 }
 header .grid .item-2 {
   display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-between;
-  /* horizontal alignment of grid tracks */
+  grid-template-columns: auto auto;
+  align-items: center;
 }
 header .grid .item-2 .initial {
   color: #63B2FF;
-  grid-area: 1/3;
+  grid-area: 1/2;
   margin: 0 auto;
 }
 header .grid .item-2 .initial h1 {
   margin-bottom: 0;
   font-size: 120px;
-}
-header .grid .item-3 {
-  display: grid;
-  grid-area: 1/3;
 }
 header .grid .item-3 .button_container {
   position: fixed;
@@ -1421,14 +1416,13 @@ header .grid .item-3 .overlay ul li a:after {
   }
 }
 header .span-col-3 {
-  grid-area: 2/2;
-  grid-column: 2 span 2;
+  grid-area: 2/1;
+  grid-column: 1/span 2;
 }
 header .span-col-3 .slide-1,
 header .span-col-3 .slide-2 {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: space-evenly;
 }
 header .span-col-3 .slide-1 .leftSide,
 header .span-col-3 .slide-2 .leftSide {
@@ -1471,14 +1465,14 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
 }
 header .dots-container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  margin-top: -40px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: -50px;
   margin-bottom: 100px;
   grid-gap: 10px;
 }
 header .dots-container .dots-wrapper {
-  grid-area: 1/3;
-  margin-left: auto;
+  grid-area: 1/2;
+  margin-right: auto;
 }
 header .dots-container .dot {
   height: 15px;
@@ -1891,6 +1885,10 @@ footer .initial .wrap h4::after {
 }
 
 @media only screen and (min-device-width: 280px) and (max-device-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
   /* Typewriter */
   .fade-in {
     -webkit-animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
@@ -1971,8 +1969,10 @@ header .span-col-3 .slide-2 .leftSide {
   }
   header .span-col-3 .slide-1 .leftSide img,
 header .span-col-3 .slide-2 .leftSide img {
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    /* remove extra space below image */
   }
   header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
