@@ -21,13 +21,17 @@ $h2: (
 
 $h3: (
     "normal": 40px,
-    "mobile": 25px,
+    "mobile": 25px
 );
 
 $font-weights: (
+    "extraLight": 200,
+    "light": 300,
     "regular": 400,
     "medium": 500,
-    "bold": 900
+    "semiBold": 600,
+    "bold": 700,
+    "extraBold": 800
 );
 
 $github: #171515;

@@ -1774,7 +1774,7 @@ header .fade {
   left: 20px;
   bottom: 11px;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 26px;
   color: #63B2FF;
   cursor: text;
@@ -1976,7 +1976,7 @@ header .span-col-3 .slide-2 .leftSide img {
   }
   header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
-    margin-top: 80px;
+    margin-top: 100px;
   }
   header .span-col-3 .slide-1 .rightSide .blue-line,
 header .span-col-3 .slide-2 .rightSide .blue-line {
