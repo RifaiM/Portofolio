@@ -18,7 +18,7 @@ and (max-device-width : 480px) {
         .dots-container {
             display: flex;
             position: absolute;
-            top: 590px;
+            top: 550px;
             left: 0;
             right: 0;
             margin-top: unset;
@@ -90,8 +90,8 @@ and (max-device-width : 480px) {
                     justify-content: center;
 
                     img {
-                        width: 240px;
-                        height: 150px;
+                        min-width: 100%;
+                        min-height: 100%;
                     }
                 }
                 .rightSide {

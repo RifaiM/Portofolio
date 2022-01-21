@@ -1422,11 +1422,13 @@ header .grid .item-3 .overlay ul li a:after {
 }
 header .span-col-3 {
   grid-area: 2/2;
+  grid-column: 2 span 2;
 }
 header .span-col-3 .slide-1,
 header .span-col-3 .slide-2 {
   display: flex;
   justify-content: space-around;
+  gap: 20px;
 }
 header .span-col-3 .slide-1 .leftSide,
 header .span-col-3 .slide-2 .leftSide {
@@ -1902,7 +1904,7 @@ footer .initial .wrap h4::after {
   header .dots-container {
     display: flex;
     position: absolute;
-    top: 590px;
+    top: 550px;
     left: 0;
     right: 0;
     margin-top: unset;
@@ -1969,8 +1971,8 @@ header .span-col-3 .slide-2 .leftSide {
   }
   header .span-col-3 .slide-1 .leftSide img,
 header .span-col-3 .slide-2 .leftSide img {
-    width: 240px;
-    height: 150px;
+    min-width: 100%;
+    min-height: 100%;
   }
   header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
