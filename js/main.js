@@ -19,7 +19,7 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";
   dott[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 7 seconds
+  setTimeout(showSlides, 8000); // Change image every 6 seconds
 }
 
 // scroll function

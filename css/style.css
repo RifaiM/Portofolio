@@ -1428,10 +1428,16 @@ header .span-col-3 .slide-2 {
   display: flex;
   justify-content: space-around;
 }
+header .span-col-3 .slide-1 .leftSide,
+header .span-col-3 .slide-2 .leftSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header .span-col-3 .slide-1 .leftSide img,
 header .span-col-3 .slide-2 .leftSide img {
-  width: 217px;
-  height: 412px;
+  width: 480px;
+  height: 300px;
 }
 header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
@@ -1963,8 +1969,8 @@ header .span-col-3 .slide-2 .leftSide {
   }
   header .span-col-3 .slide-1 .leftSide img,
 header .span-col-3 .slide-2 .leftSide img {
-    width: 180px;
-    height: 344px;
+    width: 240px;
+    height: 150px;
   }
   header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
