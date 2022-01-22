@@ -646,10 +646,10 @@ header {
             }
     
             .webText {
-                width: 500px;
-                height: 170px;
+                width: 90%;
+                height: 150px;
                 position: absolute;
-                top: 40%;
+                top: 60%;
                 background: rgba(255, 255, 255, 0.9);
                 box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
                 color: config.$black;
@@ -666,8 +666,9 @@ header {
         .Webcontainer-1 img,
         .Webcontainer-2 img,
         .Webcontainer-3 img {
-            width: 450px;
-            height: 280px;
+            max-width: 80%;
+            max-height: 80%;
+            display: block; /* remove extra space below image */
             box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
         }
     
