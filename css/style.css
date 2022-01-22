@@ -984,8 +984,11 @@ header .triangle-top {
   z-index: -1;
 }
 header .grid {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: auto auto;
+  -ms-grid-column: auto auto;
+  grid-column: auto;
   grid-gap: 5px;
   z-index: 1;
 }
@@ -1238,8 +1241,10 @@ header .grid .item-1 .nav ul li a::after {
   transition: 0.35s;
 }
 header .grid .item-2 {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: auto auto;
+  -ms-grid-column: auto auto;
   align-items: center;
 }
 header .grid .item-2 .initial {
@@ -1472,8 +1477,11 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   font-size: 60px;
 }
 header .dots-container {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  -ms-grid-column: repeat(4, 1fr);
+  grid-column: auto;
   margin-top: -50px;
   margin-bottom: 100px;
   grid-gap: 10px;
@@ -1866,9 +1874,14 @@ footer .triangle-bottom {
   z-index: -1;
 }
 footer .initial {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: auto auto auto;
+  -ms-grid-column: auto auto auto;
+  grid-column: auto;
   grid-template-rows: 500px;
+  -ms-grid-row: 500px;
+  grid-row: auto;
   gap: 5px;
   z-index: 1;
 }
@@ -1966,6 +1979,7 @@ footer .initial .wrap h4::after {
   }
   header .grid .item-2 {
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-column: repeat(2, 1fr);
   }
   header .grid .item-2 .initial {
     grid-area: 1/2;
@@ -2236,7 +2250,9 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   }
   footer .initial {
     grid-template-columns: auto;
+    -ms-grid-column: auto;
     grid-template-rows: 380px;
+    -ms-grid-row: 380px;
     justify-content: end;
   }
   footer .initial .wrap {

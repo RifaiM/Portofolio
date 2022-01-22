@@ -103,8 +103,11 @@ header {
         z-index: -1;
     }
     .grid {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: auto auto;
+        -ms-grid-column: auto auto;
+        grid-column: auto;
         grid-gap: 5px;
         z-index: 1;
 
@@ -345,8 +348,10 @@ header {
             }
         }
         .item-2 {
+            display: -ms-grid;
             display: grid;
             grid-template-columns: auto auto;
+            -ms-grid-column: auto auto;
             align-items: center;
             .initial {
                 color: config.$blue;
@@ -572,8 +577,11 @@ header {
     /* The dots/bullets/indicators */
 
     .dots-container {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        -ms-grid-column: repeat(4, 1fr);
+        grid-column: auto;
         margin-top: -50px;
         margin-bottom: 100px;
         grid-gap: 10px;
@@ -1037,9 +1045,14 @@ footer {
         z-index: -1;
     }
     .initial {
+        display: -ms-grid;
         display: grid;
         grid-template-columns: auto auto auto;
+        -ms-grid-column: auto auto auto;
+        grid-column: auto;
         grid-template-rows: 500px;
+        -ms-grid-row: 500px;
+        grid-row: auto;
         gap: 5px;
         z-index: 1;
 

@@ -62,6 +62,7 @@ and (max-device-width : 480px) {
             }
             .item-2 {
                 grid-template-columns: repeat(2, 1fr);
+                -ms-grid-column: repeat(2, 1fr);
                 .initial {
                     grid-area: 1 / 2;
 
@@ -367,7 +368,9 @@ and (max-device-width : 480px) {
             }
             .initial {
                 grid-template-columns: auto;
+                -ms-grid-column: auto;
                 grid-template-rows: 380px;
+                -ms-grid-row: 380px;
                 justify-content: end;
 
                 .wrap {

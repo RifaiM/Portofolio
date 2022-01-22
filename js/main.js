@@ -1,6 +1,9 @@
-$(window).on('load', function () { $('#loading').hide(); })
+$(window).on('load', function () 
+  { 
+    $('#loading').hide(); 
+})
 
-// slider
+// slide show
 
 var slideIndex = 0;
 showSlides();
@@ -21,10 +24,10 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";
   dott[slideIndex-1].className += " active";
-  setTimeout(showSlides, 10000); // Change image every 10 seconds
+  setTimeout(showSlides, 9000); // Change image every 9 seconds
 }
 
-// scroll function
+// hamburger right scroll function
 
 $("#toggle").click(function () {
   $(this).toggleClass("active");
@@ -40,6 +43,8 @@ $(document).scroll(function() {
     $('.button_container').fadeOut();
   }
 });
+
+// disable scroll when overlay open
 
 $("#overlay").mouseenter(function(){
   $("body").css("overflow", "hidden"); 
@@ -58,7 +63,7 @@ $( '.js-input' ).keyup(function() {
 });
 
 
-//scroll reveal
+// typewriter scroll reveal
 
 document.addEventListener("DOMContentLoaded", function(event) {
   document.addEventListener("scroll", function(event) {
@@ -82,6 +87,7 @@ function addClass(element, className) {
   }
 }
 
+// hamburger left (mobile)
 
 (function() {
 
