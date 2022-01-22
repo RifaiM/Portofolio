@@ -340,7 +340,7 @@ and (max-device-width : 480px) {
                 .bi-github,
                 .bi-linkedin,
                 .ig {
-                    font-size: map-get(config.$h2, "mobile");
+                    
                     padding-top: 2px;
                 }
 
@@ -349,10 +349,7 @@ and (max-device-width : 480px) {
                     padding-left: 0;
                 }
 
-                .ig {
-                    width: 45px;
-                    height: 45px;
-                }
+                
 
             }
         }
