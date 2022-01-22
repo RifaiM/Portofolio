@@ -150,12 +150,9 @@ header {
                         margin-top: 30px;
                         transition: all 300ms;
                         display: none;
-                        -moz-border-radius-topright: 25px;
-                        -webkit-border-top-right-radius: 25px;
-                        border-top-right-radius: 25px;
-                        -moz-border-radius-bottomright: 25px;
-                        -webkit-border-bottom-right-radius: 25px;
-                        border-bottom-right-radius: 25px;
+                        -webkit-border-bottom-right-radius: 100px;
+                        -moz-border-radius-bottomright: 100px;
+                        border-bottom-right-radius: 100px;
                         }
                         
                         .menu--on {
