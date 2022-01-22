@@ -647,9 +647,12 @@ header {
     
             .webText {
                 width: 90%;
-                height: 150px;
+                min-height: 50%;
                 position: absolute;
-                top: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                bottom: 0;
                 background: rgba(255, 255, 255, 0.9);
                 box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
                 color: config.$black;
@@ -659,6 +662,16 @@ header {
                 .sub-title,
                 .sub-desc {
                     color: config.$black;
+                    padding-left: 20px;
+                }
+                .title {
+                    font-size: map-get(config.$h3, "mobile");
+                }
+                .sub-title {
+                    font-weight: map-get(config.$font-weights, "semiBold");
+                }
+                .sub-desc {
+                    font-weight: map-get(config.$font-weights, "regular");
                 }
             }
         }

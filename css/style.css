@@ -1546,9 +1546,12 @@ header .fade {
 .projects .containerWeb .Webcontainer-2 .webText,
 .projects .containerWeb .Webcontainer-3 .webText {
   width: 90%;
-  height: 150px;
+  min-height: 50%;
   position: absolute;
-  top: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
   color: #0E1111;
@@ -1564,6 +1567,22 @@ header .fade {
 .projects .containerWeb .Webcontainer-3 .webText .sub-title,
 .projects .containerWeb .Webcontainer-3 .webText .sub-desc {
   color: #0E1111;
+  padding-left: 20px;
+}
+.projects .containerWeb .Webcontainer-1 .webText .title,
+.projects .containerWeb .Webcontainer-2 .webText .title,
+.projects .containerWeb .Webcontainer-3 .webText .title {
+  font-size: 25px;
+}
+.projects .containerWeb .Webcontainer-1 .webText .sub-title,
+.projects .containerWeb .Webcontainer-2 .webText .sub-title,
+.projects .containerWeb .Webcontainer-3 .webText .sub-title {
+  font-weight: 600;
+}
+.projects .containerWeb .Webcontainer-1 .webText .sub-desc,
+.projects .containerWeb .Webcontainer-2 .webText .sub-desc,
+.projects .containerWeb .Webcontainer-3 .webText .sub-desc {
+  font-weight: 400;
 }
 .projects .containerWeb .Webcontainer-1 img,
 .projects .containerWeb .Webcontainer-2 img,
@@ -2036,6 +2055,9 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     height: auto;
     width: 100%;
     padding: 0;
+    top: 60%;
+    bottom: unset;
+    display: unset;
   }
   .projects .containerWeb .Webcontainer-1 .webText .title,
 .projects .containerWeb .Webcontainer-1 .webText .sub-title,
