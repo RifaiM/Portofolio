@@ -41,7 +41,9 @@
     <meta name="keywords" content="About Mochammad Rifai, Mochammad Rifai Personal Projects, Mochammad Rifai Contacts">
 </head>
 <body>
-    <div id="load"><i class="fa fa-spinner fa-spin"></i></div>
+    <div id="loading">
+        <img id="loading-image" src="img/loading-gif.gif" alt="Loading..." />
+      </div>
     <div id="contents">
         <!--HEADER NEW-->
         <header>
@@ -365,6 +367,12 @@
     <!--
     <script src="./css/scrollCue-2.0.0/scrollCue.js"></script>
     -->
+
+    <script>
+        $(window).on('load', function () {
+          $('#loading').hide();
+        }) 
+      </script>
 
     <!--AOS-->
     <script>
