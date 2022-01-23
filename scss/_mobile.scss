@@ -419,7 +419,7 @@ and (max-device-width : 1138px) {
         .dots-container {
             display: flex;
             position: absolute;
-            top: 560px;
+            top: 630px;
             left: 0;
             right: 0;
             margin-top: unset;
@@ -511,6 +511,15 @@ and (max-device-width : 1138px) {
         margin-top: 50px;
         .heading-text {
             padding: 0;
+        }
+        .containerWeb {
+            .webText {
+                .title,
+                .sub-title,
+                .sub-desc {
+                    margin: 10px 0;
+                }
+            }
         }
     }
 

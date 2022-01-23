@@ -1727,7 +1727,7 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   header .dots-container {
     display: flex;
     position: absolute;
-    top: 560px;
+    top: 630px;
     left: 0;
     right: 0;
     margin-top: unset;
@@ -1817,6 +1817,11 @@ header .span-col-3 .slide-2 .rightSide .right-img img {
   }
   .projects .heading-text {
     padding: 0;
+  }
+  .projects .containerWeb .webText .title,
+.projects .containerWeb .webText .sub-title,
+.projects .containerWeb .webText .sub-desc {
+    margin: 10px 0;
   }
 
   /* About */
