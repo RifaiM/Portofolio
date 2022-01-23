@@ -311,7 +311,6 @@ body {
   font-family: "Manrope", sans-serif;
   margin: 0;
   padding: 0;
-  zoom: 100%;
 }
 
 #loading {
@@ -338,7 +337,7 @@ a {
 }
 
 /* BLUE LINE BELOW TEXT */
-.blue-line {
+body .blue-line {
   content: "";
   width: 102px;
   height: 5px;
@@ -346,9 +345,7 @@ a {
   display: block;
   margin-top: 5px;
 }
-
-.blue-line:nth-child(3),
-.blue-line:nth-child(4) {
+body .blue-line:nth-child(3), body .blue-line:nth-child(4) {
   width: 51px;
   height: 5px;
   background: #63b2ff;
@@ -367,14 +364,13 @@ a {
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
+  /* The typing effect */
+  /* The typewriter cursor effect */
 }
-
-.fade-in {
+.typewriter.fade-in {
   -webkit-animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
           animation: typing 4s steps(40, end), blink-caret 0.8s step-end infinite;
 }
-
-/* The typing effect */
 @-webkit-keyframes typing {
   from {
     max-width: 0;
@@ -391,7 +387,6 @@ a {
     max-width: 100%;
   }
 }
-/* The typewriter cursor effect */
 @-webkit-keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -408,10 +403,10 @@ a {
     border-color: #63B2FF;
   }
 }
+
 /* HEADER */
 header {
   /* The dots/bullets/indicators */
-  /* Fading animation */
 }
 header .triangle-top {
   width: 0;
@@ -459,11 +454,10 @@ header .grid .item-1 .nav ul .menu div {
   border-bottom: 1px solid #A4B7B4;
 }
 header .grid .item-1 .nav ul .menu a {
-  text-decoration: none;
   color: #63B2FF;
 }
 header .grid .item-1 .nav ul .menu a:hover {
-  text-decoration: underline;
+  color: #0E1111;
 }
 header .grid .item-1 .nav ul .menu div:last-child {
   border: 0;
@@ -495,6 +489,32 @@ header .grid .item-1 .nav ul .material-design-hamburger button {
 header .grid .item-1 .nav ul .material-design-hamburger__icon {
   cursor: pointer;
 }
+header .grid .item-1 .nav ul .material-design-hamburger__icon--to-arrow {
+  -webkit-animation-name: material-design-hamburger__icon--slide;
+          animation-name: material-design-hamburger__icon--slide;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+header .grid .item-1 .nav ul .material-design-hamburger__icon--to-arrow::before {
+  -webkit-animation-name: material-design-hamburger__icon--slide-before;
+          animation-name: material-design-hamburger__icon--slide-before;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+header .grid .item-1 .nav ul .material-design-hamburger__icon--to-arrow::after {
+  -webkit-animation-name: material-design-hamburger__icon--slide-after;
+          animation-name: material-design-hamburger__icon--slide-after;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+header .grid .item-1 .nav ul .material-design-hamburger__icon--from-arrow::before {
+  -webkit-animation-name: material-design-hamburger__icon--slide-before-from;
+          animation-name: material-design-hamburger__icon--slide-before-from;
+}
+header .grid .item-1 .nav ul .material-design-hamburger__icon--from-arrow::after {
+  -webkit-animation-name: material-design-hamburger__icon--slide-after-from;
+          animation-name: material-design-hamburger__icon--slide-after-from;
+}
 header .grid .item-1 .nav ul .material-design-hamburger__layer {
   display: block;
   width: 50px;
@@ -507,7 +527,7 @@ header .grid .item-1 .nav ul .material-design-hamburger__layer {
           animation-timing-function: ease-in-out;
   border-radius: 50px;
 }
-header .grid .item-1 .nav ul .material-design-hamburger__layer:before, header .grid .item-1 .nav ul .material-design-hamburger__layer:after {
+header .grid .item-1 .nav ul .material-design-hamburger__layer::before, header .grid .item-1 .nav ul .material-design-hamburger__layer::after {
   display: block;
   width: 100%;
   height: 5px;
@@ -521,41 +541,11 @@ header .grid .item-1 .nav ul .material-design-hamburger__layer:before, header .g
   border-radius: 50px;
   margin: 2px 0;
 }
-header .grid .item-1 .nav ul .material-design-hamburger__layer:before {
+header .grid .item-1 .nav ul .material-design-hamburger__layer::before {
   bottom: 200%;
 }
-header .grid .item-1 .nav ul .material-design-hamburger__layer:after {
+header .grid .item-1 .nav ul .material-design-hamburger__layer::after {
   top: 200%;
-}
-header .grid .item-1 .nav ul .material-design-hamburger__icon--to-arrow {
-  -webkit-animation-name: material-design-hamburger__icon--slide;
-          animation-name: material-design-hamburger__icon--slide;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-header .grid .item-1 .nav ul .material-design-hamburger__icon--to-arrow:before {
-  -webkit-animation-name: material-design-hamburger__icon--slide-before;
-          animation-name: material-design-hamburger__icon--slide-before;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-header .grid .item-1 .nav ul .material-design-hamburger__icon--to-arrow:after {
-  -webkit-animation-name: material-design-hamburger__icon--slide-after;
-          animation-name: material-design-hamburger__icon--slide-after;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-header .grid .item-1 .nav ul .material-design-hamburger__icon--from-arrow {
-  -webkit-animation-name: material-design-hamburger__icon--slide-from;
-          animation-name: material-design-hamburger__icon--slide-from;
-}
-header .grid .item-1 .nav ul .material-design-hamburger__icon--from-arrow:before {
-  -webkit-animation-name: material-design-hamburger__icon--slide-before-from;
-          animation-name: material-design-hamburger__icon--slide-before-from;
-}
-header .grid .item-1 .nav ul .material-design-hamburger__icon--from-arrow:after {
-  -webkit-animation-name: material-design-hamburger__icon--slide-after-from;
-          animation-name: material-design-hamburger__icon--slide-after-from;
 }
 @-webkit-keyframes material-design-hamburger__icon--slide {
   100% {
@@ -666,7 +656,7 @@ header .grid .item-1 .nav ul li a {
   overflow: hidden;
   padding-bottom: 5px;
 }
-header .grid .item-1 .nav ul li a:hover::after, header .grid .item-1 .nav ul li a:focus::after, header .grid .item-1 .nav ul li a:active:after {
+header .grid .item-1 .nav ul li a:hover::after, header .grid .item-1 .nav ul li a:focus::after, header .grid .item-1 .nav ul li a:active::after {
   width: 200%;
 }
 header .grid .item-1 .nav ul li a::after {
@@ -696,6 +686,9 @@ header .grid .item-2 .initial h1 {
   margin-bottom: 0;
   font-size: 120px;
 }
+header .grid .item-3 {
+  /* Overlay */
+}
 header .grid .item-3 .button_container {
   position: fixed;
   top: 40px;
@@ -707,7 +700,7 @@ header .grid .item-3 .button_container {
   transition: opacity 0.25s ease;
   display: none;
 }
-header .grid .item-3 .border {
+header .grid .item-3 .button_container .border {
   background: #63B2FF;
   position: fixed;
   border-radius: 50px;
@@ -731,7 +724,7 @@ header .grid .item-3 .button_container.active .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
   background: #FBFAF5;
 }
-header .grid .item-3 .button_container span {
+header .grid .item-3 span {
   background: #FBFAF5;
   border-radius: 5px;
   height: 5px;
@@ -742,10 +735,10 @@ header .grid .item-3 .button_container span {
   top: 0px;
   right: 0px;
 }
-header .grid .item-3 .button_container span:nth-of-type(2) {
+header .grid .item-3 span:nth-of-type(2) {
   top: 11px;
 }
-header .grid .item-3 .button_container span:nth-of-type(3) {
+header .grid .item-3 span:nth-of-type(3) {
   top: 22px;
 }
 header .grid .item-3 .overlay {
@@ -834,10 +827,10 @@ header .grid .item-3 .overlay ul li a {
   text-decoration: none;
   overflow: hidden;
 }
-header .grid .item-3 .overlay ul li a:hover:after, header .grid .item-3 .overlay ul li a:focus:after, header .grid .item-3 .overlay ul li a:active:after {
+header .grid .item-3 .overlay ul li a:hover::after, header .grid .item-3 .overlay ul li a:focus::after, header .grid .item-3 .overlay ul li a:active::after {
   width: 50%;
 }
-header .grid .item-3 .overlay ul li a:after {
+header .grid .item-3 .overlay ul li a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -871,6 +864,7 @@ header .grid .item-3 .overlay ul li a:after {
 header .span-col-3 {
   grid-area: 2/1;
   grid-column: 1/span 2;
+  /* Fading animation */
 }
 header .span-col-3 .slide-1,
 header .span-col-3 .slide-2 {
@@ -916,6 +910,28 @@ header .span-col-3 .slide-1 .rightSide .textTop h2,
 header .span-col-3 .slide-2 .rightSide .textTop h2 {
   font-size: 60px;
 }
+header .span-col-3 .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header .dots-container {
   display: -ms-grid;
   display: grid;
@@ -942,28 +958,6 @@ header .dots-container .dot {
 header .dots-container .active, header .dots-container .dot:hover {
   background-color: #717171;
 }
-header .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 /* PROJECTS SECTION */
 .projects .heading-text {
@@ -980,7 +974,7 @@ header .fade {
 .projects .heading-text .large-text h3 {
   font-size: 40px;
 }
-.projects .containerWeb {
+.projects .web-wrapper {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -988,19 +982,44 @@ header .fade {
   grid-column: auto;
   gap: 20px;
 }
-.projects .containerWeb .Webcontainer-1,
-.projects .containerWeb .Webcontainer-2,
-.projects .containerWeb .Webcontainer-3 {
+.projects .web-wrapper .web-container-1,
+.projects .web-wrapper .web-container-2,
+.projects .web-wrapper .web-container-3 {
   position: relative;
 }
-.projects .containerWeb .Webcontainer-1 p,
-.projects .containerWeb .Webcontainer-2 p,
-.projects .containerWeb .Webcontainer-3 p {
+.projects .web-wrapper .web-container-1 p,
+.projects .web-wrapper .web-container-2 p,
+.projects .web-wrapper .web-container-3 p {
   color: #A4B7B4;
 }
-.projects .containerWeb .Webcontainer-1 .webText,
-.projects .containerWeb .Webcontainer-2 .webText,
-.projects .containerWeb .Webcontainer-3 .webText {
+.projects .web-wrapper .web-container-1 img,
+.projects .web-wrapper .web-container-2 img,
+.projects .web-wrapper .web-container-3 img {
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  /* remove extra space below image */
+  box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
+}
+.projects .web-wrapper .web-container-1:hover img,
+.projects .web-wrapper .web-container-2:hover img,
+.projects .web-wrapper .web-container-3:hover img {
+  transform: translateY(-20%);
+  transition: 0.6s;
+}
+.projects .web-wrapper .web-container-1:hover,
+.projects .web-wrapper .web-container-2:hover,
+.projects .web-wrapper .web-container-3:hover {
+  transform: translateY(0%);
+}
+.projects .web-wrapper .web-container-1:hover .webText .title,
+.projects .web-wrapper .web-container-2:hover .webText .title,
+.projects .web-wrapper .web-container-3:hover .webText .title {
+  color: #63B2FF;
+}
+.projects .web-wrapper .web-container-1 .webText,
+.projects .web-wrapper .web-container-2 .webText,
+.projects .web-wrapper .web-container-3 .webText {
   width: 90%;
   min-height: 50%;
   position: absolute;
@@ -1013,65 +1032,40 @@ header .fade {
   color: #0E1111;
   overflow: hidden;
 }
-.projects .containerWeb .Webcontainer-1 .webText .title,
-.projects .containerWeb .Webcontainer-1 .webText .sub-title,
-.projects .containerWeb .Webcontainer-1 .webText .sub-desc,
-.projects .containerWeb .Webcontainer-2 .webText .title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-desc,
-.projects .containerWeb .Webcontainer-3 .webText .title,
-.projects .containerWeb .Webcontainer-3 .webText .sub-title,
-.projects .containerWeb .Webcontainer-3 .webText .sub-desc {
+.projects .web-wrapper .web-container-1 .webText .title,
+.projects .web-wrapper .web-container-1 .webText .sub-title,
+.projects .web-wrapper .web-container-1 .webText .sub-desc,
+.projects .web-wrapper .web-container-2 .webText .title,
+.projects .web-wrapper .web-container-2 .webText .sub-title,
+.projects .web-wrapper .web-container-2 .webText .sub-desc,
+.projects .web-wrapper .web-container-3 .webText .title,
+.projects .web-wrapper .web-container-3 .webText .sub-title,
+.projects .web-wrapper .web-container-3 .webText .sub-desc {
   color: #0E1111;
   padding-left: 20px;
 }
-.projects .containerWeb .Webcontainer-1 .webText .title,
-.projects .containerWeb .Webcontainer-2 .webText .title,
-.projects .containerWeb .Webcontainer-3 .webText .title {
+.projects .web-wrapper .web-container-1 .webText .title,
+.projects .web-wrapper .web-container-2 .webText .title,
+.projects .web-wrapper .web-container-3 .webText .title {
   font-size: 25px;
 }
-.projects .containerWeb .Webcontainer-1 .webText .sub-title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-title,
-.projects .containerWeb .Webcontainer-3 .webText .sub-title {
+.projects .web-wrapper .web-container-1 .webText .sub-title,
+.projects .web-wrapper .web-container-2 .webText .sub-title,
+.projects .web-wrapper .web-container-3 .webText .sub-title {
   font-weight: 600;
 }
-.projects .containerWeb .Webcontainer-1 .webText .sub-desc,
-.projects .containerWeb .Webcontainer-2 .webText .sub-desc,
-.projects .containerWeb .Webcontainer-3 .webText .sub-desc {
+.projects .web-wrapper .web-container-1 .webText .sub-desc,
+.projects .web-wrapper .web-container-2 .webText .sub-desc,
+.projects .web-wrapper .web-container-3 .webText .sub-desc {
   font-weight: 400;
 }
-.projects .containerWeb .Webcontainer-1 img,
-.projects .containerWeb .Webcontainer-2 img,
-.projects .containerWeb .Webcontainer-3 img {
-  max-width: 80%;
-  max-height: 80%;
-  display: block;
-  /* remove extra space below image */
-  box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
-}
-.projects .containerWeb .Webcontainer-1:hover img,
-.projects .containerWeb .Webcontainer-2:hover img,
-.projects .containerWeb .Webcontainer-3:hover img {
-  transform: translateY(-20%);
-  transition: 0.6s;
-}
-.projects .containerWeb .web-1 .Webcontainer-1:hover,
-.projects .containerWeb .web-2 .Webcontainer-2:hover,
-.projects .containerWeb .web-3 .Webcontainer-3:hover {
-  transform: translateY(0%);
-}
-.projects .containerWeb .web-1 .Webcontainer-1:hover .webText .title,
-.projects .containerWeb .web-2 .Webcontainer-2:hover .webText .title,
-.projects .containerWeb .web-3 .Webcontainer-3:hover .webText .title {
-  color: #63B2FF;
-}
-.projects .containerWeb .web-1,
-.projects .containerWeb .web-3 {
+.projects .web-wrapper .web-1,
+.projects .web-wrapper .web-3 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.projects .containerWeb .web-2 {
+.projects .web-wrapper .web-2 {
   display: flex;
   align-items: flex-start;
   justify-content: left;
@@ -1096,10 +1090,6 @@ header .fade {
   -ms-grid-column: repeat(2, 1fr);
   grid-column: auto;
   gap: 20px;
-  /* The actual line being placed before each list item, tweak width and color as appropriate */
-  /* Start the line further down on the first list item */
-  /* Stop the line short on the final list item */
-  /* Styles for the SVG bullet points */
 }
 .about .containerAbout h2 {
   color: #63B2FF;
@@ -1114,12 +1104,16 @@ header .fade {
   padding-bottom: 8px;
   z-index: 1;
   width: 100%;
+  /* The actual line being placed before each list item, tweak width and color as appropriate */
+  /* Start the line further down on the first list item */
+  /* Stop the line short on the final list item */
+  /* Styles for the SVG bullet points */
 }
 .about .containerAbout li h4, .about .containerAbout li p {
   color: #0E1111;
   padding-left: 30px;
 }
-.about .containerAbout li:before {
+.about .containerAbout li::before {
   background-color: #63b2ff;
   width: 2px;
   content: "";
@@ -1129,19 +1123,18 @@ header .fade {
   left: 9px;
   z-index: -1;
 }
-.about .containerAbout li:first-child:before {
+.about .containerAbout li:first-child::before {
   top: 15px;
 }
-.about .containerAbout li:last-child:before {
+.about .containerAbout li:last-child::before {
   height: 6px;
 }
-.about .containerAbout .bullet {
-  margin-left: px;
+.about .containerAbout li .bullet {
   width: 20px;
   fill: #63b2ff;
   float: left;
 }
-.about .containerAbout .date {
+.about .containerAbout li .date {
   color: #A4B7B4;
 }
 
@@ -1159,18 +1152,18 @@ header .fade {
   display: inline-block;
   color: #0E1111;
 }
-.contact li {
+.contact .contact-container {
   width: 100%;
 }
-.contact li .typewriter,
-.contact li h2,
-.contact li h3 {
+.contact .contact-container .typewriter,
+.contact .contact-container h2,
+.contact .contact-container h3 {
   color: #0E1111;
 }
-.contact li h2 {
+.contact .contact-container h2 {
   font-size: 60px;
 }
-.contact li h3 {
+.contact .contact-container h3 {
   font-size: 40px;
 }
 .contact .row {
@@ -1270,6 +1263,9 @@ header .fade {
 }
 
 /* SOCIAL SECTION */
+.social {
+  margin-top: 80px;
+}
 .social .heading-text h3 {
   color: #0E1111;
   font-size: 40px;
@@ -1337,13 +1333,6 @@ footer .initial .wrap h1, footer .initial .wrap h4, footer .initial .wrap p {
 footer .initial .wrap h1 {
   font-size: 120px;
 }
-footer .initial .wrap .blue-line {
-  content: "";
-  width: 100%;
-  height: 3px;
-  background: #FBFAF5;
-  display: block;
-}
 footer .initial .wrap h4 {
   position: relative;
   color: #FBFAF5;
@@ -1351,7 +1340,7 @@ footer .initial .wrap h4 {
   margin: 0;
   padding-bottom: 5px;
 }
-footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active:after {
+footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active::after {
   width: 50%;
 }
 footer .initial .wrap h4::after {
@@ -1365,6 +1354,13 @@ footer .initial .wrap h4::after {
   background: #FBFAF5;
   transition: 0.35s;
 }
+footer .initial .wrap .blue-line {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #FBFAF5;
+  display: block;
+}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 280px) and (max-device-width: 653px) {
@@ -1373,7 +1369,7 @@ footer .initial .wrap h4::after {
   }
 
   /* Typewriter */
-  .fade-in {
+  .typewriter.fade-in {
     -webkit-animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
             animation: typing 2s steps(30, end), blink-caret 0.8s step-end infinite;
   }
@@ -1432,13 +1428,9 @@ footer .initial .wrap h4::after {
     top: 40px;
     right: 30px;
   }
-  header .grid .item-3 .border {
+  header .grid .item-3 .button_container .border {
     top: 20px;
     right: 10px;
-  }
-  header .grid .item-3 .button_container span {
-    top: 0px;
-    right: 0px;
   }
   header .span-col-3 {
     padding: 0 10px;
@@ -1499,43 +1491,22 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   .projects .heading-text .large-text h3 {
     font-size: 25px;
   }
-  .projects .containerWeb {
+  .projects .web-wrapper {
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-column: repeat(1, 1fr);
     gap: 10px;
   }
-  .projects .containerWeb .Webcontainer-1,
-.projects .containerWeb .Webcontainer-2,
-.projects .containerWeb .Webcontainer-3 {
+  .projects .web-wrapper .web-container-1,
+.projects .web-wrapper .web-container-2,
+.projects .web-wrapper .web-container-3 {
     position: relative;
     margin-top: 20px;
     display: flex;
     justify-content: left;
   }
-  .projects .containerWeb .Webcontainer-1 .webText,
-.projects .containerWeb .Webcontainer-2 .webText,
-.projects .containerWeb .Webcontainer-3 .webText {
-    height: auto;
-    width: 100%;
-    padding: 0;
-    top: 60%;
-    bottom: unset;
-    display: unset;
-  }
-  .projects .containerWeb .Webcontainer-1 .webText .title,
-.projects .containerWeb .Webcontainer-1 .webText .sub-title,
-.projects .containerWeb .Webcontainer-1 .webText .sub-desc,
-.projects .containerWeb .Webcontainer-2 .webText .title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-title,
-.projects .containerWeb .Webcontainer-2 .webText .sub-desc,
-.projects .containerWeb .Webcontainer-3 .webText .title,
-.projects .containerWeb .Webcontainer-3 .webText .sub-title,
-.projects .containerWeb .Webcontainer-3 .webText .sub-desc {
-    padding: 0 16px;
-  }
-  .projects .containerWeb .Webcontainer-1 img,
-.projects .containerWeb .Webcontainer-2 img,
-.projects .containerWeb .Webcontainer-3 img {
+  .projects .web-wrapper .web-container-1 img,
+.projects .web-wrapper .web-container-2 img,
+.projects .web-wrapper .web-container-3 img {
     padding: 0;
     max-width: 90%;
     max-height: 100%;
@@ -1543,7 +1514,28 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     /* remove extra space below image */
     margin: 0 auto;
   }
-  .projects .containerWeb .web-1, .projects .containerWeb .web-2, .projects .containerWeb .web-3 {
+  .projects .web-wrapper .web-container-1 .webText,
+.projects .web-wrapper .web-container-2 .webText,
+.projects .web-wrapper .web-container-3 .webText {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    top: 60%;
+    bottom: unset;
+    display: unset;
+  }
+  .projects .web-wrapper .web-container-1 .webText .title,
+.projects .web-wrapper .web-container-1 .webText .sub-title,
+.projects .web-wrapper .web-container-1 .webText .sub-desc,
+.projects .web-wrapper .web-container-2 .webText .title,
+.projects .web-wrapper .web-container-2 .webText .sub-title,
+.projects .web-wrapper .web-container-2 .webText .sub-desc,
+.projects .web-wrapper .web-container-3 .webText .title,
+.projects .web-wrapper .web-container-3 .webText .sub-title,
+.projects .web-wrapper .web-container-3 .webText .sub-desc {
+    padding: 0 16px;
+  }
+  .projects .web-wrapper .web-1, .projects .web-wrapper .web-2, .projects .web-wrapper .web-3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1568,52 +1560,9 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     grid-template-columns: repeat(1, 1fr);
     -ms-grid-column: repeat(1, 1fr);
     gap: 10px;
-    /* The actual line being placed before each list item, tweak width and color as appropriate */
-    /* Start the line further down on the first list item */
-    /* Stop the line short on the final list item */
-    /* Styles for the SVG bullet points */
   }
   .about .containerAbout h2 {
     font-size: 45px;
-  }
-  .about .containerAbout li {
-    /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
-    position: relative;
-    z-index: 0;
-    /* Use padding to space things out rather than margins as the line would get broken up otherwise */
-    margin: 0;
-    padding-bottom: 8px;
-    z-index: 1;
-    width: 100%;
-  }
-  .about .containerAbout li h4, .about .containerAbout li p {
-    color: #0E1111;
-    padding-left: 30px;
-  }
-  .about .containerAbout li:before {
-    background-color: #63b2ff;
-    width: 2px;
-    content: "";
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 9px;
-    z-index: -1;
-  }
-  .about .containerAbout li:first-child:before {
-    top: 15px;
-  }
-  .about .containerAbout li:last-child:before {
-    height: 6px;
-  }
-  .about .containerAbout .bullet {
-    margin-left: px;
-    width: 20px;
-    fill: #63b2ff;
-    float: left;
-  }
-  .about .containerAbout .date {
-    color: #A4B7B4;
   }
 
   /* CONTACT SECTION */
@@ -1622,40 +1571,42 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     gap: 10px;
     margin-top: 50px;
   }
-  .contact ul {
+  .contact .row {
+    margin: -10px 0;
+  }
+  .contact .contact-wrapper {
     padding: 0;
   }
-  .contact .containerContact {
+  .contact .contact-content {
     padding: 0;
     margin-top: 20px;
   }
-  .contact .containerContact .contact-form {
+  .contact .contact-content .contact-form {
     display: flex;
     flex-direction: column;
   }
-  .contact .containerContact .contact-form .form-field {
+  .contact .contact-content .contact-form .form-field {
     display: inline-flex;
     width: auto;
   }
-  .contact li {
+  .contact .contact-container {
     width: 100%;
   }
-  .contact li .typewriter,
-.contact li h2,
-.contact li h3 {
+  .contact .contact-container .typewriter,
+.contact .contact-container h2,
+.contact .contact-container h3 {
     color: #0E1111;
   }
-  .contact li h2 {
+  .contact .contact-container h2 {
     font-size: 45px;
   }
-  .contact li h3 {
+  .contact .contact-container h3 {
     font-size: 25px;
   }
 
   /* SOCIAL SECTION */
   .social {
     padding: 0 10px;
-    margin-top: 50px;
   }
   .social .heading-text {
     padding: 0;
@@ -1715,7 +1666,7 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   footer .initial .wrap h4 {
     margin: 5px 0 0 0;
   }
-  footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active:after {
+  footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active::after {
     width: 90%;
   }
 }
@@ -1765,13 +1716,9 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     top: 40px;
     right: 30px;
   }
-  header .grid .item-3 .border {
+  header .grid .item-3 .button_container .border {
     top: 20px;
     right: 10px;
-  }
-  header .grid .item-3 .button_container span {
-    top: 0px;
-    right: 0px;
   }
   header .span-col-3 {
     padding: 0 20px;
@@ -1818,9 +1765,9 @@ header .span-col-3 .slide-2 .rightSide .right-img img {
   .projects .heading-text {
     padding: 0;
   }
-  .projects .containerWeb .webText .title,
-.projects .containerWeb .webText .sub-title,
-.projects .containerWeb .webText .sub-desc {
+  .projects .web-wrapper .webText .title,
+.projects .web-wrapper .webText .sub-title,
+.projects .web-wrapper .webText .sub-desc {
     margin: 10px 0;
   }
 
@@ -1840,17 +1787,19 @@ header .span-col-3 .slide-2 .rightSide .right-img img {
     padding: 0 20px;
     margin-top: 50px;
   }
-  .contact ul {
+  .contact .row {
+    margin: -10px 0;
+  }
+  .contact .contact-wrapper {
     padding: 0;
   }
-  .contact .containerContact {
+  .contact .contact-content {
     padding: 0;
   }
 
   /* Social */
   .social {
     padding: 0 20px;
-    margin-top: 50px;
   }
   .social .heading-text {
     padding: 0;
@@ -1864,6 +1813,7 @@ header .span-col-3 .slide-2 .rightSide .right-img img {
   footer .triangle-bottom {
     border-bottom: 500px solid #63B2FF;
     border-left: 700px solid transparent;
+    overflow: hidden;
   }
   footer .initial .wrap {
     padding-left: 300px;
