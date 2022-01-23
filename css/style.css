@@ -285,7 +285,8 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 50px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 1px;
   padding: 15px 32px;
   margin: 4px 2px;
 }
@@ -889,7 +890,7 @@ header .span-col-3 .slide-2 .rightSide {
 }
 header .span-col-3 .slide-1 .rightSide .blue-line,
 header .span-col-3 .slide-2 .rightSide .blue-line {
-  width: 80%;
+  width: 100%;
   height: 3px;
 }
 header .span-col-3 .slide-1 .rightSide .right-img,
@@ -1042,7 +1043,6 @@ header .dots-container .active, header .dots-container .dot:hover {
 .projects .web-wrapper .web-container-3 .webText .title,
 .projects .web-wrapper .web-container-3 .webText .sub-title,
 .projects .web-wrapper .web-container-3 .webText .sub-desc {
-  color: #0E1111;
   padding-left: 20px;
 }
 .projects .web-wrapper .web-container-1 .webText .title,
@@ -1055,10 +1055,19 @@ header .dots-container .active, header .dots-container .dot:hover {
 .projects .web-wrapper .web-container-3 .webText .sub-title {
   font-weight: 600;
 }
+.projects .web-wrapper .web-container-1 .webText .title,
+.projects .web-wrapper .web-container-1 .webText .sub-title,
+.projects .web-wrapper .web-container-2 .webText .title,
+.projects .web-wrapper .web-container-2 .webText .sub-title,
+.projects .web-wrapper .web-container-3 .webText .title,
+.projects .web-wrapper .web-container-3 .webText .sub-title {
+  color: #0E1111;
+}
 .projects .web-wrapper .web-container-1 .webText .sub-desc,
 .projects .web-wrapper .web-container-2 .webText .sub-desc,
 .projects .web-wrapper .web-container-3 .webText .sub-desc {
-  font-weight: 400;
+  font-weight: 500;
+  color: #A4B7B4;
 }
 .projects .web-wrapper .web-1,
 .projects .web-wrapper .web-3 {

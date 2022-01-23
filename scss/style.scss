@@ -562,7 +562,7 @@ header {
                 text-align: left;
 
                 .blue-line {
-                    width: 80%;
+                    width: 100%;
                     height: 3px;
                 }
                 .right-img {
@@ -708,7 +708,6 @@ header {
                 .title,
                 .sub-title,
                 .sub-desc {
-                    color: config.$black;
                     padding-left: 20px;
                 }
                 .title {
@@ -717,8 +716,13 @@ header {
                 .sub-title {
                     font-weight: map-get(config.$font-weights, "semiBold");
                 }
+                .title,
+                .sub-title {
+                    color: config.$black;
+                }
                 .sub-desc {
-                    font-weight: map-get(config.$font-weights, "regular");
+                    font-weight: map-get(config.$font-weights, "medium");
+                    color: config.$grey1;
                 }
             }
         }
@@ -945,7 +949,7 @@ header {
             left: 20px;
             bottom: 11px;
             font-size: config.$h4;
-            font-weight: map-get(config.$font-weights, bold);
+            font-weight: map-get(config.$font-weights, "bold");
             line-height: 26px;
             color: config.$blue;
             cursor: text;
