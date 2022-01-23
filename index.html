@@ -270,19 +270,13 @@
             </div>
             <div class="contact-content p-1 mt-1">
                 <div class="get-in-touch my-1">
-                    <form class="contact-form row" method="POST" name="form" data-netlify="true" netlify-honeypot="bot-field">
-                        <div hidden aria-hidden="true">
-                            <label>
-                                Don&apos;t fill this out if you&apos;re human: 
-                            <input name="bot-field" />
-                            </label>
-                        </div>
+                    <form class="contact-form row" method="POST" name="form" action="https://formspree.io/f/xvolzljn">
                         <div class="form-field col x-50">
                             <input name="name" id="name" class="input-text js-input" type="text" required>
                             <label class="label" for="name">Name</label>
                         </div>
                         <div class="form-field col x-50">
-                            <input name="email" id="email" class="input-text js-input" type="email" required>
+                            <input name="_replyto" id="email" class="input-text js-input" type="email" required>
                             <label class="label" for="email">E-mail</label>
                         </div>
                         <div class="form-field col x-100">
