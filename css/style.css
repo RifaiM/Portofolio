@@ -883,6 +883,8 @@ header .span-col-3 .slide-1 .leftSide video,
 header .span-col-3 .slide-2 .leftSide video {
   width: 480px;
   height: 300px;
+  -webkit-clip-path: inset(1.5px 1.5px);
+          clip-path: inset(1.5px 1.5px);
 }
 header .span-col-3 .slide-1 .rightSide,
 header .span-col-3 .slide-2 .rightSide {
@@ -1391,7 +1393,7 @@ footer .initial .wrap .blue-line {
   header .dots-container {
     display: flex;
     position: absolute;
-    top: 560px;
+    top: 530px;
     left: 0;
     right: 0;
     margin-top: unset;
