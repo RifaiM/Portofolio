@@ -1729,7 +1729,7 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
   }
 
   button.back-to-top.show {
-    right: 10px;
+    right: 20px;
     bottom: 250px;
     height: 40px;
     width: 40px;
@@ -1883,5 +1883,9 @@ header .span-col-3 .slide-2 .rightSide .right-img img {
   }
   footer .initial .wrap {
     padding-left: 300px;
+  }
+
+  button.back-to-top.show {
+    bottom: 250px;
   }
 }/*# sourceMappingURL=style.css.map */

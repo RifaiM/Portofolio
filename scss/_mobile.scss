@@ -554,4 +554,15 @@ and (max-device-width : 1138px) {
             }
         }
     }
+
+    button.back-to-top{
+
+        &.show {
+            right: 20px;
+            bottom: 250px;
+            height: 40px;
+            width: 40px;
+            font-size: 16px;
+        }
+    }
 }
