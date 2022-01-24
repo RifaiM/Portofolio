@@ -766,9 +766,8 @@ header .grid .item-3 .overlay.open {
 header .grid .item-3 .overlay.open .bi-star-fill {
   font-size: 10px;
   position: absolute;
-  padding: 0 3px;
   top: 0;
-  right: 5%;
+  right: 0;
   -webkit-animation: loading 3s linear infinite;
           animation: loading 3s linear infinite;
   color: #FBFAF5;
@@ -817,20 +816,20 @@ header .grid .item-3 .overlay ul {
 header .grid .item-3 .overlay ul li {
   display: block;
   height: 25%;
-  height: calc(100% / 4);
+  height: calc(100% / 3);
   min-height: 50px;
   position: relative;
   opacity: 0;
 }
 header .grid .item-3 .overlay ul li a {
-  display: block;
+  display: inline-block;
   position: relative;
   color: #FBFAF5;
-  text-decoration: none;
   overflow: hidden;
 }
 header .grid .item-3 .overlay ul li a:hover::after, header .grid .item-3 .overlay ul li a:focus::after, header .grid .item-3 .overlay ul li a:active::after {
-  width: 50%;
+  width: 100%;
+  display: block;
 }
 header .grid .item-3 .overlay ul li a::after {
   content: "";
