@@ -1393,7 +1393,7 @@ button.back-to-top {
   right: 50px;
   bottom: 75px;
   outline: 0 !important;
-  z-index: 99;
+  z-index: 1;
   transition: all 0.3s ease-in-out;
 }
 button.back-to-top:hover, button.back-to-top:active, button.back-to-top:focus {
