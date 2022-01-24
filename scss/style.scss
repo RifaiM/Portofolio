@@ -50,7 +50,7 @@ body {
         margin-top: 5px;
 
         &:nth-child(3),
-        &:nth-child(4) {
+        &:nth-child(1) {
             width: 51px;
             height: 5px;
             background: rgb(99, 178, 255);
@@ -679,7 +679,7 @@ header {
                 box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
             }
             &:hover img {
-                transform: translateY(-20%);
+                transform: translateY(-10%);
                 transition: 0.6s;
             }
             &:hover {
@@ -712,8 +712,10 @@ header {
                 }
                 .title {
                     font-size: map-get(config.$h3, "mobile");
+                    font-weight: map-get(config.$font-weights, "bold");
                 }
                 .sub-title {
+                    font-size: config.$h4;
                     font-weight: map-get(config.$font-weights, "semiBold");
                 }
                 .title,

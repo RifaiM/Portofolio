@@ -347,7 +347,7 @@ body .blue-line {
   display: block;
   margin-top: 5px;
 }
-body .blue-line:nth-child(3), body .blue-line:nth-child(4) {
+body .blue-line:nth-child(3), body .blue-line:nth-child(1) {
   width: 51px;
   height: 5px;
   background: #63b2ff;
@@ -1007,7 +1007,7 @@ header .dots-container .active, header .dots-container .dot:hover {
 .projects .web-wrapper .web-container-1:hover img,
 .projects .web-wrapper .web-container-2:hover img,
 .projects .web-wrapper .web-container-3:hover img {
-  transform: translateY(-20%);
+  transform: translateY(-10%);
   transition: 0.6s;
 }
 .projects .web-wrapper .web-container-1:hover,
@@ -1050,10 +1050,12 @@ header .dots-container .active, header .dots-container .dot:hover {
 .projects .web-wrapper .web-container-2 .webText .title,
 .projects .web-wrapper .web-container-3 .webText .title {
   font-size: 25px;
+  font-weight: 700;
 }
 .projects .web-wrapper .web-container-1 .webText .sub-title,
 .projects .web-wrapper .web-container-2 .webText .sub-title,
 .projects .web-wrapper .web-container-3 .webText .sub-title {
+  font-size: 20px;
   font-weight: 600;
 }
 .projects .web-wrapper .web-container-1 .webText .title,
