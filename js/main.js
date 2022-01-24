@@ -26,7 +26,7 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";
   dott[slideIndex-1].className += " active";
-  setTimeout(showSlides, 9000); // Change image every 9 seconds
+  setTimeout(showSlides, 20000); // Change image every 9 seconds
 }
 
 // hamburger right scroll function
