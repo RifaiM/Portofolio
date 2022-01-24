@@ -32,6 +32,10 @@ a {
     color: config.$white;
 }
 
+p {
+    letter-spacing: 0.5px;
+}
+
 /* DOTTED AFTER TEXT */
 
 .pr {
@@ -576,11 +580,13 @@ header {
                     }
                 }
                 .textTop {
-                    h3 {
+                    h1 {
                         font-size: map-get(config.$h3, "normal");
+                        font-weight: map-get(config.$font-weights, "semiBold");
                     }
                     h2 {
                         font-size: map-get(config.$h2, "normal");
+                        font-weight: map-get(config.$font-weights, "bold");
                     }
                 }
             }
@@ -675,7 +681,9 @@ header {
             & img {
                 max-width: 80%;
                 max-height: 80%;
-                display: block; /* remove extra space below image */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
                 box-shadow: rgb(34 34 34 / 18%) -4px 8px 20px 0px;
             }
             &:hover img {
@@ -696,20 +704,15 @@ header {
                 width: 90%;
                 min-height: 50%;
                 position: absolute;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                right: 0;
+                left: 0;
+                margin: auto;
                 bottom: 0;
                 background: rgba(251, 250, 245, 0.9);
                 box-shadow: rgb(17 17 17 / 18%) -4px 8px 20px 0px;
                 color: config.$black;
                 overflow: hidden;
         
-                .title,
-                .sub-title,
-                .sub-desc {
-                    padding-left: 20px;
-                }
                 .title {
                     font-size: map-get(config.$h3, "mobile");
                     font-weight: map-get(config.$font-weights, "bold");
@@ -794,6 +797,9 @@ header {
             h4, p {
                 color: config.$black;
                 padding-left: 30px;
+            }
+            h4 {
+                letter-spacing: 0.5px;
             }
 
             /* The actual line being placed before each list item, tweak width and color as appropriate */
@@ -952,6 +958,7 @@ header {
             bottom: 11px;
             font-size: config.$h4;
             font-weight: map-get(config.$font-weights, "bold");
+            letter-spacing: 0.5px;
             line-height: 26px;
             color: config.$blue;
             cursor: text;
@@ -1071,6 +1078,7 @@ footer {
                 overflow: hidden;
                 margin: 0;
                 padding-bottom: 5px;
+                letter-spacing: 0.5px;
 
                 &:hover::after, &:focus::after, &:active::after {
                     width: 50%;

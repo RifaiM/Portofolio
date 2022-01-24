@@ -339,11 +339,6 @@ and (max-device-width : 667px) {
                     grid-area: 1 / 1;
                     width: 120px;
 
-                    p {
-                        display: inline-block;
-                        width: auto;
-                    }
-
                     h1 {
                         font-size: map-get(config.$h1, "mobile");
                     }
@@ -351,6 +346,10 @@ and (max-device-width : 667px) {
                     .blue-line {
                         content: "";
                         width: 90%;
+                    }
+
+                    p {
+                        letter-spacing: unset;
                     }
 
                     h4 {

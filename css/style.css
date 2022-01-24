@@ -333,6 +333,10 @@ a {
   color: #FBFAF5;
 }
 
+p {
+  letter-spacing: 0.5px;
+}
+
 /* DOTTED AFTER TEXT */
 .pr {
   color: #63B2FF;
@@ -905,13 +909,15 @@ header .span-col-3 .slide-2 .rightSide .right-img img {
   width: 80px;
   height: 80px;
 }
-header .span-col-3 .slide-1 .rightSide .textTop h3,
-header .span-col-3 .slide-2 .rightSide .textTop h3 {
+header .span-col-3 .slide-1 .rightSide .textTop h1,
+header .span-col-3 .slide-2 .rightSide .textTop h1 {
   font-size: 40px;
+  font-weight: 600;
 }
 header .span-col-3 .slide-1 .rightSide .textTop h2,
 header .span-col-3 .slide-2 .rightSide .textTop h2 {
   font-size: 60px;
+  font-weight: 700;
 }
 header .span-col-3 .fade {
   -webkit-animation-name: fade;
@@ -1001,7 +1007,8 @@ header .dots-container .active, header .dots-container .dot:hover {
   max-width: 80%;
   max-height: 80%;
   display: block;
-  /* remove extra space below image */
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: rgba(34, 34, 34, 0.18) -4px 8px 20px 0px;
 }
 .projects .web-wrapper .web-container-1:hover img,
@@ -1026,25 +1033,14 @@ header .dots-container .active, header .dots-container .dot:hover {
   width: 90%;
   min-height: 50%;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  right: 0;
+  left: 0;
+  margin: auto;
   bottom: 0;
   background: rgba(251, 250, 245, 0.9);
   box-shadow: rgba(17, 17, 17, 0.18) -4px 8px 20px 0px;
   color: #0E1111;
   overflow: hidden;
-}
-.projects .web-wrapper .web-container-1 .webText .title,
-.projects .web-wrapper .web-container-1 .webText .sub-title,
-.projects .web-wrapper .web-container-1 .webText .sub-desc,
-.projects .web-wrapper .web-container-2 .webText .title,
-.projects .web-wrapper .web-container-2 .webText .sub-title,
-.projects .web-wrapper .web-container-2 .webText .sub-desc,
-.projects .web-wrapper .web-container-3 .webText .title,
-.projects .web-wrapper .web-container-3 .webText .sub-title,
-.projects .web-wrapper .web-container-3 .webText .sub-desc {
-  padding-left: 20px;
 }
 .projects .web-wrapper .web-container-1 .webText .title,
 .projects .web-wrapper .web-container-2 .webText .title,
@@ -1125,6 +1121,9 @@ header .dots-container .active, header .dots-container .dot:hover {
 .about .containerAbout li h4, .about .containerAbout li p {
   color: #0E1111;
   padding-left: 30px;
+}
+.about .containerAbout li h4 {
+  letter-spacing: 0.5px;
 }
 .about .containerAbout li::before {
   background-color: #63b2ff;
@@ -1252,6 +1251,7 @@ header .dots-container .active, header .dots-container .dot:hover {
   bottom: 11px;
   font-size: 20px;
   font-weight: 700;
+  letter-spacing: 0.5px;
   line-height: 26px;
   color: #63B2FF;
   cursor: text;
@@ -1352,6 +1352,7 @@ footer .initial .wrap h4 {
   overflow: hidden;
   margin: 0;
   padding-bottom: 5px;
+  letter-spacing: 0.5px;
 }
 footer .initial .wrap h4:hover::after, footer .initial .wrap h4:focus::after, footer .initial .wrap h4:active::after {
   width: 50%;
@@ -1665,16 +1666,15 @@ header .span-col-3 .slide-2 .rightSide .textTop h2 {
     grid-area: 1/1;
     width: 120px;
   }
-  footer .initial .wrap p {
-    display: inline-block;
-    width: auto;
-  }
   footer .initial .wrap h1 {
     font-size: 100px;
   }
   footer .initial .wrap .blue-line {
     content: "";
     width: 90%;
+  }
+  footer .initial .wrap p {
+    letter-spacing: unset;
   }
   footer .initial .wrap h4 {
     margin: 5px 0 0 0;
