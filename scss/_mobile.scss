@@ -368,7 +368,7 @@ and (max-device-width : 667px) {
 
             &.show {
                 right: 20px;
-                bottom: 250px;
+                bottom: 20px !important;
                 height: 40px;
                 width: 40px;
                 font-size: 16px;
