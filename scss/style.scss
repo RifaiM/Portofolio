@@ -672,7 +672,8 @@ header {
         
         .web-container-1,
         .web-container-2,
-        .web-container-3 {
+        .web-container-3,
+        .web-container-4 {
             position: relative;
             
             p {
@@ -738,7 +739,8 @@ header {
             align-items: center;
             justify-content: center;
         }
-        .web-2 {
+        .web-2,
+        .web-4 {
             display: flex;
             align-items: flex-start;
             justify-content: left;
